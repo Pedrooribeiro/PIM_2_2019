@@ -11,7 +11,7 @@ namespace Model
 {
     public class Veiculo
     {
-        SqlConnection sqlConn = new SqlConnection(@"Server=localhost\SQLEXPRESS;Database=dbControleFrotasDev;Trusted_Connection=True;");
+        DBConnection dbConnection = new DBConnection();
 
         private string cor;
 
@@ -77,9 +77,8 @@ namespace Model
         public void cadastrarVeiculo() {
             try
             {
-                sqlConn.Open();
+                dbConnection.open();
                 SqlCommand cmd = new SqlCommand("INSERT INTO veiculos (cor,placa,modelo,marca,ano_fabricacao,motorizacao,tipo_combustivel) VALUES (@cor,@placa,@modelo,@marca,@anoFabricacao,@motorizacao,@tipoCombustivel)");
-                Console.Write(cmd);
                 cmd.Parameters.AddWithValue("@cor", this.cor);
                 cmd.Parameters.AddWithValue("@placa", this.placa);
                 cmd.Parameters.AddWithValue("@modelo", this.modelo);
@@ -87,9 +86,8 @@ namespace Model
                 cmd.Parameters.AddWithValue("@anoFabricacao", this.anoFabricacao);
                 cmd.Parameters.AddWithValue("@motorizacao", this.motorizacao);
                 cmd.Parameters.AddWithValue("@tipoCombustivel", this.tipoCombustivel);
-                Console.Write(cmd);
-                cmd.Connection = this.sqlConn;
-                int cmdResult = cmd.ExecuteNonQuery();
+                cmd.Connection = dbConnection.getSqlConn();
+                cmd.ExecuteNonQuery();
              }
             catch (System.Data.SqlClient.SqlException sqlException)
             {
@@ -97,7 +95,7 @@ namespace Model
             }
             finally
             {
-                sqlConn.Close();
+                dbConnection.close();
             }
         }
 
