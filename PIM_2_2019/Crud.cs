@@ -61,20 +61,20 @@ namespace PrototipoTelas
 
         private void Crud_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Erro! Usuário ou senha incorretos, tente novamente.", "Erro");
-            MessageBox.Show("Erro ao cadastrar! Campos vazios ou preenchidos incorretamente, tente novamente.", "Erro");
-            MessageBox.Show("Erro ao cadastrar! Item já cadastrado.", "Erro");
-            MessageBox.Show("Erro ao consultar! Campos vazios ou preenchidos incorretamente, tente novamente.", "Erro");
-            MessageBox.Show("Erro ao consultar! Item não localizado, tente novamente", "Erro");
-            MessageBox.Show("Erro ao modificar! Campos vazios ou preenchidos incorretamente, tente novamente.", "Erro");
-            MessageBox.Show("Erro ao modificar! Item não localizado, tente novamente", "Erro");
-            MessageBox.Show("Erro ao modificar! Usuário não possui permissão para realizar modificação.", "Erro");
-            MessageBox.Show("Erro ao excluir! Campos vazios ou preenchidos incorretamente, tente novamente.", "Erro");
-            MessageBox.Show("Erro ao excluir! Item não localizado, tente novamente", "Erro");
-            MessageBox.Show("Erro ao excluir! Usuário não possui permissão para realizar exclusão.", "Erro");
-            MessageBox.Show("Erro ao gerar relatório! Usuário não possui permissão.", "Erro");
-            MessageBox.Show("Erro ao gerar relatório! Campos vazios ou preenchidos incorretamente, tente novamente.", "Erro");
-            MessageBox.Show("Erro ao gerar relatório! Itens não localizados.", "Erro");
+            //MessageBox.Show("Erro! Usuário ou senha incorretos, tente novamente.", "Erro");
+            //MessageBox.Show("Erro ao cadastrar! Campos vazios ou preenchidos incorretamente, tente novamente.", "Erro");
+            //MessageBox.Show("Erro ao cadastrar! Item já cadastrado.", "Erro");
+            //MessageBox.Show("Erro ao consultar! Campos vazios ou preenchidos incorretamente, tente novamente.", "Erro");
+            //MessageBox.Show("Erro ao consultar! Item não localizado, tente novamente", "Erro");
+            //MessageBox.Show("Erro ao modificar! Campos vazios ou preenchidos incorretamente, tente novamente.", "Erro");
+            //MessageBox.Show("Erro ao modificar! Item não localizado, tente novamente", "Erro");
+            //MessageBox.Show("Erro ao modificar! Usuário não possui permissão para realizar modificação.", "Erro");
+            //MessageBox.Show("Erro ao excluir! Campos vazios ou preenchidos incorretamente, tente novamente.", "Erro");
+            //MessageBox.Show("Erro ao excluir! Item não localizado, tente novamente", "Erro");
+            //MessageBox.Show("Erro ao excluir! Usuário não possui permissão para realizar exclusão.", "Erro");
+            //MessageBox.Show("Erro ao gerar relatório! Usuário não possui permissão.", "Erro");
+            //MessageBox.Show("Erro ao gerar relatório! Campos vazios ou preenchidos incorretamente, tente novamente.", "Erro");
+            //MessageBox.Show("Erro ao gerar relatório! Itens não localizados.", "Erro");
         }
 
         private void Timer1_Tick(object sender, EventArgs e)

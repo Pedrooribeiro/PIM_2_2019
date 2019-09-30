@@ -4,3 +4,4 @@ C:\Users\jdpacheco\Pictures\PIM\2\PROJETO-DESKTOP\Model\obj\Debug\ControleFrotaC
 C:\Users\jdpacheco\Pictures\PIM\2\PROJETO-DESKTOP\Model\obj\Debug\ControleFrotaClasses.csproj.CoreCompileInputs.cache
 C:\Users\jdpacheco\Pictures\PIM\2\PROJETO-DESKTOP\Model\obj\Debug\Model.dll
 C:\Users\jdpacheco\Pictures\PIM\2\PROJETO-DESKTOP\Model\obj\Debug\Model.pdb
+C:\Users\jdpacheco\Pictures\PIM\2\PROJETO-DESKTOP\Model\obj\Debug\ControleFrotaClasses.csproj.CopyComplete

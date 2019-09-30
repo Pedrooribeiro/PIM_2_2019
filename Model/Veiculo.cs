@@ -3,38 +3,43 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace Model
 {
     public class Veiculo
     {
-        private String cor;
+        SqlConnection sqlConn = new SqlConnection(@"Server=localhost\SQLEXPRESS;Database=dbControleFrotasDev;Trusted_Connection=True;");
 
-        public String Cor
+        private string cor;
+
+        public string Cor
         {
             get { return cor; }
             set { cor = value; }
         }
 
-        private String placa;
+        private string placa;
 
-        public String Placa
+        public string Placa
         {
             get { return placa; }
             set { placa = value; }
         }
 
-        private String modelo;
+        private string modelo;
 
-        public String Modelo
+        public string Modelo
         {
             get { return modelo; }
             set { modelo = value; }
         }
 
-        private String marca;
+        private string marca;
 
-        public String Marca
+        public string Marca
         {
             get { return marca; }
             set { marca = value; }
@@ -48,45 +53,56 @@ namespace Model
             set { anoFabricacao = value; }
         }
 
-        private String motorizacao;
+        private string motorizacao;
 
-        public String Motorizacao
+        public string Motorizacao
         {
             get { return motorizacao; }
             set { motorizacao = value; }
         }
 
-        private String tipoCombustivel;
+        private string tipoCombustivel;
 
-        public String TipoCombustivel
+        public string TipoCombustivel
         {
             get { return tipoCombustivel; }
             set { tipoCombustivel = value; }
         }
-
-        private String tipoVeiculo;
-
-        public String TipoVeiculo
-        {
-            get { return tipoVeiculo; }
-            set { tipoVeiculo = value; }
-        }
-
-
-
-
-
-
 
         public Veiculo()
         {
 
         }
 
-        public Boolean cadastrarVeiculo() { return true; }
+        public void cadastrarVeiculo() {
+            try
+            {
+                sqlConn.Open();
+                SqlCommand cmd = new SqlCommand("INSERT INTO veiculos (cor,placa,modelo,marca,ano_fabricacao,motorizacao,tipo_combustivel) VALUES (@cor,@placa,@modelo,@marca,@anoFabricacao,@motorizacao,@tipoCombustivel)");
+                Console.Write(cmd);
+                cmd.Parameters.AddWithValue("@cor", this.cor);
+                cmd.Parameters.AddWithValue("@placa", this.placa);
+                cmd.Parameters.AddWithValue("@modelo", this.modelo);
+                cmd.Parameters.AddWithValue("@marca", this.marca);
+                cmd.Parameters.AddWithValue("@anoFabricacao", this.anoFabricacao);
+                cmd.Parameters.AddWithValue("@motorizacao", this.motorizacao);
+                cmd.Parameters.AddWithValue("@tipoCombustivel", this.tipoCombustivel);
+                Console.Write(cmd);
+                cmd.Connection = this.sqlConn;
+                int cmdResult = cmd.ExecuteNonQuery();
+             }
+            catch (System.Data.SqlClient.SqlException sqlException)
+            {
+                MessageBox.Show("Erro ao cadastrar! Campos vazios ou preenchidos incorretamente, tente novamente.", "Erro");
+            }
+            finally
+            {
+                sqlConn.Close();
+            }
+        }
+
         public Boolean consultarVeiculo() { return true; }
         public Boolean modificarVeiculo() { return true; }
         public Boolean excluirVeiculo() { return true; }
-
     }
 }

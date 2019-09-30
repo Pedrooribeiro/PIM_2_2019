@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Model;
 
 namespace PrototipoTelas
 {
@@ -29,9 +30,21 @@ namespace PrototipoTelas
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Tem certeza que deseja cadastrar o veículo?", "Confirmação de Cadastro", MessageBoxButtons.YesNo) == DialogResult.Yes) {
+            Veiculo veiculo = new Veiculo();
+            veiculo.Cor = txtCor.Text;
+            veiculo.Placa = txtPlaca.Text;
+            veiculo.Modelo = txtModelo.Text;
+            veiculo.Marca = txtMarca.Text;
+            veiculo.AnoFabricacao = Convert.ToInt32(txtAno.Text);
+            veiculo.Motorizacao = txtMotorizacao.Text;
+            veiculo.TipoCombustivel = txtTipoCombustivel.Text;
 
+            veiculo.cadastrarVeiculo();
+
+
+            if (MessageBox.Show("Tem certeza que deseja cadastrar o veículo?", "Confirmação de Cadastro", MessageBoxButtons.YesNo) == DialogResult.Yes) {            
                 MessageBox.Show("Veículo cadastrado com sucesso");
+                Close();
             }
             else
             {
