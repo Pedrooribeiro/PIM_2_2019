@@ -31,6 +31,7 @@ namespace PrototipoTelas
         private void Button1_Click(object sender, EventArgs e)
         {
             Veiculo veiculo = new Veiculo();
+
             veiculo.Cor = txtCor.Text;
             veiculo.Placa = txtPlaca.Text;
             veiculo.Modelo = txtModelo.Text;

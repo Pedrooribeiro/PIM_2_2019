@@ -69,6 +69,15 @@ namespace Model
             set { tipoCombustivel = value; }
         }
 
+        private String placaConsultada;
+
+        public String PlacaConsultada
+        {
+            get { return placaConsultada; }
+            set { placaConsultada = value; }
+        }
+
+
         public Veiculo()
         {
 
@@ -124,7 +133,30 @@ namespace Model
                 dbConnection.close();
             }
         }
-        public Boolean modificarVeiculo() { return true; }
+
+        public void modificarVeiculo() {
+            try
+            {
+                dbConnection.open();
+                SqlCommand cmdModificar = new SqlCommand("UPDATE veiculos SET cor = @cor, placa = @placa, modelo = @modelo, marca = @marca, ano_fabricacao = @anoFabricacao, motorizacao = @motorizacao, tipo_combustivel = @tipoCombustivel WHERE placa = @placaConsultada");
+                cmdModificar.Parameters.AddWithValue("@cor", this.cor);
+                cmdModificar.Parameters.AddWithValue("@placa", this.placa);
+                cmdModificar.Parameters.AddWithValue("@modelo", this.modelo);
+                cmdModificar.Parameters.AddWithValue("@marca", this.marca);
+                cmdModificar.Parameters.AddWithValue("@anoFabricacao", this.anoFabricacao);
+                cmdModificar.Parameters.AddWithValue("@motorizacao", this.motorizacao);
+                cmdModificar.Parameters.AddWithValue("@tipoCombustivel", this.tipoCombustivel);
+                cmdModificar.Parameters.AddWithValue("@placaConsultada", this.placaConsultada);
+                cmdModificar.Connection = dbConnection.getSqlConn();
+                cmdModificar.ExecuteNonQuery();
+            } catch (System.Data.SqlClient.SqlException sqlException)
+            {
+                MessageBox.Show("Erro ao modificar! Item não localizado, campos vazios ou preenchidos incorretamente, tente novamente.", "Erro");
+            } finally
+            {
+                dbConnection.close();
+            }
+        }
         public Boolean excluirVeiculo() { return true; }
     }
 }

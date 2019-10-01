@@ -15,6 +15,13 @@ namespace PrototipoTelas
         public ResultadoConsultaVeiculo()
         {
             InitializeComponent();
+            txtCor.Enabled = false;
+            txtPlaca.Enabled = false;
+            txtModelo.Enabled = false;
+            txtMarca.Enabled = false;
+            txtAno.Enabled = false;
+            txtMotorizacao.Enabled = false;
+            txtTipoCombustivel.Enabled = false;
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -47,6 +54,11 @@ namespace PrototipoTelas
         }
 
         private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ResultadoConsultaVeiculo_Load(object sender, EventArgs e)
         {
 
         }

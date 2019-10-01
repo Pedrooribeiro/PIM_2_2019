@@ -231,6 +231,7 @@
             this.Controls.Add(this.label1);
             this.Name = "ResultadoConsultaVeiculo";
             this.Text = "ResultadoConsultaVeiculo";
+            this.Load += new System.EventHandler(this.ResultadoConsultaVeiculo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

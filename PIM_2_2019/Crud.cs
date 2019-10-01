@@ -65,9 +65,7 @@ namespace PrototipoTelas
             //MessageBox.Show("Erro ao cadastrar! Campos vazios ou preenchidos incorretamente, tente novamente.", "Erro");
             //MessageBox.Show("Erro ao cadastrar! Item já cadastrado.", "Erro");
             //MessageBox.Show("Erro ao consultar! Campos vazios ou preenchidos incorretamente, tente novamente.", "Erro");
-            //MessageBox.Show("Erro ao consultar! Item não localizado, tente novamente", "Erro");
-            //MessageBox.Show("Erro ao modificar! Campos vazios ou preenchidos incorretamente, tente novamente.", "Erro");
-            //MessageBox.Show("Erro ao modificar! Item não localizado, tente novamente", "Erro");
+            //MessageBox.Show("Erro ao modificar! Item não localizado, campos vazios ou preenchidos incorretamente, tente novamente.", "Erro");
             //MessageBox.Show("Erro ao modificar! Usuário não possui permissão para realizar modificação.", "Erro");
             //MessageBox.Show("Erro ao excluir! Campos vazios ou preenchidos incorretamente, tente novamente.", "Erro");
             //MessageBox.Show("Erro ao excluir! Item não localizado, tente novamente", "Erro");
