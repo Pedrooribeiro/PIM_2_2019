@@ -87,6 +87,7 @@
             this.label7.Size = new System.Drawing.Size(116, 17);
             this.label7.TabIndex = 24;
             this.label7.Text = "Tipo Combustível";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label6
             // 
@@ -97,6 +98,7 @@
             this.label6.Size = new System.Drawing.Size(85, 17);
             this.label6.TabIndex = 23;
             this.label6.Text = "Motorização";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label5
             // 
@@ -147,6 +149,7 @@
             this.label1.Size = new System.Drawing.Size(30, 17);
             this.label1.TabIndex = 17;
             this.label1.Text = "Cor";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtCor
             // 
@@ -197,6 +200,7 @@
             this.txtMotorizacao.ReadOnly = true;
             this.txtMotorizacao.Size = new System.Drawing.Size(123, 20);
             this.txtMotorizacao.TabIndex = 39;
+            this.txtMotorizacao.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtMotorizacao_MaskInputRejected);
             // 
             // txtTipoCombustivel
             // 
@@ -205,6 +209,7 @@
             this.txtTipoCombustivel.ReadOnly = true;
             this.txtTipoCombustivel.Size = new System.Drawing.Size(123, 20);
             this.txtTipoCombustivel.TabIndex = 40;
+            this.txtTipoCombustivel.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtTipoCombustivel_MaskInputRejected);
             // 
             // ResultadoConsultaVeiculo
             // 

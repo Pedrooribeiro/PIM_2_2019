@@ -87,16 +87,16 @@ namespace Model
             try
             {
                 dbConnection.open();
-                SqlCommand cmd = new SqlCommand("INSERT INTO veiculos (cor,placa,modelo,marca,ano_fabricacao,motorizacao,tipo_combustivel) VALUES (@cor,@placa,@modelo,@marca,@anoFabricacao,@motorizacao,@tipoCombustivel)");
-                cmd.Parameters.AddWithValue("@cor", this.cor);
-                cmd.Parameters.AddWithValue("@placa", this.placa);
-                cmd.Parameters.AddWithValue("@modelo", this.modelo);
-                cmd.Parameters.AddWithValue("@marca", this.marca);
-                cmd.Parameters.AddWithValue("@anoFabricacao", this.anoFabricacao);
-                cmd.Parameters.AddWithValue("@motorizacao", this.motorizacao);
-                cmd.Parameters.AddWithValue("@tipoCombustivel", this.tipoCombustivel);
-                cmd.Connection = dbConnection.getSqlConn();
-                cmd.ExecuteNonQuery();
+                SqlCommand cmdCadastrar = new SqlCommand("INSERT INTO veiculos (cor,placa,modelo,marca,ano_fabricacao,motorizacao,tipo_combustivel) VALUES (@cor,@placa,@modelo,@marca,@anoFabricacao,@motorizacao,@tipoCombustivel)");
+                cmdCadastrar.Parameters.AddWithValue("@cor", this.cor);
+                cmdCadastrar.Parameters.AddWithValue("@placa", this.placa);
+                cmdCadastrar.Parameters.AddWithValue("@modelo", this.modelo);
+                cmdCadastrar.Parameters.AddWithValue("@marca", this.marca);
+                cmdCadastrar.Parameters.AddWithValue("@anoFabricacao", this.anoFabricacao);
+                cmdCadastrar.Parameters.AddWithValue("@motorizacao", this.motorizacao);
+                cmdCadastrar.Parameters.AddWithValue("@tipoCombustivel", this.tipoCombustivel);
+                cmdCadastrar.Connection = dbConnection.getSqlConn();
+                cmdCadastrar.ExecuteNonQuery();
              }
             catch (System.Data.SqlClient.SqlException sqlException)
             {
@@ -112,10 +112,10 @@ namespace Model
             try
             {
                 dbConnection.open();
-                SqlCommand cmd = new SqlCommand("SELECT * FROM veiculos WHERE placa = @placa");
-                cmd.Parameters.AddWithValue("@placa", this.placa);
-                cmd.Connection = dbConnection.getSqlConn();
-                SqlDataReader dr = cmd.ExecuteReader();
+                SqlCommand cmdConsultar = new SqlCommand("SELECT * FROM veiculos WHERE placa = @placa");
+                cmdConsultar.Parameters.AddWithValue("@placa", this.placa);
+                cmdConsultar.Connection = dbConnection.getSqlConn();
+                SqlDataReader dr = cmdConsultar.ExecuteReader();
                 while(dr.Read()) {
                     this.cor = dr["cor"].ToString();
                     this.placa = dr["placa"].ToString();
@@ -157,6 +157,21 @@ namespace Model
                 dbConnection.close();
             }
         }
-        public Boolean excluirVeiculo() { return true; }
+        public void excluirVeiculo() {
+            try
+            {
+                dbConnection.open();
+                SqlCommand cmdExcluir = new SqlCommand("DELETE FROM veiculos WHERE placa = @placaConsultada");
+                cmdExcluir.Parameters.AddWithValue("@placaConsultada", this.placaConsultada);
+                cmdExcluir.Connection = dbConnection.getSqlConn();
+                cmdExcluir.ExecuteNonQuery();
+            } catch (System.Data.SqlClient.SqlException sqlException)
+            {
+                MessageBox.Show("Erro ao excluir! Item não localizados, campos vazios ou preenchidos incorretamente, tente novamente.", "Erro");
+            } finally
+            {
+                dbConnection.close();
+            }
+        }
     }
 }
