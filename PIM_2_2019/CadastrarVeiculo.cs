@@ -44,7 +44,7 @@ namespace PrototipoTelas
 
             if (MessageBox.Show("Tem certeza que deseja cadastrar o veículo?", "Confirmação de Cadastro", MessageBoxButtons.YesNo) == DialogResult.Yes) {            
                 MessageBox.Show("Veículo cadastrado com sucesso");
-                Close();
+                this.Close();
             }
             else
             {

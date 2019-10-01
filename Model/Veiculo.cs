@@ -99,7 +99,31 @@ namespace Model
             }
         }
 
-        public Boolean consultarVeiculo() { return true; }
+        public void consultarVeiculo() {
+            try
+            {
+                dbConnection.open();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM veiculos WHERE placa = @placa");
+                cmd.Parameters.AddWithValue("@placa", this.placa);
+                cmd.Connection = dbConnection.getSqlConn();
+                SqlDataReader dr = cmd.ExecuteReader();
+                while(dr.Read()) {
+                    this.cor = dr["cor"].ToString();
+                    this.placa = dr["placa"].ToString();
+                    this.modelo = dr["modelo"].ToString();
+                    this.marca = dr["marca"].ToString();
+                    this.anoFabricacao = Convert.ToInt32(dr["ano_fabricacao"]);
+                    this.motorizacao = dr["motorizacao"].ToString();
+                    this.tipoCombustivel = dr["tipo_combustivel"].ToString();
+                }
+            } catch (System.Data.SqlClient.SqlException sqlException)
+            {
+               MessageBox.Show("Erro ao consultar! Item não localizado, tente novamente", "Erro");
+            } finally
+            {
+                dbConnection.close();
+            }
+        }
         public Boolean modificarVeiculo() { return true; }
         public Boolean excluirVeiculo() { return true; }
     }

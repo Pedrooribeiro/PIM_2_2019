@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Model;
 
 namespace PrototipoTelas
 {
@@ -19,8 +20,22 @@ namespace PrototipoTelas
 
         private void Button1_Click(object sender, EventArgs e)
         {
+            Veiculo veiculo = new Veiculo();
+            veiculo.Placa = txtPlaca.Text;
+            veiculo.consultarVeiculo();
+
             ResultadoConsultaVeiculo ResultadoConsultaVeiculo2 = new ResultadoConsultaVeiculo();
+
+            ResultadoConsultaVeiculo2.txtCor.Text = veiculo.Cor;
+            ResultadoConsultaVeiculo2.txtPlaca.Text = veiculo.Placa;
+            ResultadoConsultaVeiculo2.txtModelo.Text = veiculo.Modelo;
+            ResultadoConsultaVeiculo2.txtMarca.Text = veiculo.Marca;
+            ResultadoConsultaVeiculo2.txtAno.Text = veiculo.AnoFabricacao.ToString();
+            ResultadoConsultaVeiculo2.txtMotorizacao.Text = veiculo.Motorizacao;
+            ResultadoConsultaVeiculo2.txtTipoCombustivel.Text = veiculo.TipoCombustivel;
+
             ResultadoConsultaVeiculo2.ShowDialog();
+            this.Close();
         }
 
         private void Button2_Click(object sender, EventArgs e)

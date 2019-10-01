@@ -36,7 +36,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtPlaca = new System.Windows.Forms.TextBox();
             this.txtModelo = new System.Windows.Forms.TextBox();
             this.txtMarca = new System.Windows.Forms.TextBox();
             this.txtAno = new System.Windows.Forms.TextBox();
@@ -45,6 +44,7 @@
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
+            this.txtPlaca = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -132,14 +132,6 @@
             this.label7.Text = "Tipo Combustível";
             this.label7.Click += new System.EventHandler(this.Label7_Click);
             // 
-            // txtPlaca
-            // 
-            this.txtPlaca.Location = new System.Drawing.Point(184, 108);
-            this.txtPlaca.Name = "txtPlaca";
-            this.txtPlaca.Size = new System.Drawing.Size(100, 20);
-            this.txtPlaca.TabIndex = 8;
-            this.txtPlaca.TextChanged += new System.EventHandler(this.TextBox2_TextChanged);
-            // 
             // txtModelo
             // 
             this.txtModelo.Location = new System.Drawing.Point(184, 143);
@@ -211,12 +203,21 @@
             this.label8.Text = "Cadastrar Veículo";
             this.label8.Click += new System.EventHandler(this.Label8_Click);
             // 
+            // txtPlaca
+            // 
+            this.txtPlaca.Location = new System.Drawing.Point(184, 108);
+            this.txtPlaca.Mask = "aaa-0000";
+            this.txtPlaca.Name = "txtPlaca";
+            this.txtPlaca.Size = new System.Drawing.Size(100, 20);
+            this.txtPlaca.TabIndex = 17;
+            // 
             // CadastrarVeiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(311, 406);
+            this.Controls.Add(this.txtPlaca);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnCadastrar);
@@ -225,7 +226,6 @@
             this.Controls.Add(this.txtAno);
             this.Controls.Add(this.txtMarca);
             this.Controls.Add(this.txtModelo);
-            this.Controls.Add(this.txtPlaca);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -251,7 +251,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtPlaca;
         private System.Windows.Forms.TextBox txtModelo;
         private System.Windows.Forms.TextBox txtMarca;
         private System.Windows.Forms.TextBox txtAno;
@@ -260,5 +259,6 @@
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.MaskedTextBox txtPlaca;
     }
 }
