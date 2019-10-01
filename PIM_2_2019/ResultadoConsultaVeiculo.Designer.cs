@@ -63,7 +63,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(239, 370);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(79, 30);
-            this.btnCancelar.TabIndex = 32;
+            this.btnCancelar.TabIndex = 42;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.Button2_Click);
@@ -73,7 +73,7 @@
             this.btnFinalizar.Location = new System.Drawing.Point(67, 370);
             this.btnFinalizar.Name = "btnFinalizar";
             this.btnFinalizar.Size = new System.Drawing.Size(79, 30);
-            this.btnFinalizar.TabIndex = 31;
+            this.btnFinalizar.TabIndex = 41;
             this.btnFinalizar.Text = "Finalizar";
             this.btnFinalizar.UseVisualStyleBackColor = true;
             this.btnFinalizar.Click += new System.EventHandler(this.Button1_Click);

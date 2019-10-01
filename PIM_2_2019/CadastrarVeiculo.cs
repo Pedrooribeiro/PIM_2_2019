@@ -43,13 +43,18 @@ namespace PrototipoTelas
             veiculo.cadastrarVeiculo();
 
 
-            if (MessageBox.Show("Tem certeza que deseja cadastrar o veículo?", "Confirmação de Cadastro", MessageBoxButtons.YesNo) == DialogResult.Yes) {            
-                MessageBox.Show("Veículo cadastrado com sucesso");
-                this.Close();
-            }
-            else
+            if (veiculo.Passou == true)
             {
-                MessageBox.Show("Cancelado com sucesso");
+                if (MessageBox.Show("Tem certeza que deseja cadastrar um novo veiculo?", "Confirmação Veiculo", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    MessageBox.Show("Veiculo cadastrado com sucesso");
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Cancelado com sucesso");
+                    this.Close();
+                }
             }
         }
 

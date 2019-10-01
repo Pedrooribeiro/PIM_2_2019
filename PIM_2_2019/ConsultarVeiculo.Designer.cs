@@ -82,7 +82,7 @@
             this.txtPlaca.Mask = "aaa-0000";
             this.txtPlaca.Name = "txtPlaca";
             this.txtPlaca.Size = new System.Drawing.Size(100, 20);
-            this.txtPlaca.TabIndex = 7;
+            this.txtPlaca.TabIndex = 4;
             // 
             // ConsultarVeiculo
             // 

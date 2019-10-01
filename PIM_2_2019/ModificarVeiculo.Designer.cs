@@ -48,7 +48,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtPlacaConsultar = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnConsultar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label2
@@ -66,35 +66,35 @@
             this.txtTipoCombustivel.Location = new System.Drawing.Point(360, 401);
             this.txtTipoCombustivel.Name = "txtTipoCombustivel";
             this.txtTipoCombustivel.Size = new System.Drawing.Size(100, 20);
-            this.txtTipoCombustivel.TabIndex = 41;
+            this.txtTipoCombustivel.TabIndex = 36;
             // 
             // txtMotorizacao
             // 
             this.txtMotorizacao.Location = new System.Drawing.Point(360, 366);
             this.txtMotorizacao.Name = "txtMotorizacao";
             this.txtMotorizacao.Size = new System.Drawing.Size(100, 20);
-            this.txtMotorizacao.TabIndex = 40;
+            this.txtMotorizacao.TabIndex = 35;
             // 
             // txtAno
             // 
             this.txtAno.Location = new System.Drawing.Point(360, 327);
             this.txtAno.Name = "txtAno";
             this.txtAno.Size = new System.Drawing.Size(100, 20);
-            this.txtAno.TabIndex = 39;
+            this.txtAno.TabIndex = 34;
             // 
             // txtMarca
             // 
             this.txtMarca.Location = new System.Drawing.Point(360, 289);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(100, 20);
-            this.txtMarca.TabIndex = 38;
+            this.txtMarca.TabIndex = 33;
             // 
             // txtModelo
             // 
             this.txtModelo.Location = new System.Drawing.Point(360, 255);
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(100, 20);
-            this.txtModelo.TabIndex = 37;
+            this.txtModelo.TabIndex = 32;
             // 
             // label9
             // 
@@ -178,7 +178,7 @@
             this.button1.Location = new System.Drawing.Point(148, 459);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(126, 40);
-            this.button1.TabIndex = 42;
+            this.button1.TabIndex = 37;
             this.button1.Text = "Modificar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
@@ -188,7 +188,7 @@
             this.button2.Location = new System.Drawing.Point(334, 459);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(126, 40);
-            this.button2.TabIndex = 43;
+            this.button2.TabIndex = 38;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.Button2_Click);
@@ -199,7 +199,7 @@
             this.txtPlaca.Mask = "aaa-0000";
             this.txtPlaca.Name = "txtPlaca";
             this.txtPlaca.Size = new System.Drawing.Size(100, 20);
-            this.txtPlaca.TabIndex = 44;
+            this.txtPlaca.TabIndex = 31;
             // 
             // label1
             // 
@@ -217,7 +217,7 @@
             this.txtPlacaConsultar.Mask = "aaa-0000";
             this.txtPlacaConsultar.Name = "txtPlacaConsultar";
             this.txtPlacaConsultar.Size = new System.Drawing.Size(100, 20);
-            this.txtPlacaConsultar.TabIndex = 46;
+            this.txtPlacaConsultar.TabIndex = 28;
             // 
             // label3
             // 
@@ -228,15 +228,15 @@
             this.label3.Size = new System.Drawing.Size(0, 24);
             this.label3.TabIndex = 47;
             // 
-            // button3
+            // btnConsultar
             // 
-            this.button3.Location = new System.Drawing.Point(237, 122);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(126, 40);
-            this.button3.TabIndex = 48;
-            this.button3.Text = "Consultar";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnConsultar.Location = new System.Drawing.Point(237, 122);
+            this.btnConsultar.Name = "btnConsultar";
+            this.btnConsultar.Size = new System.Drawing.Size(126, 40);
+            this.btnConsultar.TabIndex = 29;
+            this.btnConsultar.Text = "Consultar";
+            this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.Click += new System.EventHandler(this.button3_Click);
             // 
             // ModificarVeiculo
             // 
@@ -244,7 +244,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(562, 515);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtPlacaConsultar);
             this.Controls.Add(this.label1);
@@ -293,6 +293,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MaskedTextBox txtPlacaConsultar;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnConsultar;
     }
 }

@@ -121,7 +121,7 @@ namespace PrototipoTelas
 
         private void Button21_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Tem certeza que desejar cadastrar o veículo ?","Cadastro", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("Tem certeza que desejar cadastrar o veículo?","Cadastro", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 MessageBox.Show("Veículo cadastrado com sucesso");
             }

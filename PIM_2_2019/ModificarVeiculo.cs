@@ -55,16 +55,19 @@ namespace PrototipoTelas
             veiculoModificar.Motorizacao = txtMotorizacao.Text;
             veiculoModificar.TipoCombustivel = txtTipoCombustivel.Text;
             veiculoModificar.modificarVeiculo();
-                   
-            if (MessageBox.Show("Tem certeza que deseja modificar o veículo?","Confirmação Modificação", MessageBoxButtons.YesNo) == DialogResult.Yes)
+
+            if (veiculoModificar.Passou == true)
             {
-                MessageBox.Show("Veículo modificado com sucesso");
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Modificação cancelada com sucesso");
-                this.Close();
+                if (MessageBox.Show("Tem certeza que deseja cadastrar um novo seguro?", "Confirmação Seguro", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    MessageBox.Show("Seguro cadastrado com sucesso");
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Cancelado com sucesso");
+                    this.Close();
+                }
             }
         }
 
@@ -76,7 +79,7 @@ namespace PrototipoTelas
         private void button3_Click(object sender, EventArgs e)
         {
             Veiculo veiculoConsultar = new Veiculo();
-            veiculoConsultar.Placa = txtPlacaConsultar.Text;
+            veiculoConsultar.PlacaConsultada = txtPlacaConsultar.Text;
             veiculoConsultar.consultarVeiculo();
 
             txtCor.Text = veiculoConsultar.Cor;
@@ -87,7 +90,11 @@ namespace PrototipoTelas
             txtMotorizacao.Text = veiculoConsultar.Motorizacao;
             txtTipoCombustivel.Text = veiculoConsultar.TipoCombustivel;
 
-            txtEnabled(true);
+            if (veiculoConsultar.Passou == true)
+            {
+                txtPlacaConsultar.Enabled = false;
+                txtEnabled(true);
+            }
         }
     }
 }

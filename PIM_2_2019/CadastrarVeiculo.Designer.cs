@@ -137,7 +137,7 @@
             this.txtModelo.Location = new System.Drawing.Point(184, 143);
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(100, 20);
-            this.txtModelo.TabIndex = 9;
+            this.txtModelo.TabIndex = 4;
             this.txtModelo.TextChanged += new System.EventHandler(this.TextBox3_TextChanged);
             // 
             // txtMarca
@@ -145,7 +145,7 @@
             this.txtMarca.Location = new System.Drawing.Point(184, 180);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(100, 20);
-            this.txtMarca.TabIndex = 10;
+            this.txtMarca.TabIndex = 5;
             this.txtMarca.TextChanged += new System.EventHandler(this.TextBox4_TextChanged);
             // 
             // txtAno
@@ -153,7 +153,7 @@
             this.txtAno.Location = new System.Drawing.Point(184, 218);
             this.txtAno.Name = "txtAno";
             this.txtAno.Size = new System.Drawing.Size(100, 20);
-            this.txtAno.TabIndex = 11;
+            this.txtAno.TabIndex = 6;
             this.txtAno.TextChanged += new System.EventHandler(this.TextBox5_TextChanged);
             // 
             // txtMotorizacao
@@ -161,7 +161,7 @@
             this.txtMotorizacao.Location = new System.Drawing.Point(184, 254);
             this.txtMotorizacao.Name = "txtMotorizacao";
             this.txtMotorizacao.Size = new System.Drawing.Size(100, 20);
-            this.txtMotorizacao.TabIndex = 12;
+            this.txtMotorizacao.TabIndex = 7;
             this.txtMotorizacao.TextChanged += new System.EventHandler(this.TextBox6_TextChanged);
             // 
             // txtTipoCombustivel
@@ -169,7 +169,7 @@
             this.txtTipoCombustivel.Location = new System.Drawing.Point(184, 289);
             this.txtTipoCombustivel.Name = "txtTipoCombustivel";
             this.txtTipoCombustivel.Size = new System.Drawing.Size(100, 20);
-            this.txtTipoCombustivel.TabIndex = 13;
+            this.txtTipoCombustivel.TabIndex = 8;
             this.txtTipoCombustivel.TextChanged += new System.EventHandler(this.TextBox7_TextChanged);
             // 
             // btnCadastrar
@@ -177,17 +177,17 @@
             this.btnCadastrar.Location = new System.Drawing.Point(52, 345);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(79, 30);
-            this.btnCadastrar.TabIndex = 14;
+            this.btnCadastrar.TabIndex = 9;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.Button1_Click);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(184, 345);
+            this.btnCancelar.Location = new System.Drawing.Point(205, 345);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(79, 30);
-            this.btnCancelar.TabIndex = 15;
+            this.btnCancelar.TabIndex = 10;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.Button2_Click);
@@ -209,7 +209,7 @@
             this.txtPlaca.Mask = "aaa-0000";
             this.txtPlaca.Name = "txtPlaca";
             this.txtPlaca.Size = new System.Drawing.Size(100, 20);
-            this.txtPlaca.TabIndex = 17;
+            this.txtPlaca.TabIndex = 3;
             // 
             // CadastrarVeiculo
             // 

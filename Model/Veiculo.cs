@@ -69,14 +69,21 @@ namespace Model
             set { tipoCombustivel = value; }
         }
 
-        private String placaConsultada;
+        private string placaConsultada;
 
-        public String PlacaConsultada
+        public string PlacaConsultada
         {
             get { return placaConsultada; }
             set { placaConsultada = value; }
         }
 
+        private Boolean passou;
+
+        public Boolean Passou
+        {
+            get { return passou; }
+            set { passou = value; }
+        }
 
         public Veiculo()
         {
@@ -97,13 +104,15 @@ namespace Model
                 cmdCadastrar.Parameters.AddWithValue("@tipoCombustivel", this.tipoCombustivel);
                 cmdCadastrar.Connection = dbConnection.getSqlConn();
                 cmdCadastrar.ExecuteNonQuery();
-             }
+            }
             catch (System.Data.SqlClient.SqlException sqlException)
             {
                 MessageBox.Show("Erro ao cadastrar! Campos vazios ou preenchidos incorretamente, tente novamente.", "Erro");
+                passou = false;
             }
             finally
             {
+                passou = true;
                 dbConnection.close();
             }
         }
@@ -112,8 +121,8 @@ namespace Model
             try
             {
                 dbConnection.open();
-                SqlCommand cmdConsultar = new SqlCommand("SELECT * FROM veiculos WHERE placa = @placa");
-                cmdConsultar.Parameters.AddWithValue("@placa", this.placa);
+                SqlCommand cmdConsultar = new SqlCommand("SELECT * FROM veiculos WHERE placa = @placaConsultada");
+                cmdConsultar.Parameters.AddWithValue("@placaConsultada", this.placaConsultada);
                 cmdConsultar.Connection = dbConnection.getSqlConn();
                 SqlDataReader dr = cmdConsultar.ExecuteReader();
                 while(dr.Read()) {
@@ -127,10 +136,13 @@ namespace Model
                 }
             } catch (System.Data.SqlClient.SqlException sqlException)
             {
+               System.Windows.Forms.MessageBox.Show(sqlException.Message);
                MessageBox.Show("Erro ao consultar! Item não localizado, tente novamente", "Erro");
+               passou = false;
             } finally
             {
                 dbConnection.close();
+                passou = true;
             }
         }
 
