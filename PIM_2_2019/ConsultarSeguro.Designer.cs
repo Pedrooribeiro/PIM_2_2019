@@ -37,7 +37,8 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(281, 161);
+            this.btnCancelar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnCancelar.Location = new System.Drawing.Point(201, 187);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(94, 35);
             this.btnCancelar.TabIndex = 44;
@@ -47,9 +48,10 @@
             // 
             // label10
             // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(131, 28);
+            this.label10.Location = new System.Drawing.Point(73, 32);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(172, 24);
             this.label10.TabIndex = 32;
@@ -57,7 +59,8 @@
             // 
             // btnConsultar
             // 
-            this.btnConsultar.Location = new System.Drawing.Point(81, 161);
+            this.btnConsultar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnConsultar.Location = new System.Drawing.Point(60, 187);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(94, 35);
             this.btnConsultar.TabIndex = 43;
@@ -67,9 +70,10 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(104, 104);
+            this.label1.Location = new System.Drawing.Point(57, 107);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 17);
             this.label1.TabIndex = 21;
@@ -77,7 +81,8 @@
             // 
             // txtPlaca
             // 
-            this.txtPlaca.Location = new System.Drawing.Point(275, 104);
+            this.txtPlaca.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtPlaca.Location = new System.Drawing.Point(197, 107);
             this.txtPlaca.Mask = "aaa-0000";
             this.txtPlaca.Name = "txtPlaca";
             this.txtPlaca.Size = new System.Drawing.Size(100, 20);
@@ -88,7 +93,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
-            this.ClientSize = new System.Drawing.Size(423, 253);
+            this.ClientSize = new System.Drawing.Size(348, 302);
             this.Controls.Add(this.txtPlaca);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.label10);
@@ -96,6 +101,7 @@
             this.Controls.Add(this.label1);
             this.Name = "ConsultarSeguro";
             this.Text = "ConsultarSeguro";
+            this.Load += new System.EventHandler(this.ConsultarSeguro_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -944,6 +944,7 @@
             // 
             // button51
             // 
+            this.button51.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button51.Location = new System.Drawing.Point(640, 2);
             this.button51.Name = "button51";
             this.button51.Size = new System.Drawing.Size(55, 24);

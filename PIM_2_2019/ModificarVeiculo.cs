@@ -98,5 +98,10 @@ namespace PrototipoTelas
                 txtEnabled(true);
             }
         }
+
+        private void ModificarVeiculo_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -46,5 +46,10 @@ namespace PrototipoTelas
 
             this.Close();
         }
+
+        private void ConsultarSeguro_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

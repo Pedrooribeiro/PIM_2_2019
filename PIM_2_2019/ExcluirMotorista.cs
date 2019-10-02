@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Model;
 
 namespace PrototipoTelas
 {
@@ -15,6 +16,12 @@ namespace PrototipoTelas
         public ExcluirMotorista()
         {
             InitializeComponent();
+            txtNomeCompleto.Enabled = false;
+            txtRg.Enabled = false;
+            txtCpf.Enabled = false;
+            txtCnh.Enabled = false;
+            txtVencimentoCnh.Enabled = false;
+            txtEmpresa.Enabled = false;
         }
 
         private void Label1_Click(object sender, EventArgs e)
@@ -24,19 +31,43 @@ namespace PrototipoTelas
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Tem certeza que deseja excluir o motorista?","Confirmação exclusão", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                MessageBox.Show("Motorista excluído com sucesso");
-            }
-            else
-            {
-                MessageBox.Show("Operação cancelada");
-            }
         }
 
         private void Button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            Motorista motoristaConsultar = new Motorista();
+            motoristaConsultar.CpfConsultado = txtCpfConsultado.Text;
+            motoristaConsultar.consultarMotorista();
+
+            txtNomeCompleto.Text = motoristaConsultar.NomeCompleto;
+            txtRg.Text = motoristaConsultar.Rg;
+            txtCpf.Text = motoristaConsultar.Cpf;
+            txtCnh.Text = motoristaConsultar.Cnh;
+            txtVencimentoCnh.Text = motoristaConsultar.VencimentoCnh;
+            txtEmpresa.Text = motoristaConsultar.Empresa;
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            Motorista motoristaExcluir = new Motorista();
+            motoristaExcluir.CpfConsultado = txtCpfConsultado.Text;
+            motoristaExcluir.excluirMotorista();
+
+            if (MessageBox.Show("Tem certeza que deseja excluir o motorista?", "Confirmação exclusão", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                MessageBox.Show("Motorista excluído com sucesso");
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Operação cancelada com sucesso");
+                this.Close();
+            }
         }
     }
 }

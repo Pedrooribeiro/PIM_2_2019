@@ -38,5 +38,10 @@ namespace PrototipoTelas
         {
             this.Close();
         }
+
+        private void CadastrarGasto_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
