@@ -29,18 +29,20 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNomeCompleto = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnCadastrar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.txtRg = new System.Windows.Forms.MaskedTextBox();
+            this.txtCpf = new System.Windows.Forms.MaskedTextBox();
+            this.txtCnh = new System.Windows.Forms.MaskedTextBox();
+            this.txtVencimentoCnh = new System.Windows.Forms.MaskedTextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtEmpresa = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -53,12 +55,12 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nome Completo";
             // 
-            // textBox1
+            // txtNomeCompleto
             // 
-            this.textBox1.Location = new System.Drawing.Point(243, 137);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtNomeCompleto.Location = new System.Drawing.Point(243, 137);
+            this.txtNomeCompleto.Name = "txtNomeCompleto";
+            this.txtNomeCompleto.Size = new System.Drawing.Size(100, 20);
+            this.txtNomeCompleto.TabIndex = 1;
             // 
             // label2
             // 
@@ -110,72 +112,93 @@
             this.label6.TabIndex = 6;
             this.label6.Text = "Vencimento CNH";
             // 
-            // textBox2
+            // btnCadastrar
             // 
-            this.textBox2.Location = new System.Drawing.Point(243, 174);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 7;
+            this.btnCadastrar.Location = new System.Drawing.Point(105, 355);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(86, 34);
+            this.btnCadastrar.TabIndex = 7;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.Button1_Click);
             // 
-            // textBox3
+            // btnCancelar
             // 
-            this.textBox3.Location = new System.Drawing.Point(243, 209);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 8;
+            this.btnCancelar.Location = new System.Drawing.Point(257, 355);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(86, 34);
+            this.btnCancelar.TabIndex = 8;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.Button2_Click);
             // 
-            // textBox4
+            // txtRg
             // 
-            this.textBox4.Location = new System.Drawing.Point(243, 244);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 9;
+            this.txtRg.Location = new System.Drawing.Point(243, 177);
+            this.txtRg.Mask = "00.000.000-0";
+            this.txtRg.Name = "txtRg";
+            this.txtRg.Size = new System.Drawing.Size(100, 20);
+            this.txtRg.TabIndex = 2;
             // 
-            // textBox5
+            // txtCpf
             // 
-            this.textBox5.Location = new System.Drawing.Point(243, 276);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 10;
+            this.txtCpf.Location = new System.Drawing.Point(243, 212);
+            this.txtCpf.Mask = "000.000.000-00";
+            this.txtCpf.Name = "txtCpf";
+            this.txtCpf.Size = new System.Drawing.Size(100, 20);
+            this.txtCpf.TabIndex = 3;
             // 
-            // button1
+            // txtCnh
             // 
-            this.button1.Location = new System.Drawing.Point(105, 333);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(86, 34);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Cadastrar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            this.txtCnh.Location = new System.Drawing.Point(243, 244);
+            this.txtCnh.Name = "txtCnh";
+            this.txtCnh.Size = new System.Drawing.Size(100, 20);
+            this.txtCnh.TabIndex = 4;
             // 
-            // button2
+            // txtVencimentoCnh
             // 
-            this.button2.Location = new System.Drawing.Point(243, 333);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(86, 34);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.Button2_Click);
+            this.txtVencimentoCnh.Location = new System.Drawing.Point(243, 276);
+            this.txtVencimentoCnh.Name = "txtVencimentoCnh";
+            this.txtVencimentoCnh.Size = new System.Drawing.Size(100, 20);
+            this.txtVencimentoCnh.TabIndex = 5;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(102, 308);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(64, 17);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "Empresa";
+            // 
+            // txtEmpresa
+            // 
+            this.txtEmpresa.Location = new System.Drawing.Point(243, 308);
+            this.txtEmpresa.Name = "txtEmpresa";
+            this.txtEmpresa.Size = new System.Drawing.Size(100, 20);
+            this.txtEmpresa.TabIndex = 6;
             // 
             // CadastrarMotorista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
-            this.ClientSize = new System.Drawing.Size(455, 459);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.ClientSize = new System.Drawing.Size(438, 424);
+            this.Controls.Add(this.txtEmpresa);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txtVencimentoCnh);
+            this.Controls.Add(this.txtCnh);
+            this.Controls.Add(this.txtCpf);
+            this.Controls.Add(this.txtRg);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtNomeCompleto);
             this.Controls.Add(this.label1);
             this.Name = "CadastrarMotorista";
             this.Text = " CadastrarMotorista";
@@ -187,17 +210,19 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNomeCompleto;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnCadastrar;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.MaskedTextBox txtRg;
+        private System.Windows.Forms.MaskedTextBox txtCpf;
+        private System.Windows.Forms.MaskedTextBox txtCnh;
+        private System.Windows.Forms.MaskedTextBox txtVencimentoCnh;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.MaskedTextBox txtEmpresa;
     }
 }

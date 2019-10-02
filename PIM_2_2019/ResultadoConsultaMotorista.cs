@@ -15,6 +15,12 @@ namespace PrototipoTelas
         public ResultadoConsultaMotorista()
         {
             InitializeComponent();
+            txtNomeCompleto.Enabled = false;
+            txtRg.Enabled = false;
+            txtCpf.Enabled = false;
+            txtCnh.Enabled = false;
+            txtVencimentoCnh.Enabled = false;
+            txtEmpresa.Enabled = false;
         }
 
         private void Button2_Click(object sender, EventArgs e)
@@ -24,13 +30,15 @@ namespace PrototipoTelas
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Tem certeza que deseja salvar o relatório ? ", "Confirmação", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("Tem certeza que deseja finalizar? ", "Confirmação", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                MessageBox.Show("Relatório salvo com sucesso em 'Meus documentos'");
+                MessageBox.Show("Consulta finalizada");
+                this.Close();
             }
             else
             {
-                MessageBox.Show("Operação cancelada");
+                MessageBox.Show("Consulta cancelada");
+                this.Close();
             }
         }
     }
