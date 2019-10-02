@@ -28,31 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnConsultar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtPlaca = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
-            // button2
+            // btnCancelar
             // 
-            this.button2.Location = new System.Drawing.Point(263, 223);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 35);
-            this.button2.TabIndex = 41;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.Button2_Click);
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(247, 123);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(130, 20);
-            this.textBox2.TabIndex = 33;
+            this.btnCancelar.Location = new System.Drawing.Point(281, 161);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(94, 35);
+            this.btnCancelar.TabIndex = 44;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.Button2_Click);
             // 
             // label10
             // 
@@ -64,55 +55,44 @@
             this.label10.TabIndex = 32;
             this.label10.Text = "Consultar Seguro";
             // 
-            // label2
+            // btnConsultar
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(78, 123);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 17);
-            this.label2.TabIndex = 24;
-            this.label2.Text = "Seguradora";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(90, 223);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 35);
-            this.button1.TabIndex = 23;
-            this.button1.Text = "Consultar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(247, 91);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(130, 20);
-            this.textBox1.TabIndex = 22;
+            this.btnConsultar.Location = new System.Drawing.Point(81, 161);
+            this.btnConsultar.Name = "btnConsultar";
+            this.btnConsultar.Size = new System.Drawing.Size(94, 35);
+            this.btnConsultar.TabIndex = 43;
+            this.btnConsultar.Text = "Consultar";
+            this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.Click += new System.EventHandler(this.Button1_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(76, 94);
+            this.label1.Location = new System.Drawing.Point(104, 104);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 17);
+            this.label1.Size = new System.Drawing.Size(43, 17);
             this.label1.TabIndex = 21;
-            this.label1.Text = "Número Apólice";
+            this.label1.Text = "Placa";
+            // 
+            // txtPlaca
+            // 
+            this.txtPlaca.Location = new System.Drawing.Point(275, 104);
+            this.txtPlaca.Mask = "aaa-0000";
+            this.txtPlaca.Name = "txtPlaca";
+            this.txtPlaca.Size = new System.Drawing.Size(100, 20);
+            this.txtPlaca.TabIndex = 42;
             // 
             // ConsultarSeguro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
-            this.ClientSize = new System.Drawing.Size(440, 322);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox2);
+            this.ClientSize = new System.Drawing.Size(423, 253);
+            this.Controls.Add(this.txtPlaca);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.label1);
             this.Name = "ConsultarSeguro";
             this.Text = "ConsultarSeguro";
@@ -123,12 +103,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.MaskedTextBox txtPlaca;
     }
 }

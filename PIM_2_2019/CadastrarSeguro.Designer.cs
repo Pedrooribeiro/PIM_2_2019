@@ -169,6 +169,7 @@
             this.label10.Size = new System.Drawing.Size(172, 24);
             this.label10.TabIndex = 11;
             this.label10.Text = "Cadastrar Seguro";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // txtSeguradora
             // 

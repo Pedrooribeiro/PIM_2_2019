@@ -21,7 +21,7 @@ namespace PrototipoTelas
         private void Button1_Click(object sender, EventArgs e)
         {
             Veiculo veiculo = new Veiculo();
-            veiculo.Placa = txtPlaca.Text;
+            veiculo.PlacaConsultada = txtPlaca.Text;
             veiculo.consultarVeiculo();
 
             ResultadoConsultaVeiculo ResultadoConsultaVeiculo2 = new ResultadoConsultaVeiculo();

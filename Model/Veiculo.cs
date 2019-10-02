@@ -164,8 +164,10 @@ namespace Model
             } catch (System.Data.SqlClient.SqlException sqlException)
             {
                 MessageBox.Show("Erro ao modificar! Item não localizado, campos vazios ou preenchidos incorretamente, tente novamente.", "Erro");
+                passou = false;
             } finally
             {
+                passou = true;
                 dbConnection.close();
             }
         }
@@ -180,8 +182,10 @@ namespace Model
             } catch (System.Data.SqlClient.SqlException sqlException)
             {
                 MessageBox.Show("Erro ao excluir! Item não localizados, campos vazios ou preenchidos incorretamente, tente novamente.", "Erro");
+                passou = false;
             } finally
             {
+                passou = true;
                 dbConnection.close();
             }
         }

@@ -15,6 +15,16 @@ namespace PrototipoTelas
         public ResultadoConsultaSeguro()
         {
             InitializeComponent();
+            txtNumApolice.Enabled = false;
+            txtSeguradora.Enabled = false;
+            txtSegurado.Enabled = false;
+            txtCorretor.Enabled = false;
+            txtDataInicio.Enabled = false;
+            txtDataVencimento.Enabled = false;
+            txtValorTotal.Enabled = false;
+            txtNumParcela.Enabled = false;
+            txtSituacao.Enabled = false;
+            txtPlaca.Enabled = false;
         }
 
         private void Button2_Click(object sender, EventArgs e)
@@ -24,13 +34,15 @@ namespace PrototipoTelas
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Tem certeza que deseja salvar o relatório ? ", "Confirmação", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("Tem certeza que deseja finalizar? ", "Confirmação", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                MessageBox.Show("Relatório salvo com sucesso em 'Meus documentos'");
+                MessageBox.Show("Consulta finalizada");
+                this.Close();
             }
             else
             {
-                MessageBox.Show("Operação cancelada");
+                MessageBox.Show("Consulta cancelada");
+                this.Close();
             }
         }
     }

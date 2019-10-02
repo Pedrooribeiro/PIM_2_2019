@@ -60,7 +60,8 @@ namespace PrototipoTelas
         private void button3_Click(object sender, EventArgs e)
         {
             Veiculo veiculoConsultar = new Veiculo();
-            veiculoConsultar.Placa = txtPlacaConsultada.Text;
+
+            veiculoConsultar.PlacaConsultada = txtPlacaConsultada.Text;
             veiculoConsultar.consultarVeiculo();
 
             txtCor.Text = veiculoConsultar.Cor;

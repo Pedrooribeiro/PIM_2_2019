@@ -93,6 +93,15 @@ namespace Model
             set { placaSeguro = value; }
         }
 
+        private string placaConsultada;
+
+        public string PlacaConsultada
+        {
+            get { return placaConsultada; }
+            set { placaConsultada = value; }
+        }
+
+
         private Boolean passou;
 
         public Boolean Passou
@@ -112,7 +121,7 @@ namespace Model
             try
             {
                 dbConnection.open();
-                SqlCommand cmdCadastrar = new SqlCommand("INSERT INTO seguros (numero_apolice,seguraora,segurado,corretor,data_inicio,data_vencimento,valor_total,numero_parcelas,situacao,placa_seguro) VALUES (@numeroApolice,@seguradora,@segurado,@corretor,@dataInicio,@dataVencimento,@valorTotal,@numeroParcelas,@situacao,@placaSeguro)");
+                SqlCommand cmdCadastrar = new SqlCommand("INSERT INTO seguros (numero_apolice,seguradora,segurado,corretor,data_inicio,data_vencimento,valor_total,numero_parcelas,situacao,placa_seguro) VALUES (@numeroApolice,@seguradora,@segurado,@corretor,@dataInicio,@dataVencimento,@valorTotal,@numeroParcelas,@situacao,@placaSeguro)");
                 cmdCadastrar.Parameters.AddWithValue("@numeroApolice", this.numeroApolice);
                 cmdCadastrar.Parameters.AddWithValue("@seguradora", this.seguradora);
                 cmdCadastrar.Parameters.AddWithValue("@segurado", this.segurado);
@@ -138,8 +147,90 @@ namespace Model
             }
         }
 
-        public void consultarSeguro() { }
-        public void modificarSeguro() { }
-        public void excluirSeguro() { }
+        public void consultarSeguro() {
+            try
+            {
+                dbConnection.open();
+                SqlCommand cmdConsultar = new SqlCommand("SELECT * FROM seguros WHERE placa_seguro = @placaConsultada");
+                cmdConsultar.Parameters.AddWithValue("@placaConsultada", this.placaConsultada);
+                cmdConsultar.Connection = dbConnection.getSqlConn();
+                SqlDataReader dr = cmdConsultar.ExecuteReader();
+                while (dr.Read())
+                {
+                    this.numeroApolice = dr["numero_apolice"].ToString();
+                    this.seguradora = dr["seguradora"].ToString();
+                    this.segurado = dr["segurado"].ToString();
+                    this.corretor = dr["corretor"].ToString();
+                    this.dataInicio = dr["data_inicio"].ToString();
+                    this.dataVencimento = dr["data_vencimento"].ToString();
+                    this.valorTotal = double.Parse(dr["valor_total"].ToString());
+                    this.numeroParcelas = dr["numero_parcelas"].ToString();
+                    this.situacao = dr["situacao"].ToString();
+                    this.placaSeguro = dr["placa_seguro"].ToString();
+                }
+            }
+            catch (System.Data.SqlClient.SqlException sqlException)
+            {
+                MessageBox.Show("Erro ao consultar! Item não localizado, tente novamente", "Erro");
+                passou = false;
+            }
+            finally
+            {
+                dbConnection.close();
+                passou = true;
+            }
+        }
+        public void modificarSeguro() {
+            try
+            {
+                dbConnection.open();
+                SqlCommand cmdModificar = new SqlCommand("UPDATE seguros SET numero_apolice = @numeroApolice, seguradora = @seguradora, segurado = @segurado, corretor = @corretor, data_inicio = @dataInicio, data_vencimento = @dataVencimento, valor_total = @valorTotal, numero_parcelas = @numeroParcelas, situacao = @situacao, placa_seguro = @placaSeguro WHERE placa_seguro = @placaConsultada");
+                cmdModificar.Parameters.AddWithValue("@numeroApolice", this.numeroApolice);
+                cmdModificar.Parameters.AddWithValue("@seguradora", this.seguradora);
+                cmdModificar.Parameters.AddWithValue("@segurado", this.segurado);
+                cmdModificar.Parameters.AddWithValue("@corretor", this.corretor);
+                cmdModificar.Parameters.AddWithValue("@dataInicio", this.dataInicio);
+                cmdModificar.Parameters.AddWithValue("@dataVencimento", this.dataVencimento);
+                cmdModificar.Parameters.AddWithValue("@valorTotal", this.valorTotal);
+                cmdModificar.Parameters.AddWithValue("@numeroParcelas", this.numeroParcelas);
+                cmdModificar.Parameters.AddWithValue("@situacao", this.situacao);
+                cmdModificar.Parameters.AddWithValue("@placaSeguro", this.placaSeguro);
+                cmdModificar.Parameters.AddWithValue("@placaConsultada", this.placaConsultada);
+                cmdModificar.Connection = dbConnection.getSqlConn();
+                cmdModificar.ExecuteNonQuery();
+            }
+            catch (System.Data.SqlClient.SqlException sqlException)
+            {
+                MessageBox.Show("Erro ao modificar! Item não localizado, campos vazios ou preenchidos incorretamente, tente novamente.", "Erro");
+                passou = false;
+            }
+            finally
+            {
+                passou = true;
+                dbConnection.close();
+            }
+        }
+
+        public void excluirSeguro() {
+            try
+            {
+                dbConnection.open();
+                SqlCommand cmdExcluir = new SqlCommand("DELETE FROM seguros WHERE placa_seguro = @placaConsultada");
+                cmdExcluir.Parameters.AddWithValue("@placaConsultada", this.placaConsultada);
+                cmdExcluir.Connection = dbConnection.getSqlConn();
+                cmdExcluir.ExecuteNonQuery();
+            }
+            catch (System.Data.SqlClient.SqlException sqlException)
+            {
+                System.Windows.Forms.MessageBox.Show(sqlException.Message);
+                MessageBox.Show("Erro ao excluir! Item não localizados, campos vazios ou preenchidos incorretamente, tente novamente.", "Erro");
+                passou = false;
+            }
+            finally
+            {
+                passou = true;
+                dbConnection.close();
+            }
+        }
     }
 }

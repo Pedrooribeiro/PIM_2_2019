@@ -46,6 +46,7 @@ namespace PrototipoTelas
         private void Button1_Click(object sender, EventArgs e)
         {
             Veiculo veiculoModificar = new Veiculo();
+
             veiculoModificar.PlacaConsultada = txtPlacaConsultar.Text;
             veiculoModificar.Cor = txtCor.Text;
             veiculoModificar.Placa = txtPlaca.Text;
@@ -54,13 +55,14 @@ namespace PrototipoTelas
             veiculoModificar.AnoFabricacao = Convert.ToInt32(txtAno.Text);
             veiculoModificar.Motorizacao = txtMotorizacao.Text;
             veiculoModificar.TipoCombustivel = txtTipoCombustivel.Text;
+
             veiculoModificar.modificarVeiculo();
 
             if (veiculoModificar.Passou == true)
             {
-                if (MessageBox.Show("Tem certeza que deseja cadastrar um novo seguro?", "Confirmação Seguro", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (MessageBox.Show("Tem certeza que deseja modificar o veículo?", "Confirmação Veiculo", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    MessageBox.Show("Seguro cadastrado com sucesso");
+                    MessageBox.Show("Veiculo modificado com sucesso");
                     this.Close();
                 }
                 else
