@@ -27,7 +27,6 @@ namespace PrototipoTelas
 
         private void Button1_Click(object sender, EventArgs e)
         {
-
             Viagem viagem = new Viagem();
             viagem.PlacaConsultada = txtPlacaConsultada.Text;
             viagem.consultarViagem();

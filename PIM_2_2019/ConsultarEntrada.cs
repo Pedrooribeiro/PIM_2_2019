@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Model;
 
 namespace PrototipoTelas
 {
@@ -19,8 +20,18 @@ namespace PrototipoTelas
 
         private void Button1_Click(object sender, EventArgs e)
         {
+            EntradaSaida entradaSaida = new EntradaSaida();
+            entradaSaida.PlacaConsultada = txtPlacaConsultada.Text;
+            entradaSaida.consultarDatas();
+
             ResultadoConsultaEntrada ResultadoConsultaEntrada2 = new ResultadoConsultaEntrada();
+
+            ResultadoConsultaEntrada2.dgvEntrada.DataSource = entradaSaida.DataTableEntrada;
+            ResultadoConsultaEntrada2.dgvSaida.DataSource = entradaSaida.DataTableSaida;
+
             ResultadoConsultaEntrada2.ShowDialog();
+
+            this.Close();
         }
 
         private void Button2_Click(object sender, EventArgs e)

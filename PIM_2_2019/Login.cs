@@ -15,6 +15,7 @@ namespace PrototipoTelas
         public login()
         {
             InitializeComponent();
+            WindowState = FormWindowState.Maximized;
         }
 
         private void Label3_Click(object sender, EventArgs e)

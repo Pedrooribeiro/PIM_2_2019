@@ -27,9 +27,11 @@ namespace PrototipoTelas
         bool isMenuOpen13 = false;
         bool isMenuOpen14 = false;
         bool isMenuOpen15 = false;
+
         public Crud()
         {
             InitializeComponent();
+            WindowState = FormWindowState.Maximized;
         }
 
         private void Label1_Click(object sender, EventArgs e)
@@ -283,7 +285,7 @@ namespace PrototipoTelas
         {
             if (isMenuOpen5)
             {
-                panel6.Width -= 370;
+                panel6.Width -= 400;
                 if (panel6.Width == 0)
                 {
                     timer1.Stop();
@@ -292,8 +294,8 @@ namespace PrototipoTelas
             }
             else if (!isMenuOpen5)
             {
-                panel6.Width += 370;
-                if (panel6.Width == 370)
+                panel6.Width += 400; 
+                if (panel6.Width == 400)
                 {
                     timer1.Stop();
                     isMenuOpen5 = true;
@@ -705,6 +707,11 @@ namespace PrototipoTelas
         {
             ConsultarAluguel ConsultarAlguel2 = new ConsultarAluguel();
             ConsultarAlguel2.ShowDialog();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -146,10 +146,11 @@
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(-1, -1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(112, 594);
+            this.panel1.Size = new System.Drawing.Size(112, 710);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // button16
             // 
@@ -515,17 +516,17 @@
             // 
             // button55
             // 
-            this.button55.Location = new System.Drawing.Point(122, 3);
+            this.button55.Location = new System.Drawing.Point(244, 3);
             this.button55.Name = "button55";
-            this.button55.Size = new System.Drawing.Size(116, 30);
+            this.button55.Size = new System.Drawing.Size(142, 30);
             this.button55.TabIndex = 4;
-            this.button55.Text = "Consultar";
+            this.button55.Text = "Consultar Entrada / Saída";
             this.button55.UseVisualStyleBackColor = true;
             this.button55.Click += new System.EventHandler(this.Button55_Click);
             // 
             // button29
             // 
-            this.button29.Location = new System.Drawing.Point(244, 3);
+            this.button29.Location = new System.Drawing.Point(122, 3);
             this.button29.Name = "button29";
             this.button29.Size = new System.Drawing.Size(116, 30);
             this.button29.TabIndex = 3;
