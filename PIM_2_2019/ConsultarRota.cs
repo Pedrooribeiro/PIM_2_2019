@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data;
+using System.Data.OleDb;
+using Model;
 
 namespace PrototipoTelas
 {
@@ -24,8 +27,18 @@ namespace PrototipoTelas
 
         private void Button1_Click(object sender, EventArgs e)
         {
+
+            Viagem viagem = new Viagem();
+            viagem.PlacaConsultada = txtPlacaConsultada.Text;
+            viagem.consultarViagem();
+            
             ResultadoConsultaRota ResultadoConsultaRota2 = new ResultadoConsultaRota();
+
+            ResultadoConsultaRota2.dgvDados.DataSource = viagem.DataTable;
+          
             ResultadoConsultaRota2.ShowDialog();
+
+            this.Close();
         }
     }
 }

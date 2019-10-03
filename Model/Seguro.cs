@@ -102,7 +102,7 @@ namespace Model
         }
 
 
-        private Boolean passou;
+        private Boolean passou = true;
 
         public Boolean Passou
         {
@@ -142,7 +142,6 @@ namespace Model
             }
             finally
             {
-                this.passou = true;
                 dbConnection.close();
             }
         }
@@ -177,7 +176,6 @@ namespace Model
             finally
             {
                 dbConnection.close();
-                passou = true;
             }
         }
         public void modificarSeguro() {
@@ -206,7 +204,6 @@ namespace Model
             }
             finally
             {
-                passou = true;
                 dbConnection.close();
             }
         }
@@ -228,7 +225,6 @@ namespace Model
             }
             finally
             {
-                passou = true;
                 dbConnection.close();
             }
         }

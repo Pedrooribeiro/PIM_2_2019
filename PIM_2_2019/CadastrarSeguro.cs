@@ -35,6 +35,7 @@ namespace PrototipoTelas
             seguro.PlacaSeguro = txtPlaca.Text;
 
             seguro.cadastrarSeguro();
+
             if(seguro.Passou == true)
             {
                 if (MessageBox.Show("Tem certeza que deseja cadastrar um novo seguro?", "Confirmação Seguro", MessageBoxButtons.YesNo) == DialogResult.Yes)

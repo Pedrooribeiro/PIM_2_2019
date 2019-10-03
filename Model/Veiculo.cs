@@ -77,7 +77,7 @@ namespace Model
             set { placaConsultada = value; }
         }
 
-        private Boolean passou;
+        private Boolean passou = true;
 
         public Boolean Passou
         {
@@ -142,7 +142,6 @@ namespace Model
             } finally
             {
                 dbConnection.close();
-                passou = true;
             }
         }
 
@@ -167,7 +166,6 @@ namespace Model
                 passou = false;
             } finally
             {
-                passou = true;
                 dbConnection.close();
             }
         }
@@ -185,7 +183,6 @@ namespace Model
                 passou = false;
             } finally
             {
-                passou = true;
                 dbConnection.close();
             }
         }

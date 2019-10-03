@@ -69,7 +69,7 @@ namespace Model
             set { cpfConsultado = value; }
         }
 
-        private Boolean passou;
+        private Boolean passou = true;
 
         public Boolean Passou
         {
@@ -104,7 +104,6 @@ namespace Model
             }
             finally
             {
-                passou = true;
                 dbConnection.close();
             }
         }
@@ -135,10 +134,52 @@ namespace Model
             finally
             {
                 dbConnection.close();
-                passou = true;
             }
         }
-        public Boolean modificarMotorista() { return true;  }
-        public Boolean excluirMotorista() { return true; }
+        public void modificarMotorista() {
+            try
+            {
+                dbConnection.open();
+                SqlCommand cmdModificar = new SqlCommand("UPDATE motoristas SET nome_completo = @nomeCompleto, rg = @rg, cpf = @cpf, cnh = @cnh, vencimento_cnh = @vencimentoCnh, empresa = @empresa WHERE cpf = @cpfConsultado");
+                cmdModificar.Parameters.AddWithValue("@nomeCompleto", this.nomeCompleto);
+                cmdModificar.Parameters.AddWithValue("@rg", this.rg);
+                cmdModificar.Parameters.AddWithValue("@cpf", this.cpf);
+                cmdModificar.Parameters.AddWithValue("@cnh", this.cnh);
+                cmdModificar.Parameters.AddWithValue("@vencimentoCnh", this.vencimentoCnh);
+                cmdModificar.Parameters.AddWithValue("@empresa", this.empresa);
+                cmdModificar.Parameters.AddWithValue("@cpfConsultado", this.cpfConsultado);
+                cmdModificar.Connection = dbConnection.getSqlConn();
+                cmdModificar.ExecuteNonQuery();
+            }
+            catch (System.Data.SqlClient.SqlException sqlException)
+            {
+                System.Windows.Forms.MessageBox.Show(sqlException.Message);
+                MessageBox.Show("Erro ao modificar! Item não localizado, campos vazios ou preenchidos incorretamente, tente novamente.", "Erro");
+                passou = false;
+            }
+            finally
+            {
+                dbConnection.close();
+            }
+        }
+        public void excluirMotorista() {
+            try
+            {
+                dbConnection.open();
+                SqlCommand cmdExcluir = new SqlCommand("DELETE FROM motoristas WHERE cpf = @cpfConsultado");
+                cmdExcluir.Parameters.AddWithValue("@cpfConsultado", this.cpfConsultado);
+                cmdExcluir.Connection = dbConnection.getSqlConn();
+                cmdExcluir.ExecuteNonQuery();
+            }
+            catch (System.Data.SqlClient.SqlException sqlException)
+            {
+                MessageBox.Show("Erro ao excluir! Item não localizados, campos vazios ou preenchidos incorretamente, tente novamente.", "Erro");
+                passou = false;
+            }
+            finally
+            {
+                dbConnection.close();
+            }
+        }
     }
 }
