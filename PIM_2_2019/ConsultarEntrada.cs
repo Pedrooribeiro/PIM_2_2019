@@ -28,10 +28,12 @@ namespace PrototipoTelas
 
             ResultadoConsultaEntrada2.dgvEntrada.DataSource = entradaSaida.DataTableEntrada;
             ResultadoConsultaEntrada2.dgvSaida.DataSource = entradaSaida.DataTableSaida;
-
-            ResultadoConsultaEntrada2.ShowDialog();
-
-            this.Close();
+            
+            if (entradaSaida.Passou == true)
+            {
+                ResultadoConsultaEntrada2.ShowDialog();
+                this.Close();
+            }
         }
 
         private void Button2_Click(object sender, EventArgs e)

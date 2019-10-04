@@ -305,26 +305,18 @@ namespace PrototipoTelas
 
         private void Button30_Click(object sender, EventArgs e)
         {
-            CadastrarGasto CadastrarGasto2 = new CadastrarGasto();
-            CadastrarGasto2.ShowDialog();
         }
 
         private void Button32_Click(object sender, EventArgs e)
         {
-                ContasPagar ContasPagar2 = new ContasPagar();
-                ContasPagar2.ShowDialog();
         }
 
         private void Button33_Click(object sender, EventArgs e)
         {
-            ContasReceber ContasReceber2 = new ContasReceber();
-            ContasReceber2.ShowDialog();
         }
 
         private void Button34_Click(object sender, EventArgs e)
-        {
-            GastoVeiculo GastoVeiculo2 = new GastoVeiculo();
-            GastoVeiculo2.ShowDialog();
+        {;
         }
 
         private void Button6_Click(object sender, EventArgs e)
@@ -357,7 +349,7 @@ namespace PrototipoTelas
 
         private void Button37_Click(object sender, EventArgs e)
         {
-            ExcluirPeca ExcluirPeca2 = new ExcluirPeca();
+            ModificarPeca ExcluirPeca2 = new ModificarPeca();
             ExcluirPeca2.ShowDialog();
         }
 

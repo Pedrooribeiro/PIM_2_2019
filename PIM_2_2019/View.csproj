@@ -68,12 +68,6 @@
     <Compile Include="CadastrarEntrada.Designer.cs">
       <DependentUpon>CadastrarEntrada.cs</DependentUpon>
     </Compile>
-    <Compile Include="CadastrarGasto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CadastrarGasto.Designer.cs">
-      <DependentUpon>CadastrarGasto.cs</DependentUpon>
-    </Compile>
     <Compile Include="CadastrarManutencao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,18 +206,6 @@
     <Compile Include="ConsultarVeiculo.Designer.cs">
       <DependentUpon>ConsultarVeiculo.cs</DependentUpon>
     </Compile>
-    <Compile Include="ContasPagar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ContasPagar.Designer.cs">
-      <DependentUpon>ContasPagar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ContasReceber.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ContasReceber.Designer.cs">
-      <DependentUpon>ContasReceber.cs</DependentUpon>
-    </Compile>
     <Compile Include="Crud.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -248,11 +230,11 @@
     <Compile Include="ExcluirMotorista.Designer.cs">
       <DependentUpon>ExcluirMotorista.cs</DependentUpon>
     </Compile>
-    <Compile Include="ExcluirPeca.cs">
+    <Compile Include="ModificarPeca.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ExcluirPeca.Designer.cs">
-      <DependentUpon>ExcluirPeca.cs</DependentUpon>
+    <Compile Include="ModificarPeca.Designer.cs">
+      <DependentUpon>ModificarPeca.cs</DependentUpon>
     </Compile>
     <Compile Include="ExcluirPneu.cs">
       <SubType>Form</SubType>
@@ -289,12 +271,6 @@
     </Compile>
     <Compile Include="ExcluirMulta.Designer.cs">
       <DependentUpon>ExcluirMulta.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GastoVeiculo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GastoVeiculo.Designer.cs">
-      <DependentUpon>GastoVeiculo.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -334,12 +310,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RelatorioGastoVeiculo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="RelatorioGastoVeiculo.Designer.cs">
-      <DependentUpon>RelatorioGastoVeiculo.cs</DependentUpon>
-    </Compile>
     <Compile Include="ResultadoConsultaAbastecimento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -421,9 +391,6 @@
     <EmbeddedResource Include="CadastrarEntrada.resx">
       <DependentUpon>CadastrarEntrada.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CadastrarGasto.resx">
-      <DependentUpon>CadastrarGasto.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CadastrarManutencao.resx">
       <DependentUpon>CadastrarManutencao.cs</DependentUpon>
     </EmbeddedResource>
@@ -493,12 +460,6 @@
     <EmbeddedResource Include="ConsultarVeiculo.resx">
       <DependentUpon>ConsultarVeiculo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ContasPagar.resx">
-      <DependentUpon>ContasPagar.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ContasReceber.resx">
-      <DependentUpon>ContasReceber.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Crud.resx">
       <DependentUpon>Crud.cs</DependentUpon>
     </EmbeddedResource>
@@ -511,8 +472,8 @@
     <EmbeddedResource Include="ExcluirMotorista.resx">
       <DependentUpon>ExcluirMotorista.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ExcluirPeca.resx">
-      <DependentUpon>ExcluirPeca.cs</DependentUpon>
+    <EmbeddedResource Include="ModificarPeca.resx">
+      <DependentUpon>ModificarPeca.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExcluirPneu.resx">
       <DependentUpon>ExcluirPneu.cs</DependentUpon>
@@ -531,9 +492,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ExcluirMulta.resx">
       <DependentUpon>ExcluirMulta.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GastoVeiculo.resx">
-      <DependentUpon>GastoVeiculo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -563,9 +521,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="RelatorioGastoVeiculo.resx">
-      <DependentUpon>RelatorioGastoVeiculo.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ResultadoConsultaAbastecimento.resx">
       <DependentUpon>ResultadoConsultaAbastecimento.cs</DependentUpon>
     </EmbeddedResource>

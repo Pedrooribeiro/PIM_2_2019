@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Model;
 
 namespace PrototipoTelas
 {
@@ -24,8 +25,19 @@ namespace PrototipoTelas
 
         private void Button1_Click(object sender, EventArgs e)
         {
+            Peca peca = new Peca();
+            peca.NomeConsultado = txtNome.Text;
+            peca.consultarPeca();
+
             ResultadoConsultaPeca ResultadoConsultaPeca2 = new ResultadoConsultaPeca();
-            ResultadoConsultaPeca2.ShowDialog();
+
+            ResultadoConsultaPeca2.dgvDados.DataSource = peca.DataTable;
+            
+            if(peca.Passou == true)
+            {
+                ResultadoConsultaPeca2.ShowDialog();
+                this.Close();
+            }
         }
     }
 }
