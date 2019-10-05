@@ -35,8 +35,15 @@ namespace PrototipoTelas
             
             if(peca.Passou == true)
             {
-                ResultadoConsultaPeca2.ShowDialog();
-                this.Close();
+                if (ResultadoConsultaPeca2.dgvDados.Rows.Count <= 0)
+                {
+                    MessageBox.Show("Erro ao consultar! Item não localizado, tente novamente!", "Erro");
+                    this.Close();
+                } else
+                {
+                    ResultadoConsultaPeca2.ShowDialog();
+                    this.Close();
+                }
             }
         }
     }

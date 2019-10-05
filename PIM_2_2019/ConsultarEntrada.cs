@@ -31,8 +31,13 @@ namespace PrototipoTelas
             
             if (entradaSaida.Passou == true)
             {
-                ResultadoConsultaEntrada2.ShowDialog();
-                this.Close();
+                if (ResultadoConsultaEntrada2.dgvEntrada.Rows.Count <= 0 && ResultadoConsultaEntrada2.dgvSaida.Rows.Count <= 0) {
+                    MessageBox.Show("Erro ao consultar! Item não localizado, tente novamente!", "Erro");
+                } else
+                {
+                    ResultadoConsultaEntrada2.ShowDialog();
+                    this.Close();
+                }
             }
         }
 

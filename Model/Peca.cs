@@ -86,6 +86,15 @@ namespace Model
             get { return this.dataTable; }
         }
 
+        private int idPeca;
+
+        public int IdPeca
+        {
+            get { return idPeca; }
+            set { idPeca = value; }
+        }
+
+
         public Peca()
         {
 
@@ -120,17 +129,20 @@ namespace Model
             try
             {
                 dbConnection.open();
-                SqlCommand cmdConsultar = new SqlCommand ("SELECT tipo, nome, descricao, quantidade, valor_unitario, nome_veiculo FROM estoque_peca WHERE nome = @nomeConsultado", dbConnection.getSqlConn());
+                SqlCommand cmdConsultar = new SqlCommand ("SELECT id_peca, tipo, nome, descricao, quantidade, valor_unitario, nome_veiculo FROM estoque_peca WHERE nome = @nomeConsultado", dbConnection.getSqlConn());
                 cmdConsultar.Parameters.AddWithValue("@nomeConsultado", this.nomeConsultado);
 
                 SqlDataAdapter adaptadorEntrada = new SqlDataAdapter();
                 adaptadorEntrada.SelectCommand = cmdConsultar;
                 adaptadorEntrada.Fill(this.dataTable);
+                
+                if(this.dataTable == null)
+                {
+                    MessageBox.Show("Erro ao consultar! Item não localizado, tente novamente", "Erro");
+                }
             }
             catch (System.Data.SqlClient.SqlException sqlException)
             {
-                System.Windows.Forms.MessageBox.Show(sqlException.Message);
-
                 MessageBox.Show("Erro ao consultar! Item não localizado, tente novamente", "Erro");
                 passou = false;
             }
@@ -144,7 +156,7 @@ namespace Model
             try
             {
                 dbConnection.open();
-                SqlCommand cmdModificar = new SqlCommand("UPDATE estoque_peca SET tipo = @tipo, nome = @nome, descricao = @descricao, quantidade = @quantidade, valor_unitario = @valorUnitario, nome_veiculo = @nomeVeiculo WHERE nome = @nomeConsultado");
+                SqlCommand cmdModificar = new SqlCommand("UPDATE estoque_peca SET tipo = @tipo, nome = @nome, descricao = @descricao, quantidade = @quantidade, valor_unitario = @valorUnitario, nome_veiculo = @nomeVeiculo WHERE nome = @nomeConsultado AND id_peca = @idPeca");
                 cmdModificar.Parameters.AddWithValue("@tipo", this.tipo);
                 cmdModificar.Parameters.AddWithValue("@nome", this.nome);
                 cmdModificar.Parameters.AddWithValue("@descricao", this.descricao);
@@ -152,13 +164,12 @@ namespace Model
                 cmdModificar.Parameters.AddWithValue("@valorUnitario", this.valorUnitario);
                 cmdModificar.Parameters.AddWithValue("@nomeVeiculo", this.veiculo);
                 cmdModificar.Parameters.AddWithValue("@nomeConsultado", this.NomeConsultado);
+                cmdModificar.Parameters.AddWithValue("@idPeca", this.idPeca);
                 cmdModificar.Connection = dbConnection.getSqlConn();
                 cmdModificar.ExecuteNonQuery();
             }
             catch (System.Data.SqlClient.SqlException sqlException)
             {
-                System.Windows.Forms.MessageBox.Show(sqlException.Message);
-
                 MessageBox.Show("Erro ao modificar! Campos vazios ou preenchidos incorretamente, tente novamente.", "Erro");
                 passou = false;
             }

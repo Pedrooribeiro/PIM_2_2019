@@ -34,15 +34,15 @@ namespace PrototipoTelas
                 pecaModificar.NomeConsultado = this.nomeConsultado;
 
                 for (int i = 0; i < linhas; i++) {
-                    pecaModificar.Tipo = dgvDados.Rows[i].Cells[0].Value.ToString();
-                    pecaModificar.Nome = dgvDados.Rows[i].Cells[1].Value.ToString();
-                    pecaModificar.Descricao = dgvDados.Rows[i].Cells[2].Value.ToString();
-                    pecaModificar.Quantidade = dgvDados.Rows[i].Cells[3].Value.ToString();
-                    pecaModificar.ValorUnitario = dgvDados.Rows[i].Cells[4].Value.ToString();
-                    pecaModificar.Veiculo = dgvDados.Rows[i].Cells[5].Value.ToString();
+                    pecaModificar.IdPeca = Convert.ToInt32(dgvDados.Rows[i].Cells[0].Value.ToString());
+                    pecaModificar.Tipo = dgvDados.Rows[i].Cells[1].Value.ToString();
+                    pecaModificar.Nome = dgvDados.Rows[i].Cells[2].Value.ToString();
+                    pecaModificar.Descricao = dgvDados.Rows[i].Cells[3].Value.ToString();
+                    pecaModificar.Quantidade = dgvDados.Rows[i].Cells[4].Value.ToString();
+                    pecaModificar.ValorUnitario = dgvDados.Rows[i].Cells[5].Value.ToString();
+                    pecaModificar.Veiculo = dgvDados.Rows[i].Cells[6].Value.ToString();
                     pecaModificar.modificarPeca();
                 }
-
                 MessageBox.Show("Peça modificada com sucesso");
                 this.Close();
             }
@@ -61,6 +61,12 @@ namespace PrototipoTelas
             peca.consultarPeca();
 
             dgvDados.DataSource = peca.DataTable;
+            dgvDados.Columns["id_peca"].ReadOnly = true;
+            if (dgvDados.Rows.Count <= 0)
+            {
+                MessageBox.Show("Erro ao consultar! Item não localizado, tente novamente!", "Erro");
+                this.Close();
+            }
         }
     }
 }
