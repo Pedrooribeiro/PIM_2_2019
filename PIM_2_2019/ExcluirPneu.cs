@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Model;
 
 namespace PrototipoTelas
 {
@@ -19,13 +20,22 @@ namespace PrototipoTelas
 
         private void Button1_Click(object sender, EventArgs e)
         {
+
             if (MessageBox.Show("Tem certeza que deseja excluir o pneu?", "Confirmação", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                MessageBox.Show("Pneu excluído com sucesso");
+                Pneu pneu = new Pneu();
+                pneu.PlacaConsultada = txtPlacaConsultada.Text;
+                pneu.excluirPneu();
+                if(pneu.Passou == true)
+                {
+                    MessageBox.Show("Pneu excluído com sucesso");
+                    this.Close();
+                }
             }
             else
             {
                 MessageBox.Show("Operação cancelada");
+                this.Close();
             }
         }
 

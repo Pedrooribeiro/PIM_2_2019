@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Model;
 
 namespace PrototipoTelas
 {
@@ -19,8 +20,26 @@ namespace PrototipoTelas
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            ResultadoConsultaPneu ResultadoConsultaPneu2 = new ResultadoConsultaPneu();
-            ResultadoConsultaPneu2.ShowDialog();
+            Pneu pneu = new Pneu();
+            pneu.PlacaConsultada = txtPlacaConsultada.Text;
+            pneu.consultarPneu();
+
+            ResultadoConsultaPneu ResultadoConsultaPneu = new ResultadoConsultaPneu();
+
+            ResultadoConsultaPneu.dgvDados.DataSource = pneu.DataTable;
+
+            if (pneu.Passou == true)
+            {
+                if (ResultadoConsultaPneu.dgvDados.Rows.Count <= 0)
+                {
+                    MessageBox.Show("Erro ao consultar! Item não localizado, tente novamente!", "Erro");
+                }
+                else
+                {
+                    ResultadoConsultaPneu.ShowDialog();
+                    this.Close();
+                }
+            }
         }
 
         private void Button2_Click(object sender, EventArgs e)

@@ -43,8 +43,12 @@ namespace PrototipoTelas
                     pecaModificar.Veiculo = dgvDados.Rows[i].Cells[6].Value.ToString();
                     pecaModificar.modificarPeca();
                 }
-                MessageBox.Show("Peça modificada com sucesso");
-                this.Close();
+
+                if(pecaModificar.Passou == true)
+                {
+                    MessageBox.Show("Peça modificada com sucesso");
+                    this.Close();
+                }
             }
             else
             {
@@ -65,7 +69,6 @@ namespace PrototipoTelas
             if (dgvDados.Rows.Count <= 0)
             {
                 MessageBox.Show("Erro ao consultar! Item não localizado, tente novamente!", "Erro");
-                this.Close();
             }
         }
     }

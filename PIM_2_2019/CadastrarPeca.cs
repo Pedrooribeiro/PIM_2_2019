@@ -37,8 +37,12 @@ namespace PrototipoTelas
                 peca.Veiculo = txtVeiculo.Text;
 
                 peca.cadastrarPeca();
-                MessageBox.Show("Peça cadastrada com sucesso");
-                this.Close();
+
+                if(peca.Passou == true)
+                {
+                    MessageBox.Show("Peça cadastrada com sucesso");
+                    this.Close();
+                }
             }
             else
             {
