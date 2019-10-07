@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Model;
 
 namespace PrototipoTelas
 {
@@ -19,13 +20,28 @@ namespace PrototipoTelas
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Tem certeza que deseja cadastrar manutenção?", "Confirmação", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("Tem certeza que deseja cadastrar a manutenção?", "Confirmação", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                MessageBox.Show("Manutenção cadastrada com sucesso");
+                Manutencao manutencao = new Manutencao();
+
+                manutencao.Data = txtData.Text;
+                manutencao.Motivo = txtMotivo.Text;
+                manutencao.Estabelecimento = txtEstabelecimento.Text;
+                manutencao.Placa = txtPlaca.Text;
+                manutencao.ValorTotal = txtValorTotal.Text;
+
+                manutencao.cadastrarManutencao();
+
+                if(manutencao.Passou == true)
+                {
+                    MessageBox.Show("Manutenção cadastrada com sucesso");
+                    this.Close();
+                }
             }
             else
             {
                 MessageBox.Show("Operação cancelada");
+                this.Close();
             }
         }
 

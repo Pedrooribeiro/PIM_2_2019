@@ -218,11 +218,11 @@
     <Compile Include="ExcluirAbastecimento.Designer.cs">
       <DependentUpon>ExcluirAbastecimento.cs</DependentUpon>
     </Compile>
-    <Compile Include="ExcluirManutencao.cs">
+    <Compile Include="ModificarManutencao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ExcluirManutencao.Designer.cs">
-      <DependentUpon>ExcluirManutencao.cs</DependentUpon>
+    <Compile Include="ModificarManutencao.Designer.cs">
+      <DependentUpon>ModificarManutencao.cs</DependentUpon>
     </Compile>
     <Compile Include="ExcluirMotorista.cs">
       <SubType>Form</SubType>
@@ -466,8 +466,8 @@
     <EmbeddedResource Include="ExcluirAbastecimento.resx">
       <DependentUpon>ExcluirAbastecimento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ExcluirManutencao.resx">
-      <DependentUpon>ExcluirManutencao.cs</DependentUpon>
+    <EmbeddedResource Include="ModificarManutencao.resx">
+      <DependentUpon>ModificarManutencao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExcluirMotorista.resx">
       <DependentUpon>ExcluirMotorista.cs</DependentUpon>

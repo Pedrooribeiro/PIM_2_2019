@@ -20,28 +20,29 @@ namespace PrototipoTelas
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            EntradaSaida entradaSaida = new Model.EntradaSaida();
 
-            entradaSaida.DataEntrada = txtData.Text;
-            entradaSaida.HorarioEntrada = txtHorarioEntrada.Text;
-            entradaSaida.Cpf = txtCPF.Text;
-            entradaSaida.Placa = txtPlaca.Text;
-
-            entradaSaida.cadastrarEntrada();
-
-            if (entradaSaida.Passou == true)
+            if (MessageBox.Show("Tem certeza que deseja a cadastrar entrada do veículo?", "Confirmação cadastro de entrada", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                if (MessageBox.Show("Tem certeza que deseja a cadastrar entrada do veículo?", "Confirmação cadastro de entrada", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                EntradaSaida entradaSaida = new Model.EntradaSaida();
+
+                entradaSaida.DataEntrada = txtData.Text;
+                entradaSaida.HorarioEntrada = txtHorarioEntrada.Text;
+                entradaSaida.Cpf = txtCPF.Text;
+                entradaSaida.Placa = txtPlaca.Text;
+
+                entradaSaida.cadastrarEntrada();
+                if (entradaSaida.Passou == true)
                 {
                     MessageBox.Show("Entrada cadastrada com sucesso");
                     this.Close();
                 }
-                else
-                {
-                    MessageBox.Show("Operação cancelada");
-                    this.Close();
-                }
             }
+            else
+            {
+                MessageBox.Show("Operação cancelada");
+                this.Close();
+            }
+
         }
 
         private void Button2_Click(object sender, EventArgs e)

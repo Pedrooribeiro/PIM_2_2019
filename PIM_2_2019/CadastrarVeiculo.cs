@@ -30,22 +30,21 @@ namespace PrototipoTelas
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            Veiculo veiculo = new Veiculo();
-
-            veiculo.Cor = txtCor.Text;
-            veiculo.Placa = txtPlaca.Text;
-            veiculo.Modelo = txtModelo.Text;
-            veiculo.Marca = txtMarca.Text;
-            veiculo.AnoFabricacao = Convert.ToInt32(txtAno.Text);
-            veiculo.Motorizacao = txtMotorizacao.Text;
-            veiculo.TipoCombustivel = txtTipoCombustivel.Text;
-
-            veiculo.cadastrarVeiculo();
-
-
-            if (veiculo.Passou == true)
+            if (MessageBox.Show("Tem certeza que deseja cadastrar um novo veiculo?", "Confirmação Veiculo", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                if (MessageBox.Show("Tem certeza que deseja cadastrar um novo veiculo?", "Confirmação Veiculo", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                Veiculo veiculo = new Veiculo();
+
+                veiculo.Cor = txtCor.Text;
+                veiculo.Placa = txtPlaca.Text;
+                veiculo.Modelo = txtModelo.Text;
+                veiculo.Marca = txtMarca.Text;
+                veiculo.AnoFabricacao = Convert.ToInt32(txtAno.Text);
+                veiculo.Motorizacao = txtMotorizacao.Text;
+                veiculo.TipoCombustivel = txtTipoCombustivel.Text;
+
+                veiculo.cadastrarVeiculo();
+
+                if (veiculo.Passou == true)
                 {
                     MessageBox.Show("Veiculo cadastrado com sucesso");
                     this.Close();

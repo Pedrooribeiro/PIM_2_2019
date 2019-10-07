@@ -106,7 +106,6 @@ namespace Model
             }
             catch (System.Data.SqlClient.SqlException sqlException)
             {
-                System.Windows.Forms.MessageBox.Show(sqlException.Message);
                 MessageBox.Show("Erro ao cadastrar! Campos vazios ou preenchidos incorretamente, tente novamente.", "Erro");
                 passou = false;
             }

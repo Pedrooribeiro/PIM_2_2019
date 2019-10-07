@@ -62,7 +62,7 @@
             // btnModificar
             // 
             this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnModificar.Location = new System.Drawing.Point(12, 420);
+            this.btnModificar.Location = new System.Drawing.Point(12, 419);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(102, 41);
             this.btnModificar.TabIndex = 14;
@@ -87,7 +87,7 @@
             this.txtNomeConsultado.Location = new System.Drawing.Point(389, 82);
             this.txtNomeConsultado.Name = "txtNomeConsultado";
             this.txtNomeConsultado.Size = new System.Drawing.Size(100, 20);
-            this.txtNomeConsultado.TabIndex = 42;
+            this.txtNomeConsultado.TabIndex = 12;
             // 
             // label13
             // 
@@ -106,7 +106,7 @@
             this.btnConsultar.Location = new System.Drawing.Point(255, 117);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(126, 40);
-            this.btnConsultar.TabIndex = 43;
+            this.btnConsultar.TabIndex = 13;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = true;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);

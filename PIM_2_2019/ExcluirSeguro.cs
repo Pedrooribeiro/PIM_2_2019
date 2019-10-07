@@ -35,7 +35,7 @@ namespace PrototipoTelas
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void Button2_Click(object sender, EventArgs e)
@@ -45,25 +45,23 @@ namespace PrototipoTelas
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            Seguro seguroExcluir = new Seguro();
-            seguroExcluir.PlacaConsultada = txtPlacaConsultada.Text;
-            seguroExcluir.excluirSeguro();
-            if(seguroExcluir.Passou == true){
-                if(MessageBox.Show("Tem certeza que deseja excluir o seguro do sistema?", "Confirmação Exclusão", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("Tem certeza que deseja excluir o seguro do sistema?", "Confirmação Exclusão", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                Seguro seguroExcluir = new Seguro();
+                seguroExcluir.PlacaConsultada = txtPlacaConsultada.Text;
+                seguroExcluir.excluirSeguro();
+                if (seguroExcluir.Passou == true)
                 {
                     MessageBox.Show("Seguro excluído com sucesso");
                     this.Close();
                 }
-                else
-                {
-                    MessageBox.Show("Operação cancelada com sucesso");
-                    this.Close();
-                }
             }
-            this.Close();
+            else
+            {
+                MessageBox.Show("Operação cancelada com sucesso");
+                this.Close();
+            }
         }
-     
-
         private void btnConsultar_Click(object sender, EventArgs e)
         {
             Seguro seguroConsultar = new Seguro();
@@ -82,5 +80,6 @@ namespace PrototipoTelas
             txtSituacao.Text = seguroConsultar.Situacao;
             txtPlaca.Text = seguroConsultar.PlacaSeguro;
         }
-    }
+    }  
 }
+

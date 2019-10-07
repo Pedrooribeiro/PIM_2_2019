@@ -21,33 +21,33 @@ namespace PrototipoTelas
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            Seguro seguro = new Seguro();
-
-            seguro.NumeroApolice = txtNumApolice.Text;
-            seguro.Seguradora = txtSeguradora.Text;
-            seguro.Segurado = txtSegurado.Text;
-            seguro.Corretor = txtCorretor.Text;
-            seguro.DataInicio = txtDataInicio.Text;
-            seguro.DataVencimento = txtDataVencimento.Text;
-            seguro.ValorTotal = double.Parse(txtValorTotal.Text, CultureInfo.InvariantCulture);
-            seguro.NumeroParcelas = txtNumParcela.Text;
-            seguro.Situacao = txtSituacao.Text;
-            seguro.PlacaSeguro = txtPlaca.Text;
-
-            seguro.cadastrarSeguro();
-
-            if(seguro.Passou == true)
+            if (MessageBox.Show("Tem certeza que deseja cadastrar um novo seguro?", "Confirmação Seguro", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                if (MessageBox.Show("Tem certeza que deseja cadastrar um novo seguro?", "Confirmação Seguro", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                Seguro seguro = new Seguro();
+
+                seguro.NumeroApolice = txtNumApolice.Text;
+                seguro.Seguradora = txtSeguradora.Text;
+                seguro.Segurado = txtSegurado.Text;
+                seguro.Corretor = txtCorretor.Text;
+                seguro.DataInicio = txtDataInicio.Text;
+                seguro.DataVencimento = txtDataVencimento.Text;
+                seguro.ValorTotal = double.Parse(txtValorTotal.Text, CultureInfo.InvariantCulture);
+                seguro.NumeroParcelas = txtNumParcela.Text;
+                seguro.Situacao = txtSituacao.Text;
+                seguro.PlacaSeguro = txtPlaca.Text;
+
+                seguro.cadastrarSeguro();
+
+                if (seguro.Passou == true)
                 {
                     MessageBox.Show("Seguro cadastrado com sucesso");
                     this.Close();
                 }
-                else
-                {
-                    MessageBox.Show("Cancelado com sucesso");
-                    this.Close();
-                }
+            }
+            else
+            {
+                MessageBox.Show("Cancelado com sucesso");
+                this.Close();
             }
         }
 
@@ -65,5 +65,6 @@ namespace PrototipoTelas
         {
 
         }
+
     }
 }

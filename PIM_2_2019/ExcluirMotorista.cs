@@ -54,14 +54,17 @@ namespace PrototipoTelas
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            Motorista motoristaExcluir = new Motorista();
-            motoristaExcluir.CpfConsultado = txtCpfConsultado.Text;
-            motoristaExcluir.excluirMotorista();
-
             if (MessageBox.Show("Tem certeza que deseja excluir o motorista?", "Confirmação exclusão", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                MessageBox.Show("Motorista excluído com sucesso");
-                this.Close();
+                Motorista motoristaExcluir = new Motorista();
+                motoristaExcluir.CpfConsultado = txtCpfConsultado.Text;
+                motoristaExcluir.excluirMotorista();
+                
+                if(motoristaExcluir.Passou == true)
+                {
+                    MessageBox.Show("Motorista excluído com sucesso");
+                    this.Close();
+                }
             }
             else
             {

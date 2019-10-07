@@ -43,30 +43,29 @@ namespace PrototipoTelas
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            Motorista motoristaModificar = new Motorista();
-
-            motoristaModificar.CpfConsultado = txtCpfConsultado.Text;
-            motoristaModificar.NomeCompleto = txtNomeCompleto.Text;
-            motoristaModificar.Rg = txtRg.Text;
-            motoristaModificar.Cpf = txtCpf.Text;
-            motoristaModificar.Cnh = txtCnh.Text;
-            motoristaModificar.VencimentoCnh = txtVencimentoCnh.Text;
-            motoristaModificar.Empresa = txtEmpresa.Text;
-
-            motoristaModificar.modificarMotorista();
-
-            if (motoristaModificar.Passou == true)
+            if (MessageBox.Show("Tem certeza que deseja modificar o motorista?", "Confirmação Modificação", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                if (MessageBox.Show("Tem certeza que deseja modificar o motorista?","Confirmação Modificação", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                Motorista motoristaModificar = new Motorista();
+
+                motoristaModificar.CpfConsultado = txtCpfConsultado.Text;
+                motoristaModificar.NomeCompleto = txtNomeCompleto.Text;
+                motoristaModificar.Rg = txtRg.Text;
+                motoristaModificar.Cpf = txtCpf.Text;
+                motoristaModificar.Cnh = txtCnh.Text;
+                motoristaModificar.VencimentoCnh = txtVencimentoCnh.Text;
+                motoristaModificar.Empresa = txtEmpresa.Text;
+
+                motoristaModificar.modificarMotorista();
+                if (motoristaModificar.Passou == true)
                 {
                     MessageBox.Show("Motorista modificado com sucesso");
                     this.Close();
                 }
-                else
-                {
-                    MessageBox.Show("Operação cancelada");
-                    this.Close();
-                }
+            }
+            else
+            {
+                MessageBox.Show("Operação cancelada");
+                this.Close();
             }
         }
 

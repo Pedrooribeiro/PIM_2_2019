@@ -28,27 +28,27 @@ namespace PrototipoTelas
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            EntradaSaida entradaSaida = new EntradaSaida();
 
-            entradaSaida.DataSaida = txtData.Text;
-            entradaSaida.HorarioSaida = txtHorarioSaida.Text;
-            entradaSaida.Cpf = txtCPF.Text;
-            entradaSaida.Placa = txtPlaca.Text;
-
-            entradaSaida.cadastrarSaida();
-
-            if (entradaSaida.Passou == true)
+            if (MessageBox.Show("Tem certeza que deseja cadastrar a saída do veículo?", "Confirmação cadastro de entrada", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                if (MessageBox.Show("Tem certeza que deseja cadastrar a saída do veículo?", "Confirmação cadastro de entrada", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                EntradaSaida entradaSaida = new EntradaSaida();
+
+                entradaSaida.DataSaida = txtData.Text;
+                entradaSaida.HorarioSaida = txtHorarioSaida.Text;
+                entradaSaida.Cpf = txtCPF.Text;
+                entradaSaida.Placa = txtPlaca.Text;
+
+                entradaSaida.cadastrarSaida();
+                if (entradaSaida.Passou == true)
                 {
                     MessageBox.Show("Saída cadastrada com sucesso");
                     this.Close();
                 }
-                else
-                {
-                    MessageBox.Show("Operação cancelada");
-                    this.Close();
-                }
+            }
+            else
+            {
+                MessageBox.Show("Operação cancelada");
+                this.Close();
             }
         }
 

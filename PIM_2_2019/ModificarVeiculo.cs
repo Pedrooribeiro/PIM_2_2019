@@ -17,7 +17,7 @@ namespace PrototipoTelas
         {
             if (boolean == false)
             {
-                txtCor.Enabled = false; 
+                txtCor.Enabled = false;
                 txtPlaca.Enabled = false;
                 txtModelo.Enabled = false;
                 txtMarca.Enabled = false;
@@ -45,31 +45,31 @@ namespace PrototipoTelas
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            Veiculo veiculoModificar = new Veiculo();
-
-            veiculoModificar.PlacaConsultada = txtPlacaConsultar.Text;
-            veiculoModificar.Cor = txtCor.Text;
-            veiculoModificar.Placa = txtPlaca.Text;
-            veiculoModificar.Modelo = txtModelo.Text;
-            veiculoModificar.Marca = txtMarca.Text;
-            veiculoModificar.AnoFabricacao = Convert.ToInt32(txtAno.Text);
-            veiculoModificar.Motorizacao = txtMotorizacao.Text;
-            veiculoModificar.TipoCombustivel = txtTipoCombustivel.Text;
-
-            veiculoModificar.modificarVeiculo();
-
-            if (veiculoModificar.Passou == true)
+            if (MessageBox.Show("Tem certeza que deseja modificar o veículo?", "Confirmação Veiculo", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                if (MessageBox.Show("Tem certeza que deseja modificar o veículo?", "Confirmação Veiculo", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                Veiculo veiculoModificar = new Veiculo();
+
+                veiculoModificar.PlacaConsultada = txtPlacaConsultar.Text;
+                veiculoModificar.Cor = txtCor.Text;
+                veiculoModificar.Placa = txtPlaca.Text;
+                veiculoModificar.Modelo = txtModelo.Text;
+                veiculoModificar.Marca = txtMarca.Text;
+                veiculoModificar.AnoFabricacao = Convert.ToInt32(txtAno.Text);
+                veiculoModificar.Motorizacao = txtMotorizacao.Text;
+                veiculoModificar.TipoCombustivel = txtTipoCombustivel.Text;
+
+                veiculoModificar.modificarVeiculo();
+
+                if (veiculoModificar.Passou == true)
                 {
                     MessageBox.Show("Veiculo modificado com sucesso");
                     this.Close();
                 }
-                else
-                {
-                    MessageBox.Show("Cancelado com sucesso");
-                    this.Close();
-                }
+            }
+            else
+            {
+                MessageBox.Show("Cancelado com sucesso");
+                this.Close();
             }
         }
 

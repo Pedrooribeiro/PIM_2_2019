@@ -61,37 +61,37 @@ namespace PrototipoTelas
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            Seguro seguroModificar = new Seguro();
 
-            seguroModificar.NumeroApolice = txtNumApolice.Text;
-            seguroModificar.Seguradora = txtSeguradora.Text;
-            seguroModificar.Segurado = txtSegurado.Text;
-            seguroModificar.Corretor = txtCorretor.Text;
-            seguroModificar.DataInicio = txtDataInicio.Text;
-            seguroModificar.DataVencimento = txtDataVencimento.Text;
-            seguroModificar.ValorTotal = double.Parse(txtValorTotal.Text);
-            seguroModificar.NumeroParcelas = txtNumeroParcela.Text;
-            seguroModificar.Situacao = txtSituacao.Text;
-            seguroModificar.PlacaSeguro = txtPlaca.Text;
-            seguroModificar.PlacaConsultada = txtPlacaConsultada.Text;
-
-            seguroModificar.modificarSeguro();
-
-            if (seguroModificar.Passou == true)
+            if (MessageBox.Show("Tem certeza que deseja modificar o seguro?", "Confirmação Modificação Seguro", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                if (MessageBox.Show("Tem certeza que deseja modificar o seguro?", "Confirmação Modificação Seguro", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                Seguro seguroModificar = new Seguro();
+
+                seguroModificar.NumeroApolice = txtNumApolice.Text;
+                seguroModificar.Seguradora = txtSeguradora.Text;
+                seguroModificar.Segurado = txtSegurado.Text;
+                seguroModificar.Corretor = txtCorretor.Text;
+                seguroModificar.DataInicio = txtDataInicio.Text;
+                seguroModificar.DataVencimento = txtDataVencimento.Text;
+                seguroModificar.ValorTotal = double.Parse(txtValorTotal.Text);
+                seguroModificar.NumeroParcelas = txtNumeroParcela.Text;
+                seguroModificar.Situacao = txtSituacao.Text;
+                seguroModificar.PlacaSeguro = txtPlaca.Text;
+                seguroModificar.PlacaConsultada = txtPlacaConsultada.Text;
+
+                seguroModificar.modificarSeguro();
+
+                if (seguroModificar.Passou == true)
                 {
                     MessageBox.Show("Seguro modificado com sucesso");
                     this.Close();
                 }
-                else
-                {
-                    MessageBox.Show("Cancelado com sucesso");
-                    this.Close();
-                }
+            }
+            else
+            {
+                MessageBox.Show("Cancelado com sucesso");
+                this.Close();
             }
         }
-
         private void Button2_Click(object sender, EventArgs e)
         {
             this.Close();

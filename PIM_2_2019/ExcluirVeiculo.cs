@@ -42,13 +42,17 @@ namespace PrototipoTelas
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            Veiculo veiculoExcluir = new Veiculo();
-            veiculoExcluir.PlacaConsultada = txtPlacaConsultada.Text;
-            veiculoExcluir.excluirVeiculo();
-
             if (MessageBox.Show("Tem certeza que deseja excluir o veículo do sistema?","Confirmação Exclusão", MessageBoxButtons.YesNo) == DialogResult.Yes) {
-                MessageBox.Show("Veículo excluído com sucesso");
-                this.Close();
+
+                Veiculo veiculoExcluir = new Veiculo();
+                veiculoExcluir.PlacaConsultada = txtPlacaConsultada.Text;
+                veiculoExcluir.excluirVeiculo();
+
+                if(veiculoExcluir.Passou == true)
+                {
+                    MessageBox.Show("Veículo excluído com sucesso");
+                    this.Close();
+                }
             }
             else
             {

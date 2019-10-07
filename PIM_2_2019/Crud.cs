@@ -417,7 +417,7 @@ namespace PrototipoTelas
 
         private void Button9_Click(object sender, EventArgs e)
         {
-            ExcluirManutencao ExcluirManutencao2 = new ExcluirManutencao();
+            ModificarManutencao ExcluirManutencao2 = new ModificarManutencao();
             ExcluirManutencao2.ShowDialog();
         }
 

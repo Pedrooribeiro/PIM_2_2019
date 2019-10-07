@@ -366,7 +366,7 @@
             this.panel3.Controls.Add(this.button24);
             this.panel3.Location = new System.Drawing.Point(111, 75);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(0, 38);
+            this.panel3.Size = new System.Drawing.Size(0, 42);
             this.panel3.TabIndex = 12;
             // 
             // button53
@@ -418,7 +418,7 @@
             this.panel4.Controls.Add(this.button26);
             this.panel4.Location = new System.Drawing.Point(111, 111);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(0, 38);
+            this.panel4.Size = new System.Drawing.Size(0, 42);
             this.panel4.TabIndex = 13;
             // 
             // button27
@@ -468,7 +468,7 @@
             this.panel5.Controls.Add(this.button31);
             this.panel5.Location = new System.Drawing.Point(111, 147);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(0, 41);
+            this.panel5.Size = new System.Drawing.Size(0, 42);
             this.panel5.TabIndex = 14;
             // 
             // button54
@@ -499,7 +499,7 @@
             this.panel6.Controls.Add(this.button28);
             this.panel6.Location = new System.Drawing.Point(111, 184);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(0, 41);
+            this.panel6.Size = new System.Drawing.Size(0, 42);
             this.panel6.TabIndex = 15;
             // 
             // button55
@@ -541,7 +541,7 @@
             this.panel7.Controls.Add(this.button30);
             this.panel7.Location = new System.Drawing.Point(111, 221);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(0, 41);
+            this.panel7.Size = new System.Drawing.Size(0, 42);
             this.panel7.TabIndex = 16;
             //           
             // panel8
@@ -552,7 +552,7 @@
             this.panel8.Controls.Add(this.button38);
             this.panel8.Location = new System.Drawing.Point(111, 217);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(0, 41);
+            this.panel8.Size = new System.Drawing.Size(0, 42);
             this.panel8.TabIndex = 18;
             // 
             // button56
@@ -593,7 +593,7 @@
             this.panel9.Controls.Add(this.button36);
             this.panel9.Location = new System.Drawing.Point(111, 254);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(0, 41);
+            this.panel9.Size = new System.Drawing.Size(0, 42);
             this.panel9.TabIndex = 19;
             // 
             // button57
@@ -634,14 +634,14 @@
             this.panel10.Controls.Add(this.button39);
             this.panel10.Location = new System.Drawing.Point(111, 289);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(0, 40);
+            this.panel10.Size = new System.Drawing.Size(0, 42);
             this.panel10.TabIndex = 20;
             // 
             // button58
             // 
-            this.button58.Location = new System.Drawing.Point(137, 3);
+            this.button58.Location = new System.Drawing.Point(134, 3);
             this.button58.Name = "button58";
-            this.button58.Size = new System.Drawing.Size(140, 30);
+            this.button58.Size = new System.Drawing.Size(131, 30);
             this.button58.TabIndex = 4;
             this.button58.Text = "Consultar Manutenção";
             this.button58.UseVisualStyleBackColor = true;
@@ -649,11 +649,11 @@
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(283, 3);
+            this.button9.Location = new System.Drawing.Point(267, 3);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(109, 30);
+            this.button9.Size = new System.Drawing.Size(131, 30);
             this.button9.TabIndex = 3;
-            this.button9.Text = "Excluir Manutenção";
+            this.button9.Text = "Modificar Manutenção";
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.Button9_Click);
             // 
@@ -675,7 +675,7 @@
             this.panel11.Controls.Add(this.button41);
             this.panel11.Location = new System.Drawing.Point(111, 325);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(0, 40);
+            this.panel11.Size = new System.Drawing.Size(0, 42);
             this.panel11.TabIndex = 21;
             // 
             // button59
@@ -716,7 +716,7 @@
             this.panel12.Controls.Add(this.button43);
             this.panel12.Location = new System.Drawing.Point(111, 361);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(0, 39);
+            this.panel12.Size = new System.Drawing.Size(0, 42);
             this.panel12.TabIndex = 22;
             // 
             // button60
@@ -758,7 +758,7 @@
             this.panel13.Controls.Add(this.button45);
             this.panel13.Location = new System.Drawing.Point(111, 397);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(0, 41);
+            this.panel13.Size = new System.Drawing.Size(0, 42);
             this.panel13.TabIndex = 23;
             // 
             // button61
@@ -809,7 +809,7 @@
             this.panel14.Controls.Add(this.button49);
             this.panel14.Location = new System.Drawing.Point(111, 434);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(0, 39);
+            this.panel14.Size = new System.Drawing.Size(0, 42);
             this.panel14.TabIndex = 24;
             // 
             // button47
@@ -878,7 +878,7 @@
             this.panel16.Controls.Add(this.button50);
             this.panel16.Location = new System.Drawing.Point(111, 505);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(0, 38);
+            this.panel16.Size = new System.Drawing.Size(0, 42);
             this.panel16.TabIndex = 26;
             // 
             // button50
