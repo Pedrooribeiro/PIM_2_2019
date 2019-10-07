@@ -20,7 +20,6 @@ namespace PrototipoTelas
 
         private void Button1_Click(object sender, EventArgs e)
         {
-
             Manutencao manutencao = new Manutencao();
             manutencao.PlacaConsultada = txtPlacaConsultada.Text;
             manutencao.consultarManutencao();

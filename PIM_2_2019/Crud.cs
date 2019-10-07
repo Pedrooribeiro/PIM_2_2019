@@ -679,7 +679,7 @@ namespace PrototipoTelas
 
         private void Button59_Click(object sender, EventArgs e)
         {
-            ExcluirAbastecimento ExcluirAbastecimento2 = new ExcluirAbastecimento();
+            ModificarAbastecimento ExcluirAbastecimento2 = new ModificarAbastecimento();
             ExcluirAbastecimento2.ShowDialog();
         }
 

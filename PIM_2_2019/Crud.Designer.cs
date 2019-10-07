@@ -680,17 +680,17 @@
             // 
             // button59
             // 
-            this.button59.Location = new System.Drawing.Point(297, 3);
+            this.button59.Location = new System.Drawing.Point(285, 3);
             this.button59.Name = "button59";
-            this.button59.Size = new System.Drawing.Size(128, 30);
+            this.button59.Size = new System.Drawing.Size(142, 30);
             this.button59.TabIndex = 4;
-            this.button59.Text = "Excluir Abastecimento";
+            this.button59.Text = "Modificar Abastecimento";
             this.button59.UseVisualStyleBackColor = true;
             this.button59.Click += new System.EventHandler(this.Button59_Click);
             // 
             // button40
             // 
-            this.button40.Location = new System.Drawing.Point(149, 3);
+            this.button40.Location = new System.Drawing.Point(142, 3);
             this.button40.Name = "button40";
             this.button40.Size = new System.Drawing.Size(142, 30);
             this.button40.TabIndex = 3;

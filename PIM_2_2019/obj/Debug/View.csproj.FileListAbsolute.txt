@@ -31,7 +31,6 @@ C:\Users\jdpacheco\Pictures\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\Prototipo
 C:\Users\jdpacheco\Pictures\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\PrototipoTelas.ConsultarSeguro.resources
 C:\Users\jdpacheco\Pictures\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\PrototipoTelas.ConsultarVeiculo.resources
 C:\Users\jdpacheco\Pictures\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\PrototipoTelas.Crud.resources
-C:\Users\jdpacheco\Pictures\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\PrototipoTelas.ExcluirAbastecimento.resources
 C:\Users\jdpacheco\Pictures\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\PrototipoTelas.ExcluirMotorista.resources
 C:\Users\jdpacheco\Pictures\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\PrototipoTelas.ExcluirPneu.resources
 C:\Users\jdpacheco\Pictures\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\PrototipoTelas.ExcluirQuilometragem.resources
@@ -65,3 +64,4 @@ C:\Users\jdpacheco\Pictures\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\Prototipo
 C:\Users\jdpacheco\Pictures\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\PrototipoTelas.pdb
 C:\Users\jdpacheco\Pictures\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\PrototipoTelas.ModificarPeca.resources
 C:\Users\jdpacheco\Pictures\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\PrototipoTelas.ModificarManutencao.resources
+C:\Users\jdpacheco\Pictures\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\PrototipoTelas.ModificarAbastecimento.resources

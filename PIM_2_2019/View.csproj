@@ -212,11 +212,11 @@
     <Compile Include="Crud.Designer.cs">
       <DependentUpon>Crud.cs</DependentUpon>
     </Compile>
-    <Compile Include="ExcluirAbastecimento.cs">
+    <Compile Include="ModificarAbastecimento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ExcluirAbastecimento.Designer.cs">
-      <DependentUpon>ExcluirAbastecimento.cs</DependentUpon>
+    <Compile Include="ModificarAbastecimento.Designer.cs">
+      <DependentUpon>ModificarAbastecimento.cs</DependentUpon>
     </Compile>
     <Compile Include="ModificarManutencao.cs">
       <SubType>Form</SubType>
@@ -463,8 +463,8 @@
     <EmbeddedResource Include="Crud.resx">
       <DependentUpon>Crud.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ExcluirAbastecimento.resx">
-      <DependentUpon>ExcluirAbastecimento.cs</DependentUpon>
+    <EmbeddedResource Include="ModificarAbastecimento.resx">
+      <DependentUpon>ModificarAbastecimento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModificarManutencao.resx">
       <DependentUpon>ModificarManutencao.cs</DependentUpon>

@@ -56,5 +56,10 @@ namespace PrototipoTelas
         {
             this.Close();
         }
+
+        private void CadastrarSaida_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

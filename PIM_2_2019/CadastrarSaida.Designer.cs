@@ -173,6 +173,7 @@
             this.Controls.Add(this.label1);
             this.Name = "CadastrarSaida";
             this.Text = "CadastrarSaida";
+            this.Load += new System.EventHandler(this.CadastrarSaida_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Model;
 
 namespace PrototipoTelas
 {
@@ -24,8 +25,26 @@ namespace PrototipoTelas
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            ResultadoConsultaAbastecimento ResultadoConsultaAbastecimento2 = new ResultadoConsultaAbastecimento();
-            ResultadoConsultaAbastecimento2.ShowDialog();
+            Abastecimento abastecimento = new Abastecimento();
+            abastecimento.PlacaConsultada = txtPlacaConsultada.Text;
+            abastecimento.consultarAbastecimento();
+
+            ResultadoConsultaAbastecimento ResultadoConsultaAbastecimento = new ResultadoConsultaAbastecimento();
+
+            ResultadoConsultaAbastecimento.dgvDados.DataSource = abastecimento.DataTable;
+
+            if (abastecimento.Passou == true)
+            {
+                if (ResultadoConsultaAbastecimento.dgvDados.Rows.Count <= 0)
+                {
+                    MessageBox.Show("Erro ao consultar! Item não localizado, tente novamente!", "Erro");
+                }
+                else
+                {
+                    ResultadoConsultaAbastecimento.ShowDialog();
+                    this.Close();
+                }
+            }
         }
     }
 }
