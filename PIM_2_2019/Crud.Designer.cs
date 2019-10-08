@@ -716,12 +716,12 @@
             this.panel12.Controls.Add(this.button43);
             this.panel12.Location = new System.Drawing.Point(111, 361);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(0, 42);
+            this.panel12.Size = new System.Drawing.Size(0, 40);
             this.panel12.TabIndex = 22;
             // 
             // button60
             // 
-            this.button60.Location = new System.Drawing.Point(146, 3);
+            this.button60.Location = new System.Drawing.Point(143, 3);
             this.button60.Name = "button60";
             this.button60.Size = new System.Drawing.Size(145, 30);
             this.button60.TabIndex = 27;
@@ -731,11 +731,11 @@
             // 
             // button42
             // 
-            this.button42.Location = new System.Drawing.Point(297, 3);
+            this.button42.Location = new System.Drawing.Point(285, 3);
             this.button42.Name = "button42";
-            this.button42.Size = new System.Drawing.Size(128, 30);
+            this.button42.Size = new System.Drawing.Size(145, 30);
             this.button42.TabIndex = 3;
-            this.button42.Text = "Excluir Quilometragem";
+            this.button42.Text = "Modificar Quilometragem";
             this.button42.UseVisualStyleBackColor = true;
             this.button42.Click += new System.EventHandler(this.Button42_Click);
             // 
@@ -743,7 +743,7 @@
             // 
             this.button43.Location = new System.Drawing.Point(0, 3);
             this.button43.Name = "button43";
-            this.button43.Size = new System.Drawing.Size(140, 30);
+            this.button43.Size = new System.Drawing.Size(145, 30);
             this.button43.TabIndex = 2;
             this.button43.Text = "Cadastrar Quilometragem";
             this.button43.UseVisualStyleBackColor = true;

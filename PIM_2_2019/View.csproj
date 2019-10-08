@@ -242,11 +242,11 @@
     <Compile Include="ExcluirPneu.Designer.cs">
       <DependentUpon>ExcluirPneu.cs</DependentUpon>
     </Compile>
-    <Compile Include="ExcluirQuilometragem.cs">
+    <Compile Include="ModificarQuilometragem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ExcluirQuilometragem.Designer.cs">
-      <DependentUpon>ExcluirQuilometragem.cs</DependentUpon>
+    <Compile Include="ModificarQuilometragem.Designer.cs">
+      <DependentUpon>ModificarQuilometragem.cs</DependentUpon>
     </Compile>
     <Compile Include="ExcluirSeguro.cs">
       <SubType>Form</SubType>
@@ -478,8 +478,8 @@
     <EmbeddedResource Include="ExcluirPneu.resx">
       <DependentUpon>ExcluirPneu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ExcluirQuilometragem.resx">
-      <DependentUpon>ExcluirQuilometragem.cs</DependentUpon>
+    <EmbeddedResource Include="ModificarQuilometragem.resx">
+      <DependentUpon>ModificarQuilometragem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExcluirSeguro.resx">
       <DependentUpon>ExcluirSeguro.cs</DependentUpon>

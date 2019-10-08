@@ -441,7 +441,7 @@ namespace PrototipoTelas
 
         private void Button42_Click(object sender, EventArgs e)
         {
-            ExcluirQuilometragem ExcluirQuilometragem2 = new ExcluirQuilometragem();
+            ModificarQuilometragem ExcluirQuilometragem2 = new ModificarQuilometragem();
             ExcluirQuilometragem2.ShowDialog();
         }
 

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Model;
 
 namespace PrototipoTelas
 {
@@ -16,22 +17,47 @@ namespace PrototipoTelas
         {
             InitializeComponent();
         }
-
+        
         private void Button1_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Tem certeza que deseja cadastrar quilometragem?", "Confirmação", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                MessageBox.Show("Quilometragem cadastrada com sucesso");
+                Quilometragem quilometragem = new Quilometragem();
+
+                quilometragem.DataInicio = txtDataInicio.Text;
+                quilometragem.DataAtual = txtDataAtual.Text;
+                quilometragem.Placa = txtPlaca.Text;
+                quilometragem.QuilometrosRodados = txtQuilometrosRodados.Text;
+
+                quilometragem.cadastrarQuilometragem();
+
+                if (quilometragem.Passou == true)
+                {
+                    MessageBox.Show("Quilometragem cadastrada com sucesso");
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Cancelado com sucesso");
+                    this.Close();
+                }
+
             }
             else
             {
                 MessageBox.Show("Operação cancelada");
+                this.Close();
             }
         }
 
         private void Button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtQuilometrosRodados_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

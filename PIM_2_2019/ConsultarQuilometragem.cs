@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Model;
 
 namespace PrototipoTelas
 {
@@ -24,8 +25,20 @@ namespace PrototipoTelas
 
         private void Button1_Click(object sender, EventArgs e)
         {
+            Quilometragem quilometragem = new Quilometragem();
+            quilometragem.PlacaConsultada = txtPlacaConsultada.Text;
+            quilometragem.consultarQuilometragem();
+
             ResultadoConsultaQuilometragem ResultadoConsultaQuilometragem2 = new ResultadoConsultaQuilometragem();
+
+            ResultadoConsultaQuilometragem2.txtDataInicio.Text = quilometragem.DataInicio;
+            ResultadoConsultaQuilometragem2.txtDataAtual.Text = quilometragem.DataAtual;
+            ResultadoConsultaQuilometragem2.txtPlaca.Text = quilometragem.Placa;
+            ResultadoConsultaQuilometragem2.txtQuilometrosRodados.Text = quilometragem.QuilometrosRodados;
+
             ResultadoConsultaQuilometragem2.ShowDialog();
+
+            this.Close();
         }
     }
 }
