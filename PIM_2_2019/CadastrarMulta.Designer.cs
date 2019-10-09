@@ -30,29 +30,29 @@
         {
             this.label6 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtDescricaoInfracao = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtMotorista = new System.Windows.Forms.Label();
+            this.txtAutoInfracao = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtLocal = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtValor = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtGravidade = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.txtSituacao = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.txtData = new System.Windows.Forms.MaskedTextBox();
+            this.txtPlaca = new System.Windows.Forms.MaskedTextBox();
+            this.txtDataVencimento = new System.Windows.Forms.MaskedTextBox();
+            this.txtDataPagamento = new System.Windows.Forms.MaskedTextBox();
+            this.txtCPF = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // label6
@@ -60,7 +60,7 @@
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(102, 46);
+            this.label6.Location = new System.Drawing.Point(113, 45);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(154, 24);
             this.label6.TabIndex = 38;
@@ -69,21 +69,22 @@
             // button2
             // 
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button2.Location = new System.Drawing.Point(233, 590);
+            this.button2.Location = new System.Drawing.Point(221, 590);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(91, 31);
-            this.button2.TabIndex = 37;
+            this.button2.TabIndex = 52;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
-            // textBox5
+            // txtDescricaoInfracao
             // 
-            this.textBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBox5.Location = new System.Drawing.Point(212, 263);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 36;
+            this.txtDescricaoInfracao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtDescricaoInfracao.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.txtDescricaoInfracao.Location = new System.Drawing.Point(212, 263);
+            this.txtDescricaoInfracao.Name = "txtDescricaoInfracao";
+            this.txtDescricaoInfracao.Size = new System.Drawing.Size(100, 20);
+            this.txtDescricaoInfracao.TabIndex = 36;
             // 
             // label5
             // 
@@ -96,32 +97,24 @@
             this.label5.TabIndex = 35;
             this.label5.Text = "Descrição Infração";
             // 
-            // textBox4
+            // txtMotorista
             // 
-            this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBox4.Location = new System.Drawing.Point(212, 221);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 34;
+            this.txtMotorista.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtMotorista.AutoSize = true;
+            this.txtMotorista.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMotorista.Location = new System.Drawing.Point(70, 221);
+            this.txtMotorista.Name = "txtMotorista";
+            this.txtMotorista.Size = new System.Drawing.Size(34, 17);
+            this.txtMotorista.TabIndex = 33;
+            this.txtMotorista.Text = "CPF";
             // 
-            // label4
+            // txtAutoInfracao
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(70, 221);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 17);
-            this.label4.TabIndex = 33;
-            this.label4.Text = "Motorista";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBox3.Location = new System.Drawing.Point(212, 182);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 32;
+            this.txtAutoInfracao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtAutoInfracao.Location = new System.Drawing.Point(212, 182);
+            this.txtAutoInfracao.Name = "txtAutoInfracao";
+            this.txtAutoInfracao.Size = new System.Drawing.Size(100, 20);
+            this.txtAutoInfracao.TabIndex = 32;
             // 
             // label3
             // 
@@ -134,14 +127,6 @@
             this.label3.TabIndex = 31;
             this.label3.Text = "Auto de Infração";
             // 
-            // textBox2
-            // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBox2.Location = new System.Drawing.Point(212, 145);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 30;
-            // 
             // label2
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
@@ -153,21 +138,13 @@
             this.label2.TabIndex = 29;
             this.label2.Text = "Placa";
             // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBox1.Location = new System.Drawing.Point(212, 105);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 28;
-            // 
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button1.Location = new System.Drawing.Point(73, 590);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(91, 31);
-            this.button1.TabIndex = 27;
+            this.button1.TabIndex = 51;
             this.button1.Text = "Cadastrar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
@@ -183,13 +160,13 @@
             this.label1.TabIndex = 26;
             this.label1.Text = "Data";
             // 
-            // textBox6
+            // txtLocal
             // 
-            this.textBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBox6.Location = new System.Drawing.Point(212, 305);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 40;
+            this.txtLocal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtLocal.Location = new System.Drawing.Point(212, 305);
+            this.txtLocal.Name = "txtLocal";
+            this.txtLocal.Size = new System.Drawing.Size(100, 20);
+            this.txtLocal.TabIndex = 40;
             // 
             // label7
             // 
@@ -202,13 +179,13 @@
             this.label7.TabIndex = 39;
             this.label7.Text = "Local";
             // 
-            // textBox7
+            // txtValor
             // 
-            this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBox7.Location = new System.Drawing.Point(212, 342);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 42;
+            this.txtValor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtValor.Location = new System.Drawing.Point(212, 342);
+            this.txtValor.Name = "txtValor";
+            this.txtValor.Size = new System.Drawing.Size(100, 20);
+            this.txtValor.TabIndex = 42;
             // 
             // label8
             // 
@@ -221,13 +198,13 @@
             this.label8.TabIndex = 41;
             this.label8.Text = "Valor";
             // 
-            // textBox8
+            // txtGravidade
             // 
-            this.textBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBox8.Location = new System.Drawing.Point(212, 384);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 20);
-            this.textBox8.TabIndex = 44;
+            this.txtGravidade.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtGravidade.Location = new System.Drawing.Point(212, 384);
+            this.txtGravidade.Name = "txtGravidade";
+            this.txtGravidade.Size = new System.Drawing.Size(100, 20);
+            this.txtGravidade.TabIndex = 44;
             // 
             // label9
             // 
@@ -240,14 +217,6 @@
             this.label9.TabIndex = 43;
             this.label9.Text = "Gravidade";
             // 
-            // textBox9
-            // 
-            this.textBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBox9.Location = new System.Drawing.Point(212, 423);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 20);
-            this.textBox9.TabIndex = 46;
-            // 
             // label10
             // 
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
@@ -258,14 +227,6 @@
             this.label10.Size = new System.Drawing.Size(116, 17);
             this.label10.TabIndex = 45;
             this.label10.Text = "Data Vencimento";
-            // 
-            // textBox10
-            // 
-            this.textBox10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBox10.Location = new System.Drawing.Point(212, 463);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(100, 20);
-            this.textBox10.TabIndex = 48;
             // 
             // label11
             // 
@@ -278,13 +239,13 @@
             this.label11.TabIndex = 47;
             this.label11.Text = "Data Pagamento";
             // 
-            // textBox11
+            // txtSituacao
             // 
-            this.textBox11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBox11.Location = new System.Drawing.Point(212, 500);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(100, 20);
-            this.textBox11.TabIndex = 50;
+            this.txtSituacao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtSituacao.Location = new System.Drawing.Point(212, 500);
+            this.txtSituacao.Name = "txtSituacao";
+            this.txtSituacao.Size = new System.Drawing.Size(100, 20);
+            this.txtSituacao.TabIndex = 50;
             // 
             // label12
             // 
@@ -297,35 +258,79 @@
             this.label12.TabIndex = 49;
             this.label12.Text = "Situação";
             // 
+            // txtData
+            // 
+            this.txtData.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtData.Location = new System.Drawing.Point(212, 105);
+            this.txtData.Mask = "00/00/0000";
+            this.txtData.Name = "txtData";
+            this.txtData.Size = new System.Drawing.Size(100, 20);
+            this.txtData.TabIndex = 30;
+            // 
+            // txtPlaca
+            // 
+            this.txtPlaca.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtPlaca.Location = new System.Drawing.Point(212, 145);
+            this.txtPlaca.Mask = "aaa-0000";
+            this.txtPlaca.Name = "txtPlaca";
+            this.txtPlaca.Size = new System.Drawing.Size(100, 20);
+            this.txtPlaca.TabIndex = 31;
+            // 
+            // txtDataVencimento
+            // 
+            this.txtDataVencimento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtDataVencimento.Location = new System.Drawing.Point(212, 423);
+            this.txtDataVencimento.Mask = "00/00/0000";
+            this.txtDataVencimento.Name = "txtDataVencimento";
+            this.txtDataVencimento.Size = new System.Drawing.Size(100, 20);
+            this.txtDataVencimento.TabIndex = 46;
+            // 
+            // txtDataPagamento
+            // 
+            this.txtDataPagamento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtDataPagamento.Location = new System.Drawing.Point(212, 463);
+            this.txtDataPagamento.Mask = "00/00/0000";
+            this.txtDataPagamento.Name = "txtDataPagamento";
+            this.txtDataPagamento.Size = new System.Drawing.Size(100, 20);
+            this.txtDataPagamento.TabIndex = 48;
+            // 
+            // txtCPF
+            // 
+            this.txtCPF.Location = new System.Drawing.Point(212, 221);
+            this.txtCPF.Mask = "000.000.000-00";
+            this.txtCPF.Name = "txtCPF";
+            this.txtCPF.Size = new System.Drawing.Size(100, 20);
+            this.txtCPF.TabIndex = 33;
+            // 
             // CadastrarMulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(373, 652);
-            this.Controls.Add(this.textBox11);
+            this.Controls.Add(this.txtCPF);
+            this.Controls.Add(this.txtDataPagamento);
+            this.Controls.Add(this.txtDataVencimento);
+            this.Controls.Add(this.txtPlaca);
+            this.Controls.Add(this.txtData);
+            this.Controls.Add(this.txtSituacao);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.textBox10);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.textBox9);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.txtGravidade);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.txtValor);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.txtLocal);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txtDescricaoInfracao);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtMotorista);
+            this.Controls.Add(this.txtAutoInfracao);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Name = "CadastrarMulta";
@@ -339,28 +344,28 @@
 
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtDescricaoInfracao;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label txtMotorista;
+        private System.Windows.Forms.TextBox txtAutoInfracao;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtLocal;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtValor;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtGravidade;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox txtSituacao;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.MaskedTextBox txtData;
+        private System.Windows.Forms.MaskedTextBox txtPlaca;
+        private System.Windows.Forms.MaskedTextBox txtDataVencimento;
+        private System.Windows.Forms.MaskedTextBox txtDataPagamento;
+        private System.Windows.Forms.MaskedTextBox txtCPF;
     }
 }

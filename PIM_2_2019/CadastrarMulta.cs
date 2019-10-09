@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Model;
 
 namespace PrototipoTelas
 {
@@ -21,7 +22,32 @@ namespace PrototipoTelas
         {
             if (MessageBox.Show("Tem certeza que deseja cadastrar multa?", "Confirmação", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                MessageBox.Show("Multa cadastrada com sucesso");
+                Multa multa = new Multa();
+
+                multa.Data = txtData.Text;
+                multa.AutoInfracao = txtAutoInfracao.Text;
+                multa.DescricaoInfracao = txtDescricaoInfracao.Text;
+                multa.Local = txtLocal.Text;
+                multa.Gravidade = txtGravidade.Text;
+                multa.DataVencimento = txtDataVencimento.Text;
+                multa.DataPagamento = txtDataPagamento.Text;
+                multa.Situacao = txtSituacao.Text;
+                multa.Placa = txtPlaca.Text;
+                multa.Cpf = txtCPF.Text;
+                multa.Valor = txtValor.Text;
+
+                multa.cadastrarMulta();
+
+                if (multa.Passou == true)
+                {
+                    MessageBox.Show("Multa cadastrada com sucesso");
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Cancelado com sucesso");
+                    this.Close();
+                }
             }
             else
             {
