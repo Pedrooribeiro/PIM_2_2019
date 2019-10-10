@@ -86,5 +86,10 @@ namespace PrototipoTelas
                 txtEnabled(true);
             }
         }
+
+        private void ModificarQuilometragem_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

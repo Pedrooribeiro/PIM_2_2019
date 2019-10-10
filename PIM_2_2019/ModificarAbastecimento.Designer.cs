@@ -127,7 +127,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnModificar);
             this.Name = "ModificarAbastecimento";
-            this.Text = "ExcluirAbastecimento";
+            this.Text = "ModificarAbastecimento";
             ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

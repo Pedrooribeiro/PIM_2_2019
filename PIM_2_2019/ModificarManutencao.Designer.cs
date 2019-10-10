@@ -126,7 +126,7 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnModificar);
             this.Name = "ModificarManutencao";
-            this.Text = "ExcluirManutencao";
+            this.Text = "ModificarManutencao";
             ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

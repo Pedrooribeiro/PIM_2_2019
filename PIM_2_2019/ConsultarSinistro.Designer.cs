@@ -32,7 +32,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.Excluir = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnConsultar = new System.Windows.Forms.Button();
             this.txtPlacaConsultada = new System.Windows.Forms.MaskedTextBox();
             this.dgvDados = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).BeginInit();
@@ -45,9 +45,10 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(249, 19);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(172, 24);
+            this.label6.Size = new System.Drawing.Size(173, 24);
             this.label6.TabIndex = 53;
-            this.label6.Text = "Consultar Seguro";
+            this.label6.Text = "Consultar Sinistro";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // button2
             // 
@@ -82,16 +83,16 @@
             this.label2.TabIndex = 44;
             this.label2.Text = "Placa";
             // 
-            // button1
+            // btnConsultar
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.button1.Location = new System.Drawing.Point(277, 103);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(91, 31);
-            this.button1.TabIndex = 40;
-            this.button1.Text = "Consultar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnConsultar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btnConsultar.Location = new System.Drawing.Point(277, 103);
+            this.btnConsultar.Name = "btnConsultar";
+            this.btnConsultar.Size = new System.Drawing.Size(91, 31);
+            this.btnConsultar.TabIndex = 40;
+            this.btnConsultar.Text = "Consultar";
+            this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtPlacaConsultada
             // 
@@ -100,7 +101,7 @@
             this.txtPlacaConsultada.Mask = "aaa-0000";
             this.txtPlacaConsultada.Name = "txtPlacaConsultada";
             this.txtPlacaConsultada.Size = new System.Drawing.Size(100, 20);
-            this.txtPlacaConsultada.TabIndex = 54;
+            this.txtPlacaConsultada.TabIndex = 39;
             // 
             // dgvDados
             // 
@@ -122,13 +123,13 @@
             this.ClientSize = new System.Drawing.Size(664, 402);
             this.Controls.Add(this.dgvDados);
             this.Controls.Add(this.txtPlacaConsultada);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Excluir);
             this.Name = "ConsultarSinistro";
-            this.Text = "ExcluirSinistro";
+            this.Text = "ConsultarSinistro";
             ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -141,7 +142,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button Excluir;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.MaskedTextBox txtPlacaConsultada;
         public System.Windows.Forms.DataGridView dgvDados;
     }

@@ -40,6 +40,7 @@
             // 
             // label6
             // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(239, 20);
@@ -83,14 +84,16 @@
             // 
             // txtPlacaConsultada
             // 
+            this.txtPlacaConsultada.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtPlacaConsultada.Location = new System.Drawing.Point(363, 75);
             this.txtPlacaConsultada.Mask = "aaa-0000";
             this.txtPlacaConsultada.Name = "txtPlacaConsultada";
             this.txtPlacaConsultada.Size = new System.Drawing.Size(100, 20);
-            this.txtPlacaConsultada.TabIndex = 65;
+            this.txtPlacaConsultada.TabIndex = 63;
             // 
             // btnConsultar
             // 
+            this.btnConsultar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.btnConsultar.Location = new System.Drawing.Point(281, 119);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(91, 31);
@@ -101,6 +104,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(202, 75);

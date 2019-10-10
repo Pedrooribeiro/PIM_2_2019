@@ -200,7 +200,8 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnModificar);
             this.Name = "ModificarQuilometragem";
-            this.Text = "ExcluirQuilometragem";
+            this.Text = "ModificarQuilometragem";
+            this.Load += new System.EventHandler(this.ModificarQuilometragem_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

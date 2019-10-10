@@ -127,7 +127,7 @@ namespace Model
             try
             {
                 dbConnection.open();
-                SqlCommand cmdConsultar = new SqlCommand("SELECT id_sinistro, data_sinistro, descricao_ocorrido, local_sinistro, cpf, placa FROM sinistros WHERE placa = @placaConsultada", dbConnection.getSqlConn());
+                SqlCommand cmdConsultar = new SqlCommand("SELECT id_sinistro, data_sinistro, descricao_ocorrido, local_sinistro, placa, cpf FROM sinistros WHERE placa = @placaConsultada", dbConnection.getSqlConn());
                 cmdConsultar.Parameters.AddWithValue("@placaConsultada", this.placaConsultada);
 
                 SqlDataAdapter adaptador = new SqlDataAdapter();
@@ -149,7 +149,7 @@ namespace Model
             try
             {
                 dbConnection.open();
-                SqlCommand cmdModificar = new SqlCommand("UPDATE sinistros SET data_sinistro = @dataSinistro, descricao_ocorrido = @descricaoOcorrido, local_sinistro = @localSinistro, cpf = @cpf, placa = @placa WHERE placa = @placaConsultada AND id_sinistro = @idSinistro");
+                SqlCommand cmdModificar = new SqlCommand("UPDATE sinistros SET data_sinistro = @dataSinistro, descricao_ocorrido = @descricaoOcorrido, local_sinistro = @localSinistro,  placa = @placa, cpf = @cpf WHERE placa = @placaConsultada AND id_sinistro = @idSinistro");
                 cmdModificar.Parameters.AddWithValue("@dataSinistro", this.data);
                 cmdModificar.Parameters.AddWithValue("@descricaoOcorrido", this.descricaoOcorrido);
                 cmdModificar.Parameters.AddWithValue("@localSinistro", this.local);
