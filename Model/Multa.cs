@@ -159,7 +159,6 @@ namespace Model
             }
             catch (System.Data.SqlClient.SqlException sqlException)
             {
-                System.Windows.Forms.MessageBox.Show(sqlException.Message);
                 MessageBox.Show("Erro ao cadastrar! Campos vazios ou preenchidos incorretamente, tente novamente.", "Erro");
                 passou = false;
             }
@@ -201,7 +200,7 @@ namespace Model
             try
             {
                 dbConnection.open();
-                SqlCommand cmdModificar = new SqlCommand("UPDATE multas SET data_multa = @dataMulta, auto_infracao = @autoInfracao, descricao_infracao = @descricaoInfracao, local_multa = @local, data_vencimento = @dataVencimento, data_pagamento = @dataPagamento, situacao = @situacao, placa = @placa, cpf = @cpf, valor = @valor, gravidade = @gravidade  WHERE placa = @placaConsultada AND id_multa = @idMulta");
+                SqlCommand cmdModificar = new SqlCommand("UPDATE multas SET data_multa = @dataMulta, auto_infracao = @autoInfracao, descricao_infracao = @descricaoInfracao, local_multa = @local, data_vencimento = @dataVencimento, data_pagamento = @dataPagamento, situacao = @situacao, placa = @placa, cpf = @cpf, valor = @valor, gravidade = @gravidade WHERE placa = @placaConsultada AND id_multa = @idMulta");
                 cmdModificar.Parameters.AddWithValue("@dataMulta", this.data);
                 cmdModificar.Parameters.AddWithValue("@autoInfracao", this.autoInfracao);
                 cmdModificar.Parameters.AddWithValue("@descricaoInfracao", this.descricaoInfracao);

@@ -254,11 +254,11 @@
     <Compile Include="ExcluirSeguro.Designer.cs">
       <DependentUpon>ExcluirSeguro.cs</DependentUpon>
     </Compile>
-    <Compile Include="ExcluirSinistro.cs">
+    <Compile Include="ConsultarSinistro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ExcluirSinistro.Designer.cs">
-      <DependentUpon>ExcluirSinistro.cs</DependentUpon>
+    <Compile Include="ConsultarSinistro.Designer.cs">
+      <DependentUpon>ConsultarSinistro.cs</DependentUpon>
     </Compile>
     <Compile Include="ExcluirVeiculo.cs">
       <SubType>Form</SubType>
@@ -484,8 +484,8 @@
     <EmbeddedResource Include="ExcluirSeguro.resx">
       <DependentUpon>ExcluirSeguro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ExcluirSinistro.resx">
-      <DependentUpon>ExcluirSinistro.cs</DependentUpon>
+    <EmbeddedResource Include="ConsultarSinistro.resx">
+      <DependentUpon>ConsultarSinistro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExcluirVeiculo.resx">
       <DependentUpon>ExcluirVeiculo.cs</DependentUpon>

@@ -76,7 +76,7 @@
             // 
             this.dgvEntrada.AllowUserToAddRows = false;
             this.dgvEntrada.AllowUserToDeleteRows = false;
-            this.dgvEntrada.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.dgvEntrada.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dgvEntrada.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEntrada.Location = new System.Drawing.Point(12, 118);
             this.dgvEntrada.Name = "dgvEntrada";
@@ -99,7 +99,7 @@
             // 
             this.dgvSaida.AllowUserToAddRows = false;
             this.dgvSaida.AllowUserToDeleteRows = false;
-            this.dgvSaida.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.dgvSaida.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dgvSaida.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSaida.Location = new System.Drawing.Point(12, 356);
             this.dgvSaida.Name = "dgvSaida";

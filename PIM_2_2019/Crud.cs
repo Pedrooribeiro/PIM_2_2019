@@ -477,7 +477,7 @@ namespace PrototipoTelas
 
         private void Button47_Click(object sender, EventArgs e)
         {
-            ExcluirSinistro ExcluirSinistro2 = new ExcluirSinistro();
+            ConsultarSinistro ExcluirSinistro2 = new ConsultarSinistro();
             ExcluirSinistro2.ShowDialog();
         }
 

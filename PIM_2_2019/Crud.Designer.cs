@@ -804,8 +804,8 @@
             // panel14
             // 
             this.panel14.BackColor = System.Drawing.Color.DarkGray;
-            this.panel14.Controls.Add(this.button47);
             this.panel14.Controls.Add(this.button48);
+            this.panel14.Controls.Add(this.button47);
             this.panel14.Controls.Add(this.button49);
             this.panel14.Location = new System.Drawing.Point(111, 434);
             this.panel14.Name = "panel14";
@@ -814,17 +814,17 @@
             // 
             // button47
             // 
-            this.button47.Location = new System.Drawing.Point(219, 3);
+            this.button47.Location = new System.Drawing.Point(111, 3);
             this.button47.Name = "button47";
             this.button47.Size = new System.Drawing.Size(102, 30);
             this.button47.TabIndex = 4;
-            this.button47.Text = "Excluir Sinistro";
+            this.button47.Text = "Consultar Sinistro";
             this.button47.UseVisualStyleBackColor = true;
             this.button47.Click += new System.EventHandler(this.Button47_Click);
             // 
             // button48
             // 
-            this.button48.Location = new System.Drawing.Point(111, 3);
+            this.button48.Location = new System.Drawing.Point(219, 3);
             this.button48.Name = "button48";
             this.button48.Size = new System.Drawing.Size(102, 30);
             this.button48.TabIndex = 3;

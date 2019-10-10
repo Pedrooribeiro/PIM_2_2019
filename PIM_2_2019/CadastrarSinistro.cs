@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Model;
 
 namespace PrototipoTelas
 {
@@ -19,13 +20,28 @@ namespace PrototipoTelas
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Tem certeza que deseja cadastrar sinistro", "Confirmação", MessageBoxButtons.YesNo) == DialogResult.Yes)
+
+            if (MessageBox.Show("Tem certeza que deseja cadastrar o sinistro?", "Confirmação cadastro de entrada", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                MessageBox.Show("Sinistro cadastrado com sucesso");
+                Sinistro sinistro = new Sinistro();
+
+                sinistro.Data = txtData.Text;
+                sinistro.DescricaoOcorrido = txtDescricao.Text;
+                sinistro.Local = txtLocal.Text;
+                sinistro.Cpf = txtCpf.Text;
+                sinistro.Placa = txtPlaca.Text;
+
+                sinistro.cadastrarSinistro();
+                if (sinistro.Passou == true)
+                {
+                    MessageBox.Show("Sinistro cadastrado com sucesso");
+                    this.Close();
+                }
             }
             else
             {
                 MessageBox.Show("Operação cancelada");
+                this.Close();
             }
         }
 

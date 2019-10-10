@@ -105,7 +105,6 @@ C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug
 C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\PrototipoTelas.ExcluirPneu.resources
 C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\PrototipoTelas.ModificarQuilometragem.resources
 C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\PrototipoTelas.ExcluirSeguro.resources
-C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\PrototipoTelas.ExcluirSinistro.resources
 C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\PrototipoTelas.ExcluirVeiculo.resources
 C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\PrototipoTelas.ExcluirMulta.resources
 C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\PrototipoTelas.login.resources
@@ -132,3 +131,4 @@ C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug
 C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\View.csproj.CopyComplete
 C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\PrototipoTelas.exe
 C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\PrototipoTelas.pdb
+C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\PrototipoTelas.ConsultarSinistro.resources

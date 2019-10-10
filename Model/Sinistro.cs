@@ -3,54 +3,173 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace Model
 {
-    class Sinistro
+    public class Sinistro
     {
-        private Veiculo veiculo = new Veiculo();
-        private Motorista motorista = new Motorista();
+        DBConnection dbConnection = new DBConnection();
 
-        private String data;
+        private string cpf;
 
-        public String Data
+        public string Cpf
+        {
+            get { return cpf; }
+            set { cpf = value; }
+        }
+
+        private string placa;
+
+        public string Placa
+        {
+            get { return placa; }
+            set { placa = value; }
+        }
+
+
+        private string data;
+
+        public string Data
         {
             get { return data; }
             set { data = value; }
         }
 
-        private String descricaoOcorrido;
+        private string descricaoOcorrido;
 
-        public String DescricaoOcorrido
+        public string DescricaoOcorrido
         {
             get { return descricaoOcorrido; }
             set { descricaoOcorrido = value; }
         }
 
-        private String local;
+        private string local;
 
-        public String Local
+        public string Local
         {
             get { return local; }
             set { local = value; }
         }
 
-        private String seguro;
+        private string seguro;
 
-        public String Seguro
+        public string Seguro
         {
             get { return seguro; }
             set { seguro = value; }
         }
+
+        private string placaConsultada;
+
+        public string PlacaConsultada
+        {
+            get { return placaConsultada; }
+            set { placaConsultada = value; }
+        }
+
+        private Boolean passou = true;
+
+        public Boolean Passou
+        {
+            get { return passou; }
+            set { passou = value; }
+        }
+
+        private DataTable dataTable = new DataTable();
+
+        public DataTable DataTable
+        {
+            get { return this.dataTable; }
+        }
+
+        private int idSinistro;
+
+        public int IdSinistro
+        {
+            get { return idSinistro; }
+            set { idSinistro = value; }
+        }
+
 
         public Sinistro()
         {
 
         }
 
-        public void cadastrarSinistro() { }
-        public void consultarSinistro() { }
-        public void modificarSinisitro() { }
-        public void excluirSinistro() { }
+        public void cadastrarSinistro() {
+            try
+            {
+                dbConnection.open();
+                SqlCommand cmdCadastrar = new SqlCommand("INSERT INTO sinistros (data_sinistro, descricao_ocorrido, local_sinistro, placa, cpf) VALUES (@data, @descricaoOcorrido, @localSinistro, @placa, @cpf)");
+                cmdCadastrar.Parameters.AddWithValue("@data", this.data);
+                cmdCadastrar.Parameters.AddWithValue("@descricaoOcorrido", this.descricaoOcorrido);
+                cmdCadastrar.Parameters.AddWithValue("@localSinistro", this.local);
+                cmdCadastrar.Parameters.AddWithValue("@placa", this.placa);
+                cmdCadastrar.Parameters.AddWithValue("@cpf", this.cpf);
+                cmdCadastrar.Connection = dbConnection.getSqlConn();
+                cmdCadastrar.ExecuteNonQuery();
+            }
+            catch (System.Data.SqlClient.SqlException sqlException)
+            {
+                MessageBox.Show("Erro ao cadastrar! Campos vazios ou preenchidos incorretamente, tente novamente.", "Erro");
+                passou = false;
+            }
+            finally
+            {
+                dbConnection.close();
+            }
+        }
+
+        public void consultarSinistro() {
+            try
+            {
+                dbConnection.open();
+                SqlCommand cmdConsultar = new SqlCommand("SELECT id_sinistro, data_sinistro, descricao_ocorrido, local_sinistro, cpf, placa FROM sinistros WHERE placa = @placaConsultada", dbConnection.getSqlConn());
+                cmdConsultar.Parameters.AddWithValue("@placaConsultada", this.placaConsultada);
+
+                SqlDataAdapter adaptador = new SqlDataAdapter();
+                adaptador.SelectCommand = cmdConsultar;
+                adaptador.Fill(this.dataTable);
+            }
+            catch (System.Data.SqlClient.SqlException sqlException)
+            {
+                MessageBox.Show("Erro ao consultar! Item não localizado, tente novamente", "Erro");
+                passou = false;
+            }
+            finally
+            {
+                dbConnection.close();
+            }
+        }
+
+        public void modificarSinistro() {
+            try
+            {
+                dbConnection.open();
+                SqlCommand cmdModificar = new SqlCommand("UPDATE sinistros SET data_sinistro = @dataSinistro, descricao_ocorrido = @descricaoOcorrido, local_sinistro = @localSinistro, cpf = @cpf, placa = @placa WHERE placa = @placaConsultada AND id_sinistro = @idSinistro");
+                cmdModificar.Parameters.AddWithValue("@dataSinistro", this.data);
+                cmdModificar.Parameters.AddWithValue("@descricaoOcorrido", this.descricaoOcorrido);
+                cmdModificar.Parameters.AddWithValue("@localSinistro", this.local);
+                cmdModificar.Parameters.AddWithValue("@placa", this.placa);
+                cmdModificar.Parameters.AddWithValue("@cpf", this.cpf);
+                cmdModificar.Parameters.AddWithValue("@placaConsultada", this.placaConsultada);
+                cmdModificar.Parameters.AddWithValue("@idSinistro", this.idSinistro);
+                cmdModificar.Connection = dbConnection.getSqlConn();
+                cmdModificar.ExecuteNonQuery();
+            }
+            catch (System.Data.SqlClient.SqlException sqlException)
+            {
+                System.Windows.Forms.MessageBox.Show(sqlException.Message);
+                MessageBox.Show("Erro ao modificar! Item não localizado, campos vazios ou preenchidos incorretamente, tente novamente.", "Erro");
+                passou = false;
+            }
+            finally
+            {
+                dbConnection.close();
+            }
+        }
     }
 }
