@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Model;
 
 namespace PrototipoTelas
 {
@@ -19,19 +20,53 @@ namespace PrototipoTelas
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Tem certeza que deseja cadastrar aluguel?", "Confirmação", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("Tem certeza que deseja cadastrar o aluguel?", "Confirmação", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                MessageBox.Show("Aluguel cadastrado com sucesso");
+                AluguelVeiculos aluguel = new AluguelVeiculos();
+
+                aluguel.Cpf = txtCPF.Text;
+                aluguel.NumeroVeiculos = txtNumeroVeiculos.Text;
+                aluguel.DataInicio = txtDataInicio.Text;
+                aluguel.DataEntrega = txtDataEntrega.Text;
+
+                aluguel.cadastrarAluguel();
+
+                if (aluguel.Passou == true)
+                {
+                    MessageBox.Show("Aluguel cadastrado com sucesso");
+                    this.Close();
+                }
             }
             else
             {
                 MessageBox.Show("Operação cancelada");
+                this.Close();
             }
         }
 
         private void Button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void CadastrarAluguel_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
