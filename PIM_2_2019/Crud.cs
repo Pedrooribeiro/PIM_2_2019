@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Model;
 
 namespace PrototipoTelas
 {
@@ -621,9 +622,11 @@ namespace PrototipoTelas
 
         private void Button50_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Você desejar gerar o relátorio ? ","Confirmação", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            Relatorio relatorio = new Relatorio();
+            if (MessageBox.Show("Você desejar gerar o relátorio? ","Confirmação", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                MessageBox.Show("Relatório gerado com sucesso na pasta 'Meus documentos'");
+                relatorio.gerarRelatorio();
+                MessageBox.Show("Relatório gerado com sucesso no caminho '" + relatorio.Caminho + "'");
             }
             else
             {

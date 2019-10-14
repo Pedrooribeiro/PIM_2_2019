@@ -58,6 +58,7 @@
     <Compile Include="Peca.cs" />
     <Compile Include="Pneu.cs" />
     <Compile Include="Quilometragem.cs" />
+    <Compile Include="Relatorio.cs" />
     <Compile Include="Seguro.cs" />
     <Compile Include="Sinistro.cs" />
     <Compile Include="Veiculo.cs" />
