@@ -105,6 +105,76 @@ namespace Model
                         sw.WriteLine(dr["id_peca"].ToString() + "\t" + dr["tipo"].ToString() + "\t" + dr["nome"].ToString() + "\t" + dr["descricao"].ToString() + "\t" + dr["quantidade"].ToString() + "\t" + dr["valor_unitario"].ToString() + "\t" + dr["nome_veiculo"].ToString() + "\t");
                     }
                     dr.Close();
+
+                    // MANUTENÇÕES
+                    SqlCommand cmdManutencao = new SqlCommand("SELECT * FROM manutencoes");
+                    cmdManutencao.Connection = dbConnection.getSqlConn();
+
+                    dr = cmdManutencao.ExecuteReader();
+
+                    sw.WriteLine("\n" + "MANUTENCOES");
+                    sw.WriteLine("ID MANUTENCAO" + "\t" + "DATA MANUTENCAO" + "\t" + "MOTIVO" + "\t" + "ESTABELECIMENTO" + "\t" + "PLACA" + "\t" + "VALOR TOTAL" + "\t");
+                    while (dr.Read())
+                    {
+                        sw.WriteLine(dr["id_manutencao"].ToString() + "\t" + dr["data_manutencao"].ToString() + "\t" + dr["motivo"].ToString() + "\t" + dr["estabelecimento"].ToString() + "\t" + dr["placa"].ToString() + "\t" + dr["valor_total"].ToString() + "\t");
+                    }
+                    dr.Close();
+
+                    // MOTORISTAS
+                    SqlCommand cmdMotorista = new SqlCommand("SELECT * FROM motoristas");
+                    cmdMotorista.Connection = dbConnection.getSqlConn();
+
+                    dr = cmdMotorista.ExecuteReader();
+
+                    sw.WriteLine("\n" + "MOTORISTAS");
+                    sw.WriteLine("ID MOTORISTA" + "\t" + "NOME COMPLETO" + "\t" + "RG" + "\t" + "CPF" + "\t" + "CNH" + "\t" + "VENCIMENTO CNH" + "\t" + "EMPRESA" + "\t");
+                    while (dr.Read())
+                    {
+                        sw.WriteLine(dr["id_motorista"].ToString() + "\t" + dr["nome_completo"].ToString() + "\t" + dr["rg"].ToString() + "\t" + dr["cpf"].ToString() + "\t" + dr["cnh"].ToString() + "\t" + dr["vencimento_cnh"].ToString() + "\t" + dr["empresa"].ToString() + "\t");
+                    }
+                    dr.Close();
+
+                    // MULTAS
+                    SqlCommand cmdMultas = new SqlCommand("SELECT * FROM multas");
+                    cmdMultas.Connection = dbConnection.getSqlConn();
+
+                    dr = cmdMultas.ExecuteReader();
+
+                    sw.WriteLine("\n" + "MULTAS");
+                    sw.WriteLine("ID MULTA" + "\t" + "DATA MULTA" + "\t" + "AUTO INFRACAO" + "\t" + "DESCRICAO INFRACAO" + "\t" + "LOCAL MULTA" + "\t" + "DATA VENCIMENTO" + "\t" + "DATA PAGAMENTO" + "\t" + "SITUACAO" + "\t" + "PLACA" + "\t" + "CPF" + "\t" + "VALOR" + "\t" + "GRAVIDADE" + "\t");
+                    while (dr.Read())
+                    {
+                        sw.WriteLine(dr["id_multa"].ToString() + "\t" + dr["data_multa"].ToString() + "\t" + dr["auto_infracao"].ToString() + "\t" + dr["descricao_infracao"].ToString() + "\t" + dr["local_multa"].ToString() + "\t" + dr["data_vencimento"].ToString() + "\t" + dr["data_pagamento"].ToString() + "\t" + dr["situacao"].ToString() + "\t" + dr["placa"].ToString() + "\t" + dr["cpf"].ToString() + "\t" + dr["valor"].ToString() + "\t" + dr["gravidade"].ToString() + "\t");
+                    }
+                    dr.Close();
+
+                    // PNEUS
+                    SqlCommand cmdPneus = new SqlCommand("SELECT * FROM pneus");
+                    cmdPneus.Connection = dbConnection.getSqlConn();
+
+                    dr = cmdPneus.ExecuteReader();
+
+                    sw.WriteLine("\n" + "PNEUS");
+                    sw.WriteLine("ID PNEUS" + "\t" + "NUMERO SERIE" + "\t" + "SITUACAO" + "\t" + "MARCA" + "\t" + "MODELO" + "\t" + "DIMENSAO" + "\t" + "PLACA" + "\t");
+                    while (dr.Read())
+                    {
+                        sw.WriteLine(dr["id_multa"].ToString() + "\t" + dr["numero_serie"].ToString() + "\t" + dr["situacao"].ToString() + "\t" + dr["marca"].ToString() + "\t" + dr["modelo"].ToString() + "\t" + dr["dimensao"].ToString() + "\t" + dr["placa"].ToString() + "\t");
+                    }
+                    dr.Close();
+
+                    // QUILOMETRAGEM
+                    SqlCommand cmdQuilometragem = new SqlCommand("SELECT * FROM quilometragem");
+                    cmdQuilometragem.Connection = dbConnection.getSqlConn();
+
+                    dr = cmdQuilometragem.ExecuteReader();
+
+                    sw.WriteLine("\n" + "QUILOMETRAGEM");
+                    sw.WriteLine("ID QUILOMETRAGEM" + "\t" + "DATA INICIO" + "\t" + "DATA ATUAL" + "\t" + "PLACA" + "\t" + "QUILOMETROS RODADOS" + "\t");
+                    while (dr.Read())
+                    {
+                        sw.WriteLine(dr["id_quilometragem"].ToString() + "\t" + dr["data_inicio"].ToString() + "\t" + dr["data_atual"].ToString() + "\t" + dr["placa"].ToString() + "\t" + dr["quilometros_rodados"].ToString() + "\t");
+                    }
+                    dr.Close();
                 }
                 catch (Exception excpt)
                 {              
