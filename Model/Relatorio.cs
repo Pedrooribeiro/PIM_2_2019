@@ -175,6 +175,62 @@ namespace Model
                         sw.WriteLine(dr["id_quilometragem"].ToString() + "\t" + dr["data_inicio"].ToString() + "\t" + dr["data_atual"].ToString() + "\t" + dr["placa"].ToString() + "\t" + dr["quilometros_rodados"].ToString() + "\t");
                     }
                     dr.Close();
+
+                    // SAÍDAS
+                    SqlCommand cmdSaidas = new SqlCommand("SELECT * FROM saidas");
+                    cmdSaidas.Connection = dbConnection.getSqlConn();
+
+                    dr = cmdSaidas.ExecuteReader();
+
+                    sw.WriteLine("\n" + "SAIDAS");
+                    sw.WriteLine("ID SAIDA" + "\t" + "DATA SAIDA" + "\t" + "PLACA" + "\t" + "CPF" + "\t" + "HORARIO SAIDA" + "\t");
+                    while (dr.Read())
+                    {
+                        sw.WriteLine(dr["id_saida"].ToString() + "\t" + dr["data_saida"].ToString() + "\t" + dr["placa"].ToString() + "\t" + dr["cpf"].ToString() + "\t" + dr["horario_saida"].ToString() + "\t");
+                    }
+                    dr.Close();
+
+                    // SEGUROS
+                    SqlCommand cmdSeguros = new SqlCommand("SELECT * FROM seguros");
+                    cmdSeguros.Connection = dbConnection.getSqlConn();
+
+                    dr = cmdSeguros.ExecuteReader();
+
+                    sw.WriteLine("\n" + "SEGUROS");
+                    sw.WriteLine("ID SEGURO" + "\t" + "NUMERO APOLICE" + "\t" + "SEGURADORA" + "\t" + "SEGURADO" + "\t" + "CORRETOR" + "\t" + "DATA INICIO" + "\t" + "DATA VENCIMENTO" + "\t" + "VALOR TOTAL" + "\t" + "NUMERO PARCELAS" + "\t" + "SITUACAO" + "\t" + "PLACA" + "\t");
+                    while (dr.Read())
+                    {
+                        sw.WriteLine(dr["id_seguro"].ToString() + "\t" + dr["numero_apolice"].ToString() + "\t" + dr["seguradora"].ToString() + "\t" + dr["segurado"].ToString() + "\t" + dr["corretor"].ToString() + "\t" + dr["data_inicio"].ToString() + "\t" + dr["data_vencimento"].ToString() + "\t" + dr["valor_total"].ToString() + "\t" + dr["numero_parcelas"].ToString() + "\t" + dr["situacao"].ToString() + "\t" + dr["placa_seguro"].ToString() + "\t");
+                    }
+                    dr.Close();
+
+                    // SINISTROS
+                    SqlCommand cmdSinistros = new SqlCommand("SELECT * FROM sinistros");
+                    cmdSinistros.Connection = dbConnection.getSqlConn();
+
+                    dr = cmdSinistros.ExecuteReader();
+
+                    sw.WriteLine("\n" + "SINISTROS");
+                    sw.WriteLine("ID SINISTRO" + "\t" + "DATA SINISTRO" + "\t" + "DESCRICAO OCORRIDO" + "\t" + "LOCAL SINISTRO" + "\t" + "PLACA" + "\t" + "CPF" + "\t");
+                    while (dr.Read())
+                    {
+                        sw.WriteLine(dr["id_sinistro"].ToString() + "\t" + dr["data_sinistro"].ToString() + "\t" + dr["descricao_ocorrido"].ToString() + "\t" + dr["local_sinistro"].ToString() + "\t" + dr["placa"].ToString() + "\t" + dr["cpf"].ToString() + "\t");
+                    }
+                    dr.Close();
+
+                    // VIAGENS
+                    SqlCommand cmdViagens = new SqlCommand("SELECT * FROM viagens");
+                    cmdViagens.Connection = dbConnection.getSqlConn();
+
+                    dr = cmdViagens.ExecuteReader();
+
+                    sw.WriteLine("\n" + "VIAGENS");
+                    sw.WriteLine("ID VIAGEM" + "\t" + "DATA VIAGEM" + "\t" + "DATA ENTREGAR" + "\t" + "DATA ENTREGUE" + "\t" + "MOTIVO" + "\t" + "SITUACAO" + "\t" + "KM INICIAL" + "\t" + "KM FINAL" + "\t" + "PLACA" + "\t" + "CPF" + "\t");
+                    while (dr.Read())
+                    {
+                        sw.WriteLine(dr["id_viagem"].ToString() + "\t" + dr["data_viagem"].ToString() + "\t" + dr["data_entregar"].ToString() + "\t" + dr["data_entregue"].ToString() + "\t" + dr["motivo"].ToString() + "\t" + dr["situacao"].ToString() + "\t" + dr["km_inicial"].ToString() + "\t" + dr["km_final"].ToString() + "\t" + dr["placa"].ToString() + "\t" + dr["cpf"].ToString() + "\t");
+                    }
+                    dr.Close();
                 }
                 catch (Exception excpt)
                 {              
