@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 
 namespace Model
 {
-    class DBConnection
+    public class DBConnection
     {
         SqlConnection sqlConn = new SqlConnection(@"Server=localhost\SQLEXPRESS;Database=dbControleFrotasDev;Trusted_Connection=True;");
 
