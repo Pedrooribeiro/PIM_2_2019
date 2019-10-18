@@ -26,6 +26,7 @@ namespace PrototipoTelas
             txtNumeroParcela.Enabled = false;
             txtSituacao.Enabled = false;
             txtPlaca.Enabled = false;
+            btnExcluir.Enabled = false;
         }
 
         private void Label1_Click(object sender, EventArgs e)
@@ -79,6 +80,8 @@ namespace PrototipoTelas
             txtNumeroParcela.Text = seguroConsultar.NumeroParcelas;
             txtSituacao.Text = seguroConsultar.Situacao;
             txtPlaca.Text = seguroConsultar.PlacaSeguro;
+
+            btnExcluir.Enabled = true;
         }
     }  
 }

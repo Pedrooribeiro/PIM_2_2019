@@ -13,49 +13,49 @@ namespace Model
     {
         DBConnection dbConnection = new DBConnection();
 
-        private String nomeCompleto;
+        private string nomeCompleto;
 
-        public String NomeCompleto
+        public string NomeCompleto
         {
             get { return nomeCompleto; }
             set { nomeCompleto = value; }
         }
 
-        private String rg;
+        private string rg;
 
-        public String Rg
+        public string Rg
         {
             get { return rg; }
             set { rg = value; }
         }
 
-        private String cpf;
+        private string cpf;
 
-        public String Cpf
+        public string Cpf
         {
             get { return cpf; }
             set { cpf = value; }
         }
 
-        private String cnh;
+        private string cnh;
 
-        public String Cnh
+        public string Cnh
         {
             get { return cnh; }
             set { cnh = value; }
         }
 
-        private String vencimentoCnh;
+        private string vencimentoCnh;
 
-        public String VencimentoCnh
+        public string VencimentoCnh
         {
             get { return vencimentoCnh; }
             set { vencimentoCnh = value; }
         }
 
-        private String empresa;
+        private string empresa;
 
-        public String Empresa
+        public string Empresa
         {
             get { return empresa; }
             set { empresa = value; }
@@ -153,7 +153,6 @@ namespace Model
             }
             catch (System.Data.SqlClient.SqlException sqlException)
             {
-                System.Windows.Forms.MessageBox.Show(sqlException.Message);
                 MessageBox.Show("Erro ao modificar! Item não localizado, campos vazios ou preenchidos incorretamente, tente novamente.", "Erro");
                 passou = false;
             }

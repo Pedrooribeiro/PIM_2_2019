@@ -132,3 +132,10 @@ C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug
 C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\PrototipoTelas.exe
 C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\PrototipoTelas.pdb
 C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\PrototipoTelas.ConsultarSinistro.resources
+C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\PrototipoTelas.CadastrarUsuario.resources
+C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\PrototipoTelas.ConsultarUsuario.resources
+C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\PrototipoTelas.ExcluirUsuario.resources
+C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\PrototipoTelas.ModificarUsuario.resources
+C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\PrototipoTelas.ResultadoConsultaUsuario.resources
+C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\PrototipoTelas.LoginUsuarios.resources
+C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\PrototipoTelas.OperacoesUsuario.resources

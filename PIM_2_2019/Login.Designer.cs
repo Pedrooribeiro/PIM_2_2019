@@ -35,6 +35,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnUsuarios = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtUsername
@@ -56,7 +57,7 @@
             // btnLogin
             // 
             this.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnLogin.Location = new System.Drawing.Point(290, 214);
+            this.btnLogin.Location = new System.Drawing.Point(169, 217);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(95, 34);
             this.btnLogin.TabIndex = 2;
@@ -67,7 +68,7 @@
             // btnCancelar
             // 
             this.btnCancelar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnCancelar.Location = new System.Drawing.Point(408, 214);
+            this.btnCancelar.Location = new System.Drawing.Point(408, 217);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(95, 34);
             this.btnCancelar.TabIndex = 3;
@@ -107,11 +108,23 @@
             this.label3.Text = "LOGIN";
             this.label3.Click += new System.EventHandler(this.Label3_Click);
             // 
+            // btnUsuarios
+            // 
+            this.btnUsuarios.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnUsuarios.Location = new System.Drawing.Point(290, 217);
+            this.btnUsuarios.Name = "btnUsuarios";
+            this.btnUsuarios.Size = new System.Drawing.Size(95, 34);
+            this.btnUsuarios.TabIndex = 7;
+            this.btnUsuarios.Text = "Usuários";
+            this.btnUsuarios.UseVisualStyleBackColor = true;
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
+            // 
             // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(634, 376);
+            this.Controls.Add(this.btnUsuarios);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -136,6 +149,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnUsuarios;
     }
 }
 

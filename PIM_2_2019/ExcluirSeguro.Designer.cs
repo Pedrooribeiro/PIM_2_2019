@@ -36,7 +36,7 @@
             this.txtDataVencimento = new System.Windows.Forms.MaskedTextBox();
             this.txtDataInicio = new System.Windows.Forms.MaskedTextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
             this.txtSituacao = new System.Windows.Forms.TextBox();
             this.txtNumeroParcela = new System.Windows.Forms.TextBox();
             this.txtValorTotal = new System.Windows.Forms.TextBox();
@@ -135,16 +135,16 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             // 
-            // btnModificar
+            // btnExcluir
             // 
-            this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnModificar.Location = new System.Drawing.Point(108, 487);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(113, 38);
-            this.btnModificar.TabIndex = 85;
-            this.btnModificar.Text = "Excluir";
-            this.btnModificar.UseVisualStyleBackColor = true;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            this.btnExcluir.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnExcluir.Location = new System.Drawing.Point(108, 487);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(113, 38);
+            this.btnExcluir.TabIndex = 85;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // txtSituacao
             // 
@@ -326,7 +326,7 @@
             this.Controls.Add(this.txtDataVencimento);
             this.Controls.Add(this.txtDataInicio);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnModificar);
+            this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.txtSituacao);
             this.Controls.Add(this.txtNumeroParcela);
             this.Controls.Add(this.txtValorTotal);
@@ -361,7 +361,7 @@
         private System.Windows.Forms.MaskedTextBox txtDataVencimento;
         private System.Windows.Forms.MaskedTextBox txtDataInicio;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.TextBox txtSituacao;
         private System.Windows.Forms.TextBox txtNumeroParcela;
         private System.Windows.Forms.TextBox txtValorTotal;

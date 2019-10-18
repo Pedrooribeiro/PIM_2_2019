@@ -42,7 +42,7 @@
             this.txtCor = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.txtPlaca = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -187,16 +187,16 @@
             this.label15.TabIndex = 28;
             this.label15.Text = "Cor";
             // 
-            // button1
+            // btnModificar
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button1.Location = new System.Drawing.Point(148, 459);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(126, 40);
-            this.button1.TabIndex = 37;
-            this.button1.Text = "Modificar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnModificar.Location = new System.Drawing.Point(148, 459);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(126, 40);
+            this.btnModificar.TabIndex = 37;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.Button1_Click);
             // 
             // button2
             // 
@@ -271,7 +271,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtPlaca);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.txtTipoCombustivel);
             this.Controls.Add(this.txtMotorizacao);
             this.Controls.Add(this.txtAno);
@@ -309,7 +309,7 @@
         private System.Windows.Forms.TextBox txtCor;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.MaskedTextBox txtPlaca;
         private System.Windows.Forms.Label label1;

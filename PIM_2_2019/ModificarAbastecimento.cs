@@ -18,6 +18,7 @@ namespace PrototipoTelas
         public ModificarAbastecimento()
         {
             InitializeComponent();
+            btnModificar.Enabled = false;
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -72,6 +73,7 @@ namespace PrototipoTelas
             {
                 MessageBox.Show("Erro ao consultar! Item não localizado, tente novamente!", "Erro");
             }
+            btnModificar.Enabled = true;
         }
     }
 }

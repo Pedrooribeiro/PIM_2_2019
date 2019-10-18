@@ -74,5 +74,11 @@ namespace PrototipoTelas
         {
 
         }
+
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            LoginUsuarios loginUsuarios = new LoginUsuarios();
+            loginUsuarios.ShowDialog();
+        }
     }
 }

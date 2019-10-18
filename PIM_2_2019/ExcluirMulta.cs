@@ -16,6 +16,7 @@ namespace PrototipoTelas
         public ExcluirMulta()
         {
             InitializeComponent();
+            btnExcluir.Enabled = false;
         }
 
         private string placaConsultada;
@@ -65,6 +66,8 @@ namespace PrototipoTelas
             {
                 MessageBox.Show("Erro ao consultar! Item não localizado, tente novamente!", "Erro");
             }
+
+            btnExcluir.Enabled = true;
         }
     }
 }

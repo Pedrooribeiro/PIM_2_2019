@@ -23,6 +23,7 @@ namespace PrototipoTelas
             txtAno.Enabled = false;
             txtMotorizacao.Enabled = false;
             txtTipoCombustivel.Enabled = false;
+            btnExcluir.Enabled = false;
         }
 
         private void Label1_Click(object sender, EventArgs e)
@@ -75,6 +76,8 @@ namespace PrototipoTelas
             txtAno.Text = veiculoConsultar.AnoFabricacao.ToString();
             txtMotorizacao.Text = veiculoConsultar.Motorizacao;
             txtTipoCombustivel.Text = veiculoConsultar.TipoCombustivel;
+
+            btnExcluir.Enabled = true;
         }
 
         private void ExcluirVeiculo_Load(object sender, EventArgs e)

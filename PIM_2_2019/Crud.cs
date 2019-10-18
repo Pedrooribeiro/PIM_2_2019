@@ -28,6 +28,7 @@ namespace PrototipoTelas
         bool isMenuOpen13 = false;
         bool isMenuOpen14 = false;
         bool isMenuOpen15 = false;
+        bool isMenuOpen16 = false;
 
         public Crud()
         {
@@ -707,6 +708,15 @@ namespace PrototipoTelas
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUsuarios_Click_1(object sender, EventArgs e)
+        {
         }
     }
 }

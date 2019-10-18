@@ -53,6 +53,7 @@
     <Compile Include="DBConnection.cs" />
     <Compile Include="EntradaSaida.cs" />
     <Compile Include="Manutencao.cs" />
+    <Compile Include="Usuario.cs" />
     <Compile Include="Motorista.cs" />
     <Compile Include="Multa.cs" />
     <Compile Include="Peca.cs" />

@@ -100,7 +100,7 @@
             // 
             this.txtRg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtRg.Location = new System.Drawing.Point(215, 227);
-            this.txtRg.Mask = "000.000.000-0";
+            this.txtRg.Mask = "00.000.000-0";
             this.txtRg.Name = "txtRg";
             this.txtRg.Size = new System.Drawing.Size(100, 20);
             this.txtRg.TabIndex = 47;

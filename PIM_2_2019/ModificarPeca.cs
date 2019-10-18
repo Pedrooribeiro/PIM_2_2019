@@ -18,6 +18,7 @@ namespace PrototipoTelas
         public ModificarPeca()
         {
             InitializeComponent();
+            btnModificar.Enabled = false;
         }
 
         private void Button2_Click(object sender, EventArgs e)
@@ -70,6 +71,7 @@ namespace PrototipoTelas
             {
                 MessageBox.Show("Erro ao consultar! Item não localizado, tente novamente!", "Erro");
             }
+            btnModificar.Enabled = true;
         }
     }
 }

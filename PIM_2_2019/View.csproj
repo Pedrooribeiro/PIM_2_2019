@@ -128,6 +128,12 @@
     <Compile Include="CadastrarSinistro.Designer.cs">
       <DependentUpon>CadastrarSinistro.cs</DependentUpon>
     </Compile>
+    <Compile Include="CadastrarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastrarUsuario.Designer.cs">
+      <DependentUpon>CadastrarUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="CadastrarVeiculo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,6 +206,12 @@
     <Compile Include="ConsultarSeguro.Designer.cs">
       <DependentUpon>ConsultarSeguro.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConsultarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarUsuario.Designer.cs">
+      <DependentUpon>ConsultarUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConsultarVeiculo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -211,6 +223,18 @@
     </Compile>
     <Compile Include="Crud.Designer.cs">
       <DependentUpon>Crud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginUsuarios.Designer.cs">
+      <DependentUpon>LoginUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExcluirUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExcluirUsuario.Designer.cs">
+      <DependentUpon>ExcluirUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="ModificarAbastecimento.cs">
       <SubType>Form</SubType>
@@ -302,11 +326,23 @@
     <Compile Include="ModificarSinistro.Designer.cs">
       <DependentUpon>ModificarSinistro.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModificarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarUsuario.Designer.cs">
+      <DependentUpon>ModificarUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModificarVeiculo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ModificarVeiculo.Designer.cs">
       <DependentUpon>ModificarVeiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OperacoesUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OperacoesUsuario.Designer.cs">
+      <DependentUpon>OperacoesUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -376,6 +412,12 @@
     <Compile Include="ResultadoConsultaSeguro.Designer.cs">
       <DependentUpon>ResultadoConsultaSeguro.cs</DependentUpon>
     </Compile>
+    <Compile Include="ResultadoConsultaUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResultadoConsultaUsuario.Designer.cs">
+      <DependentUpon>ResultadoConsultaUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="ResultadoConsultaVeiculo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -421,6 +463,9 @@
     <EmbeddedResource Include="CadastrarSinistro.resx">
       <DependentUpon>CadastrarSinistro.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CadastrarUsuario.resx">
+      <DependentUpon>CadastrarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CadastrarVeiculo.resx">
       <DependentUpon>CadastrarVeiculo.cs</DependentUpon>
     </EmbeddedResource>
@@ -457,11 +502,20 @@
     <EmbeddedResource Include="ConsultarSeguro.resx">
       <DependentUpon>ConsultarSeguro.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarUsuario.resx">
+      <DependentUpon>ConsultarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConsultarVeiculo.resx">
       <DependentUpon>ConsultarVeiculo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Crud.resx">
       <DependentUpon>Crud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginUsuarios.resx">
+      <DependentUpon>LoginUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExcluirUsuario.resx">
+      <DependentUpon>ExcluirUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModificarAbastecimento.resx">
       <DependentUpon>ModificarAbastecimento.cs</DependentUpon>
@@ -508,8 +562,14 @@
     <EmbeddedResource Include="ModificarSinistro.resx">
       <DependentUpon>ModificarSinistro.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ModificarUsuario.resx">
+      <DependentUpon>ModificarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ModificarVeiculo.resx">
       <DependentUpon>ModificarVeiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OperacoesUsuario.resx">
+      <DependentUpon>OperacoesUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -553,6 +613,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ResultadoConsultaSeguro.resx">
       <DependentUpon>ResultadoConsultaSeguro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResultadoConsultaUsuario.resx">
+      <DependentUpon>ResultadoConsultaUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ResultadoConsultaVeiculo.resx">
       <DependentUpon>ResultadoConsultaVeiculo.cs</DependentUpon>

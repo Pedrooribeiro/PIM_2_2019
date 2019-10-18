@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnUsuarios = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
@@ -99,8 +100,8 @@
             this.button44 = new System.Windows.Forms.Button();
             this.button45 = new System.Windows.Forms.Button();
             this.panel14 = new System.Windows.Forms.Panel();
-            this.button47 = new System.Windows.Forms.Button();
             this.button48 = new System.Windows.Forms.Button();
+            this.button47 = new System.Windows.Forms.Button();
             this.button49 = new System.Windows.Forms.Button();
             this.panel15 = new System.Windows.Forms.Panel();
             this.button62 = new System.Windows.Forms.Button();
@@ -128,7 +129,9 @@
             // 
             // panel1
             // 
+            this.panel1.AutoSize = true;
             this.panel1.BackColor = System.Drawing.Color.DarkGray;
+            this.panel1.Controls.Add(this.btnUsuarios);
             this.panel1.Controls.Add(this.button16);
             this.panel1.Controls.Add(this.button15);
             this.panel1.Controls.Add(this.button14);
@@ -146,9 +149,19 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(-1, -1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(112, 710);
+            this.panel1.Size = new System.Drawing.Size(112, 800);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // btnUsuarios
+            // 
+            this.btnUsuarios.Location = new System.Drawing.Point(3, 545);
+            this.btnUsuarios.Name = "btnUsuarios";
+            this.btnUsuarios.Size = new System.Drawing.Size(102, 30);
+            this.btnUsuarios.TabIndex = 11;
+            this.btnUsuarios.Text = "Usuários";
+            this.btnUsuarios.UseVisualStyleBackColor = true;
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click_1);
             // 
             // button16
             // 
@@ -543,7 +556,35 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(0, 42);
             this.panel7.TabIndex = 16;
-            //           
+            // 
+            // button34
+            // 
+            this.button34.Location = new System.Drawing.Point(0, 0);
+            this.button34.Name = "button34";
+            this.button34.Size = new System.Drawing.Size(75, 23);
+            this.button34.TabIndex = 0;
+            // 
+            // button33
+            // 
+            this.button33.Location = new System.Drawing.Point(0, 0);
+            this.button33.Name = "button33";
+            this.button33.Size = new System.Drawing.Size(75, 23);
+            this.button33.TabIndex = 1;
+            // 
+            // button32
+            // 
+            this.button32.Location = new System.Drawing.Point(0, 0);
+            this.button32.Name = "button32";
+            this.button32.Size = new System.Drawing.Size(75, 23);
+            this.button32.TabIndex = 2;
+            // 
+            // button30
+            // 
+            this.button30.Location = new System.Drawing.Point(0, 0);
+            this.button30.Name = "button30";
+            this.button30.Size = new System.Drawing.Size(75, 23);
+            this.button30.TabIndex = 3;
+            // 
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.DarkGray;
@@ -812,16 +853,6 @@
             this.panel14.Size = new System.Drawing.Size(0, 42);
             this.panel14.TabIndex = 24;
             // 
-            // button47
-            // 
-            this.button47.Location = new System.Drawing.Point(111, 3);
-            this.button47.Name = "button47";
-            this.button47.Size = new System.Drawing.Size(102, 30);
-            this.button47.TabIndex = 4;
-            this.button47.Text = "Consultar Sinistro";
-            this.button47.UseVisualStyleBackColor = true;
-            this.button47.Click += new System.EventHandler(this.Button47_Click);
-            // 
             // button48
             // 
             this.button48.Location = new System.Drawing.Point(219, 3);
@@ -831,6 +862,16 @@
             this.button48.Text = "Modificar Sinistro";
             this.button48.UseVisualStyleBackColor = true;
             this.button48.Click += new System.EventHandler(this.Button48_Click);
+            // 
+            // button47
+            // 
+            this.button47.Location = new System.Drawing.Point(111, 3);
+            this.button47.Name = "button47";
+            this.button47.Size = new System.Drawing.Size(102, 30);
+            this.button47.TabIndex = 4;
+            this.button47.Text = "Consultar Sinistro";
+            this.button47.UseVisualStyleBackColor = true;
+            this.button47.Click += new System.EventHandler(this.Button47_Click);
             // 
             // button49
             // 
@@ -945,6 +986,7 @@
             this.panel15.ResumeLayout(false);
             this.panel16.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1029,5 +1071,7 @@
         private System.Windows.Forms.Button button60;
         private System.Windows.Forms.Button button61;
         private System.Windows.Forms.Button button62;
+        private System.Windows.Forms.Button btnUsuarios;
+        private System.Windows.Forms.Panel panel17;
     }
 }

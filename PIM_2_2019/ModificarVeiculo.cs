@@ -41,6 +41,7 @@ namespace PrototipoTelas
         {
             InitializeComponent();
             txtEnabled(false);
+            btnModificar.Enabled = false;
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -96,6 +97,7 @@ namespace PrototipoTelas
             {
                 txtPlacaConsultar.Enabled = false;
                 txtEnabled(true);
+                btnModificar.Enabled = true;
             }
         }
 

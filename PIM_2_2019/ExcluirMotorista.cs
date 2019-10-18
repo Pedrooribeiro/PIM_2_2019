@@ -22,6 +22,7 @@ namespace PrototipoTelas
             txtCnh.Enabled = false;
             txtVencimentoCnh.Enabled = false;
             txtEmpresa.Enabled = false;
+            btnExcluir.Enabled = false;
         }
 
         private void Label1_Click(object sender, EventArgs e)
@@ -50,6 +51,8 @@ namespace PrototipoTelas
             txtCnh.Text = motoristaConsultar.Cnh;
             txtVencimentoCnh.Text = motoristaConsultar.VencimentoCnh;
             txtEmpresa.Text = motoristaConsultar.Empresa;
+
+            btnExcluir.Enabled = true;
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
