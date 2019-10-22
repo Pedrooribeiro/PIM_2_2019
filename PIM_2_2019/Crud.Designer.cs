@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnUsuarios = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
@@ -131,7 +130,6 @@
             // 
             this.panel1.AutoSize = true;
             this.panel1.BackColor = System.Drawing.Color.DarkGray;
-            this.panel1.Controls.Add(this.btnUsuarios);
             this.panel1.Controls.Add(this.button16);
             this.panel1.Controls.Add(this.button15);
             this.panel1.Controls.Add(this.button14);
@@ -152,16 +150,6 @@
             this.panel1.Size = new System.Drawing.Size(112, 800);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // btnUsuarios
-            // 
-            this.btnUsuarios.Location = new System.Drawing.Point(3, 545);
-            this.btnUsuarios.Name = "btnUsuarios";
-            this.btnUsuarios.Size = new System.Drawing.Size(102, 30);
-            this.btnUsuarios.TabIndex = 11;
-            this.btnUsuarios.Text = "Usuários";
-            this.btnUsuarios.UseVisualStyleBackColor = true;
-            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click_1);
             // 
             // button16
             // 
@@ -1071,7 +1059,6 @@
         private System.Windows.Forms.Button button60;
         private System.Windows.Forms.Button button61;
         private System.Windows.Forms.Button button62;
-        private System.Windows.Forms.Button btnUsuarios;
         private System.Windows.Forms.Panel panel17;
     }
 }

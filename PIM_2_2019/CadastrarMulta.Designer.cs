@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.label6 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.txtDescricaoInfracao = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtMotorista = new System.Windows.Forms.Label();
             this.txtAutoInfracao = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCadastrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtLocal = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -48,11 +48,11 @@
             this.label11 = new System.Windows.Forms.Label();
             this.txtSituacao = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.txtData = new System.Windows.Forms.MaskedTextBox();
             this.txtPlaca = new System.Windows.Forms.MaskedTextBox();
             this.txtDataVencimento = new System.Windows.Forms.MaskedTextBox();
             this.txtDataPagamento = new System.Windows.Forms.MaskedTextBox();
             this.txtCPF = new System.Windows.Forms.MaskedTextBox();
+            this.txtData = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // label6
@@ -66,16 +66,16 @@
             this.label6.TabIndex = 38;
             this.label6.Text = "Cadastrar Multa";
             // 
-            // button2
+            // btnCancelar
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button2.Location = new System.Drawing.Point(221, 590);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(91, 31);
-            this.button2.TabIndex = 52;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.Button2_Click);
+            this.btnCancelar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnCancelar.Location = new System.Drawing.Point(221, 590);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(91, 31);
+            this.btnCancelar.TabIndex = 52;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.Button2_Click);
             // 
             // txtDescricaoInfracao
             // 
@@ -138,16 +138,16 @@
             this.label2.TabIndex = 29;
             this.label2.Text = "Placa";
             // 
-            // button1
+            // btnCadastrar
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button1.Location = new System.Drawing.Point(73, 590);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(91, 31);
-            this.button1.TabIndex = 51;
-            this.button1.Text = "Cadastrar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            this.btnCadastrar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnCadastrar.Location = new System.Drawing.Point(73, 590);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(91, 31);
+            this.btnCadastrar.TabIndex = 51;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.Button1_Click);
             // 
             // label1
             // 
@@ -258,15 +258,6 @@
             this.label12.TabIndex = 49;
             this.label12.Text = "Situação";
             // 
-            // txtData
-            // 
-            this.txtData.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txtData.Location = new System.Drawing.Point(212, 105);
-            this.txtData.Mask = "00/00/0000";
-            this.txtData.Name = "txtData";
-            this.txtData.Size = new System.Drawing.Size(100, 20);
-            this.txtData.TabIndex = 30;
-            // 
             // txtPlaca
             // 
             this.txtPlaca.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
@@ -302,6 +293,15 @@
             this.txtCPF.Size = new System.Drawing.Size(100, 20);
             this.txtCPF.TabIndex = 33;
             // 
+            // txtData
+            // 
+            this.txtData.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtData.Location = new System.Drawing.Point(212, 105);
+            this.txtData.Mask = "00/00/0000";
+            this.txtData.Name = "txtData";
+            this.txtData.Size = new System.Drawing.Size(100, 20);
+            this.txtData.TabIndex = 30;
+            // 
             // CadastrarMulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -324,14 +324,14 @@
             this.Controls.Add(this.txtLocal);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.txtDescricaoInfracao);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtMotorista);
             this.Controls.Add(this.txtAutoInfracao);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.label1);
             this.Name = "CadastrarMulta";
             this.Text = "CadastrarMulta";
@@ -343,14 +343,14 @@
         #endregion
 
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.TextBox txtDescricaoInfracao;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label txtMotorista;
         private System.Windows.Forms.TextBox txtAutoInfracao;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtLocal;
         private System.Windows.Forms.Label label7;
@@ -362,10 +362,10 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtSituacao;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.MaskedTextBox txtData;
         private System.Windows.Forms.MaskedTextBox txtPlaca;
         private System.Windows.Forms.MaskedTextBox txtDataVencimento;
         private System.Windows.Forms.MaskedTextBox txtDataPagamento;
         private System.Windows.Forms.MaskedTextBox txtCPF;
+        private System.Windows.Forms.MaskedTextBox txtData;
     }
 }

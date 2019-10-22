@@ -44,7 +44,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(781, 328);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(83, 32);
-            this.btnCancelar.TabIndex = 17;
+            this.btnCancelar.TabIndex = 18;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.Button2_Click);
@@ -55,7 +55,7 @@
             this.btnExcluir.Location = new System.Drawing.Point(12, 328);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(83, 32);
-            this.btnExcluir.TabIndex = 16;
+            this.btnExcluir.TabIndex = 17;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Click += new System.EventHandler(this.Button1_Click);
@@ -103,7 +103,7 @@
             this.dgvDados.Name = "dgvDados";
             this.dgvDados.ReadOnly = true;
             this.dgvDados.Size = new System.Drawing.Size(852, 95);
-            this.dgvDados.TabIndex = 51;
+            this.dgvDados.TabIndex = 16;
             // 
             // txtPlacaConsultada
             // 

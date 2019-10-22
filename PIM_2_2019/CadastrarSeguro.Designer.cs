@@ -78,7 +78,7 @@
             this.btnCadastrar.Location = new System.Drawing.Point(71, 462);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(94, 35);
-            this.btnCadastrar.TabIndex = 2;
+            this.btnCadastrar.TabIndex = 11;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.Button1_Click);
@@ -189,7 +189,7 @@
             this.txtSeguradora.Location = new System.Drawing.Point(237, 149);
             this.txtSeguradora.Name = "txtSeguradora";
             this.txtSeguradora.Size = new System.Drawing.Size(130, 20);
-            this.txtSeguradora.TabIndex = 12;
+            this.txtSeguradora.TabIndex = 2;
             // 
             // txtSegurado
             // 
@@ -197,7 +197,7 @@
             this.txtSegurado.Location = new System.Drawing.Point(237, 184);
             this.txtSegurado.Name = "txtSegurado";
             this.txtSegurado.Size = new System.Drawing.Size(130, 20);
-            this.txtSegurado.TabIndex = 13;
+            this.txtSegurado.TabIndex = 3;
             // 
             // txtCorretor
             // 
@@ -205,7 +205,7 @@
             this.txtCorretor.Location = new System.Drawing.Point(237, 217);
             this.txtCorretor.Name = "txtCorretor";
             this.txtCorretor.Size = new System.Drawing.Size(130, 20);
-            this.txtCorretor.TabIndex = 14;
+            this.txtCorretor.TabIndex = 4;
             // 
             // txtValorTotal
             // 
@@ -213,7 +213,7 @@
             this.txtValorTotal.Location = new System.Drawing.Point(237, 317);
             this.txtValorTotal.Name = "txtValorTotal";
             this.txtValorTotal.Size = new System.Drawing.Size(130, 20);
-            this.txtValorTotal.TabIndex = 17;
+            this.txtValorTotal.TabIndex = 7;
             // 
             // txtNumParcela
             // 
@@ -221,7 +221,7 @@
             this.txtNumParcela.Location = new System.Drawing.Point(237, 350);
             this.txtNumParcela.Name = "txtNumParcela";
             this.txtNumParcela.Size = new System.Drawing.Size(130, 20);
-            this.txtNumParcela.TabIndex = 18;
+            this.txtNumParcela.TabIndex = 8;
             // 
             // txtSituacao
             // 
@@ -229,7 +229,7 @@
             this.txtSituacao.Location = new System.Drawing.Point(237, 384);
             this.txtSituacao.Name = "txtSituacao";
             this.txtSituacao.Size = new System.Drawing.Size(130, 20);
-            this.txtSituacao.TabIndex = 19;
+            this.txtSituacao.TabIndex = 9;
             // 
             // btnCancelar
             // 
@@ -237,7 +237,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(273, 462);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(94, 35);
-            this.btnCancelar.TabIndex = 20;
+            this.btnCancelar.TabIndex = 12;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.Button2_Click);
@@ -249,7 +249,7 @@
             this.txtDataInicio.Mask = "00/00/0000";
             this.txtDataInicio.Name = "txtDataInicio";
             this.txtDataInicio.Size = new System.Drawing.Size(130, 20);
-            this.txtDataInicio.TabIndex = 21;
+            this.txtDataInicio.TabIndex = 5;
             // 
             // txtDataVencimento
             // 
@@ -258,7 +258,7 @@
             this.txtDataVencimento.Mask = "00/00/0000";
             this.txtDataVencimento.Name = "txtDataVencimento";
             this.txtDataVencimento.Size = new System.Drawing.Size(130, 20);
-            this.txtDataVencimento.TabIndex = 22;
+            this.txtDataVencimento.TabIndex = 6;
             // 
             // label11
             // 
@@ -279,7 +279,7 @@
             this.txtPlaca.Mask = "aaa-0000";
             this.txtPlaca.Name = "txtPlaca";
             this.txtPlaca.Size = new System.Drawing.Size(130, 20);
-            this.txtPlaca.TabIndex = 24;
+            this.txtPlaca.TabIndex = 10;
             // 
             // CadastrarSeguro
             // 

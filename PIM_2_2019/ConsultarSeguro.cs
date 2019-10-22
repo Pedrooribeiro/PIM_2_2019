@@ -29,22 +29,28 @@ namespace PrototipoTelas
             seguro.PlacaConsultada = txtPlaca.Text;
             seguro.consultarSeguro();
 
-            ResultadoConsultaSeguro ResultadoConsultaSeguro = new ResultadoConsultaSeguro();
+            if (seguro.ValorTotal != 0) 
+            {
+                ResultadoConsultaSeguro ResultadoConsultaSeguro = new ResultadoConsultaSeguro();
 
-            ResultadoConsultaSeguro.txtNumApolice.Text = seguro.NumeroApolice;
-            ResultadoConsultaSeguro.txtSeguradora.Text = seguro.Seguradora;
-            ResultadoConsultaSeguro.txtSegurado.Text = seguro.Seguradora;
-            ResultadoConsultaSeguro.txtCorretor.Text = seguro.Corretor;
-            ResultadoConsultaSeguro.txtDataInicio.Text = seguro.DataInicio;
-            ResultadoConsultaSeguro.txtDataVencimento.Text = seguro.DataVencimento;
-            ResultadoConsultaSeguro.txtValorTotal.Text = seguro.ValorTotal.ToString();
-            ResultadoConsultaSeguro.txtNumParcela.Text = seguro.NumeroParcelas;
-            ResultadoConsultaSeguro.txtSituacao.Text = seguro.Situacao;
-            ResultadoConsultaSeguro.txtPlaca.Text = seguro.PlacaSeguro;
+                ResultadoConsultaSeguro.txtNumApolice.Text = seguro.NumeroApolice;
+                ResultadoConsultaSeguro.txtSeguradora.Text = seguro.Seguradora;
+                ResultadoConsultaSeguro.txtSegurado.Text = seguro.Seguradora;
+                ResultadoConsultaSeguro.txtCorretor.Text = seguro.Corretor;
+                ResultadoConsultaSeguro.txtDataInicio.Text = seguro.DataInicio;
+                ResultadoConsultaSeguro.txtDataVencimento.Text = seguro.DataVencimento;
+                ResultadoConsultaSeguro.txtValorTotal.Text = seguro.ValorTotal.ToString();
+                ResultadoConsultaSeguro.txtNumParcela.Text = seguro.NumeroParcelas;
+                ResultadoConsultaSeguro.txtSituacao.Text = seguro.Situacao;
+                ResultadoConsultaSeguro.txtPlaca.Text = seguro.PlacaSeguro;
 
-            ResultadoConsultaSeguro.ShowDialog();
-
-            this.Close();
+                ResultadoConsultaSeguro.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Erro ao cadastrar! Campos vazios ou preenchidos incorretamente, tente novamente.", "Erro");
+            }
         }
 
         private void ConsultarSeguro_Load(object sender, EventArgs e)

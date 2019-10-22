@@ -33,7 +33,18 @@ namespace PrototipoTelas
 
             ResultadoConsultaMulta2.dgvDados.DataSource = multa.DataTable;
 
-            ResultadoConsultaMulta2.ShowDialog();
+            if (multa.Passou == true)
+            {
+                if (ResultadoConsultaMulta2.dgvDados.Rows.Count <= 0)
+                {
+                    MessageBox.Show("Erro ao consultar! Item não localizado, tente novamente!", "Erro");
+                }
+                else
+                {
+                    ResultadoConsultaMulta2.ShowDialog();
+                    this.Close();
+                }
+            }
         }
     }
 }
