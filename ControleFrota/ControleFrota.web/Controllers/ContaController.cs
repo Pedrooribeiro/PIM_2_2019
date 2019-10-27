@@ -25,7 +25,8 @@ namespace ControleFrota.web.Controllers
             {
                 return View(login);
             }
-            var achou = (login.Usuario == "pedro" && login.Senha == "123");
+            var achou = UsuarioModel.ValidarUsuario(login.Usuario, login.Senha);
+
 
             if (achou)
             {
