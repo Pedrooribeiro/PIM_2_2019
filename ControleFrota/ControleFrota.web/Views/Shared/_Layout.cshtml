@@ -8,181 +8,74 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <link href="~/App_Themes/Tema1/StyleSheet1.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="~/App_Themes/Tema1/script.js"></script>
 </head>
 <body>
- 
+
     <div class="container body-content">
         @RenderBody()
         <hr />
 
     </div>
 
-    
-        <div class="area"></div>
-        <nav class="main-menu">
-            <ul>
-                <li>
-                    <a href="#">
-                        <i class="fa fa-list fa-2x"></i>
-                        <span class="nav-text">
-                            Abastecimento
-                        </span>
-                    </a>
+    @if (Request.IsAuthenticated)
+    {
+        <h1>Menu</h1>
+        <ul id="accordion" class="accordion">
+            <li>
+                <div class="link"><i class="fa fa-paint-brush"></i>Motorista<i class="fa fa-chevron-down"></i></div>
+                <ul class="submenu">
+                    <li>@Html.ActionLink("Cadastrar Novo Motorista", "Cadastro", "CadastroMotorista")</li>
+                    <li>@Html.ActionLink("Excluir Motorista", "Cadastro", "ExcluiMotorista")</li>
+                    <li>@Html.ActionLink("Consultar Motorista", "Cadastro", "ConsultaMotorista")</li>
+                </ul>
+            </li>
+            <li class="default open">
+                <div class="link"><i class="fa fa-code"></i>Multa<i class="fa fa-chevron-down"></i></div>
+                <ul class="submenu">
+                    <li><a href="#">Consultar Multa</a></li>
+                    <li><a href="#">Cadastrar Nova Multa</a></li>
+                    <li><a href="#">Excluir Multa</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="link"><i class="fa fa-mobile"></i>Peças<i class="fa fa-chevron-down"></i></div>
+                <ul class="submenu">
+                    <li><a href="#">Cadastrar Nova Peça</a></li>
+                    <li><a href="#">Consultar Peça</a></li>
+                    <li><a href="#">Excluir Peça</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="link"><i class="fa fa-globe"></i>Veículo<i class="fa fa-chevron-down"></i></div>
+                <ul class="submenu">
+                    <li><a href="#">Cadastrar Novo Veículo</a></li>
+                    <li><a href="#">Consultar Veículo</a></li>
+                    <li><a href="#">Excluir Veículo</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="link"><i class="fa fa-globe"></i>Pneu<i class="fa fa-chevron-down"></i></div>
+                <ul class="submenu">
+                    <li><a href="#">Cadastrar Novo Pneu</a></li>
+                    <li><a href="#">Consultar Pneu</a></li>
+                    <li><a href="#" target="[b]blank[/b]">Excluir Pneu</a> </li>
+                </ul>
+            </li>
+        </ul>
+        <ul id="accordion" class="accordion">
+            <li>
 
-                </li>
-                <li class="has-subnav">
-                    <a href="#">
-                        <i class="fa fa-list fa-2x"></i>
-                        <span class="nav-text">
-                            Aluguel Veículo
-                        </span>
-                    </a>
+                @using (Html.BeginForm("LogOff", "Conta", FormMethod.Post, new { id = "logoffForm" }))
+                 {
+                    <li class="logout"><a href="javascript:document.getElementById('logoffForm').submit()">Sair</a></li>
+                 }
+            </li>
+        </ul>
+    }
 
-                </li>
-                <li class="has-subnav">
-                    <a href="#">
-                        <i class="fa fa-list fa-2x"></i>
-                        <span class="nav-text">
-                            Client
-                        </span>
-                    </a>
 
-                </li>
-                <li class="has-subnav">
-                    <a href="#">
-                        <i class="fa fa-folder-open fa-2x"></i>
-                        <span class="nav-text">
-                            Conta
-                        </span>
-                    </a>
-
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fa-bar-chart-o fa-2x"></i>
-                        <span class="nav-text">
-                            Controle de Frota
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fa-font fa-2x"></i>
-                        <span class="nav-text">
-                            Entrada e Saída
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fa-table fa-2x"></i>
-                        <span class="nav-text">
-                            Manutenção
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fa-map-marker fa-2x"></i>
-                        <span class="nav-text">
-                            Motorista
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fa-info fa-2x"></i>
-                        <span class="nav-text">
-                            Multa
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fa-info fa-2x"></i>
-                        <span class="nav-text">
-                            Peça
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fa-info fa-2x"></i>
-                        <span class="nav-text">
-                            Pneu
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fa-info fa-2x"></i>
-                        <span class="nav-text">
-                            Quilometragem
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fa-info fa-2x"></i>
-                        <span class="nav-text">
-                            Relatório
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fa-info fa-2x"></i>
-                        <span class="nav-text">
-                            Seguro
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fa-info fa-2x"></i>
-                        <span class="nav-text">
-                            Sinistro
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fa-info fa-2x"></i>
-                        <span class="nav-text">
-                            Usuário
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fa-info fa-2x"></i>
-                        <span class="nav-text">
-                            Veículo
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fa-info fa-2x"></i>
-                        <span class="nav-text">
-                            Viagem
-                        </span>
-                    </a>
-                </li>
-            </ul>
-
-            <ul class="logout">
-                <li>
-                    <a href="#">
-                        <i class="fa fa-power-off fa-2x"></i>
-                        <span class="nav-text">
-                            Logout
-                        </span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)

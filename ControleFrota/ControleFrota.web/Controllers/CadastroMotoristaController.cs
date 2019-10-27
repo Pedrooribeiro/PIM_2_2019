@@ -6,19 +6,24 @@ using System.Web.Mvc;
 
 namespace ControleFrota.web.Controllers
 {
-    public class HomeController : Controller
+    public class CadastroMotoristaController : Controller
     {
+        // GET: CadastroMotorista
         [Authorize]
-        public ActionResult Index()
+        public ActionResult CadastroMotorista()
         {
             return View();
         }
 
         [Authorize]
-        public ActionResult Contact()
+        public ActionResult ExcluiMotorista()
         {
-            ViewBag.Message = "Your contact page.";
+            return View();
+        }
 
+        [Authorize]
+        public ActionResult ConsultaMotorista()
+        {
             return View();
         }
     }
