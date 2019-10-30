@@ -15,7 +15,7 @@
 
     <div class="container body-content">
         @RenderBody()
-        <hr />
+        
 
     </div>
 
@@ -26,43 +26,88 @@
             <li>
                 <div class="link"><i class="fa fa-paint-brush"></i>Motorista<i class="fa fa-chevron-down"></i></div>
                 <ul class="submenu">
-                    <li>@Html.ActionLink("Cadastrar Novo Motorista", "Cadastro", "CadastroMotorista")</li>
-                    <li>@Html.ActionLink("Excluir Motorista", "Cadastro", "ExcluiMotorista")</li>
-                    <li>@Html.ActionLink("Consultar Motorista", "Cadastro", "ConsultaMotorista")</li>
+                    <li>@Html.ActionLink("Consultar Motorista", "ConsultaMotorista", "Consulta")</li>
                 </ul>
             </li>
             <li class="default open">
                 <div class="link"><i class="fa fa-code"></i>Multa<i class="fa fa-chevron-down"></i></div>
                 <ul class="submenu">
-                    <li><a href="#">Consultar Multa</a></li>
-                    <li><a href="#">Cadastrar Nova Multa</a></li>
-                    <li><a href="#">Excluir Multa</a></li>
+                    <li>@Html.ActionLink("Consultar Multa", "ConsultaMulta", "Consulta")</li>
                 </ul>
             </li>
             <li>
                 <div class="link"><i class="fa fa-mobile"></i>Peças<i class="fa fa-chevron-down"></i></div>
                 <ul class="submenu">
-                    <li><a href="#">Cadastrar Nova Peça</a></li>
-                    <li><a href="#">Consultar Peça</a></li>
-                    <li><a href="#">Excluir Peça</a></li>
+                    <li>@Html.ActionLink("Consultar Peça", "ConsultaPeca", "Consulta")</li>
                 </ul>
             </li>
             <li>
                 <div class="link"><i class="fa fa-globe"></i>Veículo<i class="fa fa-chevron-down"></i></div>
                 <ul class="submenu">
-                    <li><a href="#">Cadastrar Novo Veículo</a></li>
-                    <li><a href="#">Consultar Veículo</a></li>
-                    <li><a href="#">Excluir Veículo</a></li>
+                    <li>@Html.ActionLink("Consultar Veículo", "ConsultaVeiculo", "Consulta")</li>
                 </ul>
             </li>
             <li>
                 <div class="link"><i class="fa fa-globe"></i>Pneu<i class="fa fa-chevron-down"></i></div>
                 <ul class="submenu">
-                    <li><a href="#">Cadastrar Novo Pneu</a></li>
-                    <li><a href="#">Consultar Pneu</a></li>
-                    <li><a href="#" target="[b]blank[/b]">Excluir Pneu</a> </li>
+                    <li>@Html.ActionLink("Consultar Pneu", "ConsultaPneu", "Consulta")</li>
                 </ul>
             </li>
+            <li>
+                <div class="link"><i class="fa fa-globe"></i>Abastecimento<i class="fa fa-chevron-down"></i></div>
+                <ul class="submenu">
+                    <li>@Html.ActionLink("Consultar Abastecimento", "ConsultaAbastecimento", "Consulta")</li>
+                </ul>
+            </li>
+            <li>
+                <div class="link"><i class="fa fa-globe"></i>Aluguel<i class="fa fa-chevron-down"></i></div>
+                <ul class="submenu">
+                    <li>@Html.ActionLink("Consultar Aluguel", "ConsultaAluguel", "Consulta")</li>
+                </ul>
+            </li>
+            <li>
+                <div class="link"><i class="fa fa-globe"></i>Entrada<i class="fa fa-chevron-down"></i></div>
+                <ul class="submenu">
+                    <li>@Html.ActionLink("Consultar Entrada", "ConsultaEntrada", "Consulta")</li>
+                </ul>
+            </li>
+            <li>
+                <div class="link"><i class="fa fa-globe"></i>Manutenção<i class="fa fa-chevron-down"></i></div>
+                <ul class="submenu">
+                    <li>@Html.ActionLink("Consultar Manutenção", "ConsultaManutencao", "Consulta")</li>
+                </ul>
+            </li>
+            <li>
+                <div class="link"><i class="fa fa-globe"></i>Quilometragem<i class="fa fa-chevron-down"></i></div>
+                <ul class="submenu">
+                    <li>@Html.ActionLink("Consultar Quilometragem", "ConsultaQuilometragem", "Consulta")</li>
+                </ul>
+            </li>
+            <li>
+                <div class="link"><i class="fa fa-globe"></i>Rota<i class="fa fa-chevron-down"></i></div>
+                <ul class="submenu">
+                    <li>@Html.ActionLink("Consultar Rota", "ConsultaRota", "Consulta")</li>
+                </ul>
+            </li>
+            <li>
+                <div class="link"><i class="fa fa-globe"></i>Seguro<i class="fa fa-chevron-down"></i></div>
+                <ul class="submenu">
+                    <li>@Html.ActionLink("Consultar Seguro", "ConsultaSeguro", "Consulta")</li>
+                </ul>
+            </li>
+            <li>
+                <div class="link"><i class="fa fa-globe"></i>Sinistro<i class="fa fa-chevron-down"></i></div>
+                <ul class="submenu">
+                    <li>@Html.ActionLink("Consultar Sinistro", "ConsultaSinistro", "Consulta")</li>
+                </ul>
+            </li>
+            <li>
+                <div class="link"><i class="fa fa-globe"></i>Usuário<i class="fa fa-chevron-down"></i></div>
+                <ul class="submenu">
+                    <li>@Html.ActionLink("Consultar Usuário", "ConsultaUsuario", "Consulta")</li>
+                </ul>
+            </li>
+
         </ul>
         <ul id="accordion" class="accordion">
             <li>

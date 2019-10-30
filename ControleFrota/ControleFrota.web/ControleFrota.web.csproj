@@ -120,7 +120,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\CadastroMotoristaController.cs" />
+    <Compile Include="Controllers\ConsultaController.cs" />
     <Compile Include="Controllers\ContaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -167,10 +167,14 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Conta\Login.cshtml" />
+    <Content Include="Views\Consulta\ConsultaMotorista.cshtml" />
+    <Content Include="Views\Consulta\ConsultaMulta.cshtml" />
+    <Content Include="Views\Consulta\ConsultaPneu.cshtml" />
+    <Content Include="Views\Consulta\ConsultaVeiculo.cshtml" />
+    <Content Include="Views\Consulta\ConsultaPeca.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\CadastroMotorista\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
