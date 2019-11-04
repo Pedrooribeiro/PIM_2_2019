@@ -71,6 +71,7 @@
             this.txtQuilometrosRodados.Size = new System.Drawing.Size(100, 20);
             this.txtQuilometrosRodados.TabIndex = 34;
             this.txtQuilometrosRodados.TextChanged += new System.EventHandler(this.txtQuilometrosRodados_TextChanged);
+            this.txtQuilometrosRodados.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQuilometrosRodados_KeyPress);
             // 
             // label4
             // 

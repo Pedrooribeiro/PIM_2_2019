@@ -143,6 +143,7 @@
             this.txtValorTotal.Name = "txtValorTotal";
             this.txtValorTotal.Size = new System.Drawing.Size(100, 20);
             this.txtValorTotal.TabIndex = 40;
+            this.txtValorTotal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtValorTotal_KeyPress);
             // 
             // label7
             // 

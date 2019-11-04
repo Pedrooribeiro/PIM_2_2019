@@ -185,6 +185,7 @@
             this.txtKmInicial.Name = "txtKmInicial";
             this.txtKmInicial.Size = new System.Drawing.Size(100, 20);
             this.txtKmInicial.TabIndex = 30;
+            this.txtKmInicial.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtKmInicial_KeyPress);
             // 
             // txtKmFinal
             // 
@@ -193,6 +194,7 @@
             this.txtKmFinal.Name = "txtKmFinal";
             this.txtKmFinal.Size = new System.Drawing.Size(100, 20);
             this.txtKmFinal.TabIndex = 31;
+            this.txtKmFinal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtKmFinal_KeyPress);
             // 
             // btnCadastrar
             // 

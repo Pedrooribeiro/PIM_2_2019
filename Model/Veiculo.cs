@@ -179,6 +179,8 @@ namespace Model
             } catch (System.Data.SqlClient.SqlException sqlException)
             {
                 MessageBox.Show("Erro ao excluir! Item não localizados, campos vazios ou preenchidos incorretamente, tente novamente.", "Erro");
+
+                System.Windows.Forms.MessageBox.Show(sqlException.Message);
                 passou = false;
             } finally
             {

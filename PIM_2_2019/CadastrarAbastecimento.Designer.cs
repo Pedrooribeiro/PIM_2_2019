@@ -76,6 +76,8 @@
             this.txtLitros.Name = "txtLitros";
             this.txtLitros.Size = new System.Drawing.Size(100, 20);
             this.txtLitros.TabIndex = 36;
+            this.txtLitros.TextChanged += new System.EventHandler(this.txtLitros_TextChanged);
+            this.txtLitros.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLitros_KeyPress);
             // 
             // label5
             // 
@@ -167,6 +169,7 @@
             this.txtValorLitro.Name = "txtValorLitro";
             this.txtValorLitro.Size = new System.Drawing.Size(100, 20);
             this.txtValorLitro.TabIndex = 40;
+            this.txtValorLitro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtValorLitro_KeyPress);
             // 
             // label7
             // 
@@ -186,6 +189,8 @@
             this.txtValorTotal.Name = "txtValorTotal";
             this.txtValorTotal.Size = new System.Drawing.Size(100, 20);
             this.txtValorTotal.TabIndex = 42;
+            this.txtValorTotal.TextChanged += new System.EventHandler(this.txtValorTotal_TextChanged);
+            this.txtValorTotal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtValorTotal_KeyPress);
             // 
             // label8
             // 

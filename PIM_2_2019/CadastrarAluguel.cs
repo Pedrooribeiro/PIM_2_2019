@@ -68,5 +68,18 @@ namespace PrototipoTelas
         {
 
         }
+
+        private void txtNumeroVeiculos_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void txtNumeroVeiculos_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != ','))
+            {
+                e.Handled = true;
+            }
+
+        }
     }
 }

@@ -59,5 +59,18 @@ namespace PrototipoTelas
         {
             this.Close();
         }
+
+        private void btnCadastrar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void txtValor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != ','))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

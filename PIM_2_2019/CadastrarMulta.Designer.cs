@@ -148,6 +148,7 @@
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.Button1_Click);
+            this.btnCadastrar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.btnCadastrar_KeyPress);
             // 
             // label1
             // 
@@ -186,6 +187,7 @@
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(100, 20);
             this.txtValor.TabIndex = 42;
+            this.txtValor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtValor_KeyPress);
             // 
             // label8
             // 

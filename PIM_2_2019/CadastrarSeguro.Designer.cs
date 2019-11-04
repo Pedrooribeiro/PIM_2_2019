@@ -214,6 +214,7 @@
             this.txtValorTotal.Name = "txtValorTotal";
             this.txtValorTotal.Size = new System.Drawing.Size(130, 20);
             this.txtValorTotal.TabIndex = 7;
+            this.txtValorTotal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtValorTotal_KeyPress);
             // 
             // txtNumParcela
             // 
@@ -222,6 +223,7 @@
             this.txtNumParcela.Name = "txtNumParcela";
             this.txtNumParcela.Size = new System.Drawing.Size(130, 20);
             this.txtNumParcela.TabIndex = 8;
+            this.txtNumParcela.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumParcela_KeyPress);
             // 
             // txtSituacao
             // 

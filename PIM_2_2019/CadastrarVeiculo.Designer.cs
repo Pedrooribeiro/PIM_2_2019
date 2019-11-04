@@ -166,6 +166,7 @@
             this.txtAno.Size = new System.Drawing.Size(100, 20);
             this.txtAno.TabIndex = 6;
             this.txtAno.TextChanged += new System.EventHandler(this.TextBox5_TextChanged);
+            this.txtAno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAno_KeyPress);
             // 
             // txtMotorizacao
             // 

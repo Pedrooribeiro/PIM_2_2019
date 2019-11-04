@@ -88,10 +88,13 @@
             // txtNumeroVeiculos
             // 
             this.txtNumeroVeiculos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtNumeroVeiculos.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.txtNumeroVeiculos.Location = new System.Drawing.Point(239, 143);
             this.txtNumeroVeiculos.Name = "txtNumeroVeiculos";
             this.txtNumeroVeiculos.Size = new System.Drawing.Size(100, 20);
             this.txtNumeroVeiculos.TabIndex = 30;
+            this.txtNumeroVeiculos.TextChanged += new System.EventHandler(this.txtNumeroVeiculos_TextChanged);
+            this.txtNumeroVeiculos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumeroVeiculos_KeyPress);
             // 
             // label2
             // 

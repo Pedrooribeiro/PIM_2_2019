@@ -74,6 +74,7 @@
             this.txtValorUnitario.Name = "txtValorUnitario";
             this.txtValorUnitario.Size = new System.Drawing.Size(100, 20);
             this.txtValorUnitario.TabIndex = 23;
+            this.txtValorUnitario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtValorUnitario_KeyPress);
             // 
             // txtQuantidade
             // 

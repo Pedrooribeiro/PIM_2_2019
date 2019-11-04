@@ -79,7 +79,7 @@
             this.btnExcluir.Location = new System.Drawing.Point(68, 431);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(83, 32);
-            this.btnExcluir.TabIndex = 7;
+            this.btnExcluir.TabIndex = 55;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Click += new System.EventHandler(this.Button1_Click);
@@ -90,7 +90,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(236, 431);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(83, 32);
-            this.btnCancelar.TabIndex = 8;
+            this.btnCancelar.TabIndex = 56;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.Button2_Click);
