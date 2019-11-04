@@ -65,9 +65,6 @@ C:\Users\jdpacheco\Pictures\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\Prototipo
 C:\Users\jdpacheco\Pictures\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\PrototipoTelas.ModificarManutencao.resources
 C:\Users\jdpacheco\Pictures\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\PrototipoTelas.ModificarAbastecimento.resources
 C:\Users\jdpacheco\Pictures\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\PrototipoTelas.ModificarQuilometragem.resources
-C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-DESKTOP\PIM_2_2019\bin\Debug\PrototipoTelas.exe.config
-C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-DESKTOP\PIM_2_2019\bin\Debug\PrototipoTelas.exe
-C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-DESKTOP\PIM_2_2019\bin\Debug\PrototipoTelas.pdb
 C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-DESKTOP\PIM_2_2019\bin\Debug\Model.dll
 C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-DESKTOP\PIM_2_2019\bin\Debug\Model.pdb
 C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\View.csprojAssemblyReference.cache
@@ -113,7 +110,6 @@ C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug
 C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\PrototipoTelas.ModificarSeguro.resources
 C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\PrototipoTelas.ModificarSinistro.resources
 C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\PrototipoTelas.ModificarVeiculo.resources
-C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\PrototipoTelas.Properties.Resources.resources
 C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\PrototipoTelas.ResultadoConsultaAbastecimento.resources
 C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\PrototipoTelas.ResultadoConsultaEntrada.resources
 C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\PrototipoTelas.ResultadoConsultaManutencao.resources
@@ -129,8 +125,6 @@ C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug
 C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\View.csproj.GenerateResource.cache
 C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\View.csproj.CoreCompileInputs.cache
 C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\View.csproj.CopyComplete
-C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\PrototipoTelas.exe
-C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\PrototipoTelas.pdb
 C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\PrototipoTelas.ConsultarSinistro.resources
 C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\PrototipoTelas.CadastrarUsuario.resources
 C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\PrototipoTelas.ConsultarUsuario.resources
@@ -139,3 +133,9 @@ C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug
 C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\PrototipoTelas.ResultadoConsultaUsuario.resources
 C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\PrototipoTelas.LoginUsuarios.resources
 C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\PrototipoTelas.OperacoesUsuario.resources
+C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-DESKTOP\PIM_2_2019\bin\Debug\ControleFrotasDesktop.exe.config
+C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-DESKTOP\PIM_2_2019\bin\Debug\ControleFrotasDesktop.exe
+C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-DESKTOP\PIM_2_2019\bin\Debug\ControleFrotasDesktop.pdb
+C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\ControleFrotasDesktop.Properties.Resources.resources
+C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\ControleFrotasDesktop.exe
+C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-DESKTOP\PIM_2_2019\obj\Debug\ControleFrotasDesktop.pdb

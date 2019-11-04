@@ -22,25 +22,25 @@ namespace Model
         }
 
 
-        private String tipo;
+        private string tipo;
 
-        public String Tipo
+        public string Tipo
         {
             get { return tipo; }
             set { tipo = value; }
         }
 
-        private String nome;
+        private string nome;
 
-        public String Nome
+        public string Nome
         {
             get { return nome; }
             set { nome = value; }
         }
 
-        private String descricao;
+        private string descricao;
 
-        public String Descricao
+        public string Descricao
         {
             get { return descricao; }
             set { descricao = value; }

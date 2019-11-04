@@ -30,41 +30,41 @@ namespace Model
         }
 
 
-        private String data;
+        private string data;
 
-        public String Data
+        public string Data
         {
             get { return data; }
             set { data = value; }
         }
 
-        private String dataEntregar;
+        private string dataEntregar;
 
-        public String DataEntregar
+        public string DataEntregar
         {
             get { return dataEntregar; }
             set { dataEntregar = value; }
         }
 
-        private String dataEntregue;
+        private string dataEntregue;
 
-        public String DataEntregue
+        public string DataEntregue
         {
             get { return dataEntregue; }
             set { dataEntregue = value; }
         }
 
-        private String motivo;
+        private string motivo;
 
-        public String Motivo
+        public string Motivo
         {
             get { return motivo; }
             set { motivo = value; }
         }
 
-        private String situacao;
+        private string situacao;
 
-        public String Situacao
+        public string Situacao
         {
             get { return situacao; }
             set { situacao = value; }

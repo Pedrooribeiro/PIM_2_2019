@@ -48,8 +48,6 @@
   <ItemGroup>
     <Compile Include="Abastecimento.cs" />
     <Compile Include="AluguelVeiculos.cs" />
-    <Compile Include="Cliente.cs" />
-    <Compile Include="Conta.cs" />
     <Compile Include="DBConnection.cs" />
     <Compile Include="EntradaSaida.cs" />
     <Compile Include="Manutencao.cs" />

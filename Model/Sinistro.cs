@@ -54,14 +54,6 @@ namespace Model
             set { local = value; }
         }
 
-        private string seguro;
-
-        public string Seguro
-        {
-            get { return seguro; }
-            set { seguro = value; }
-        }
-
         private string placaConsultada;
 
         public string PlacaConsultada

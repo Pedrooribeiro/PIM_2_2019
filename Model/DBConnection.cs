@@ -10,7 +10,7 @@ namespace Model
 {
     public class DBConnection
     {
-        SqlConnection sqlConn = new SqlConnection(@"Server=localhost\SQLEXPRESS;Database=dbControleFrotasDev;Trusted_Connection=True;");
+        SqlConnection sqlConn = new SqlConnection(@"Server=localhost\SQLEXPRESS;Database=dbControleFrotas;Trusted_Connection=True;");
 
         public SqlConnection getSqlConn()
         {
