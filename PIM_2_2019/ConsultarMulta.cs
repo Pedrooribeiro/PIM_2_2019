@@ -38,6 +38,7 @@ namespace PrototipoTelas
                 if (ResultadoConsultaMulta2.dgvDados.Rows.Count <= 0)
                 {
                     MessageBox.Show("Erro ao consultar! Item não localizado, tente novamente!", "Erro");
+                    this.Close();
                 }
                 else
                 {

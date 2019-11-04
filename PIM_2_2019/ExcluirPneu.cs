@@ -25,11 +25,20 @@ namespace PrototipoTelas
             {
                 Pneu pneu = new Pneu();
                 pneu.PlacaConsultada = txtPlacaConsultada.Text;
-                pneu.excluirPneu();
-                if(pneu.Passou == true)
+
+                if(!String.IsNullOrEmpty(pneu.PlacaConsultada))
                 {
-                    MessageBox.Show("Pneu excluído com sucesso");
-                    this.Close();
+                    pneu.excluirPneu();
+                    if(pneu.Passou == true)
+                    {
+                        MessageBox.Show("Pneu excluído com sucesso!");
+                        this.Close();
+                    } else
+                    {
+                        MessageBox.Show("Erro ao excluir! Item não localizados, campos vazios ou preenchidos incorretamente, tente novamente.", "Erro");
+                    }
+                } else {
+                    MessageBox.Show("Erro ao excluir! Item não localizados, campos vazios ou preenchidos incorretamente, tente novamente.", "Erro");
                 }
             }
             else

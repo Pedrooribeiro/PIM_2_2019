@@ -57,7 +57,7 @@ namespace PrototipoTelas
 
                 if (usuarioModificar.Passou == true)
                 {
-                    MessageBox.Show("Usuário modificado com sucesso");
+                    MessageBox.Show("Usuário modificado com sucesso.");
                     this.Close();
                 }
             }
@@ -75,17 +75,20 @@ namespace PrototipoTelas
             usuarioConsultar.UsernameConsultado = txtCpfConsultado.Text.Replace(",", "").Replace("-", "");
             usuarioConsultar.consultarUsuario();
 
-            txtNomeCompleto.Text = usuarioConsultar.NomeCompleto;
-            txtRg.Text = usuarioConsultar.Rg;
-            txtCpf.Text = usuarioConsultar.Cpf;
-            txtSenha.Text = usuarioConsultar.Senha;
-
-
-            if (usuarioConsultar.Passou == true)
+            if (!String.IsNullOrEmpty(usuarioConsultar.NomeCompleto))
             {
+                txtNomeCompleto.Text = usuarioConsultar.NomeCompleto;
+                txtRg.Text = usuarioConsultar.Rg;
+                txtCpf.Text = usuarioConsultar.Cpf;
+                txtSenha.Text = usuarioConsultar.Senha;
+
                 txtCpfConsultado.Enabled = false;
                 txtEnabled(true);
                 btnModificar.Enabled = true;
+            }
+            else
+            {
+                MessageBox.Show("Erro ao consultar! Item não localizado, tente novamente", "Erro");
             }
         }
     }

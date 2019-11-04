@@ -34,10 +34,19 @@ namespace PrototipoTelas
             ResultadoConsultaRota ResultadoConsultaRota2 = new ResultadoConsultaRota();
 
             ResultadoConsultaRota2.dgvDados.DataSource = viagem.DataTable;
-          
-            ResultadoConsultaRota2.ShowDialog();
 
-            this.Close();
+            if (viagem.Passou == true)
+            {
+                if (ResultadoConsultaRota2.dgvDados.Rows.Count <= 0)
+                {
+                    MessageBox.Show("Erro ao consultar! Item não localizado, tente novamente!", "Erro");
+                }
+                else
+                {
+                    ResultadoConsultaRota2.ShowDialog();
+                    this.Close();
+                }
+            }
         }
     }
 }

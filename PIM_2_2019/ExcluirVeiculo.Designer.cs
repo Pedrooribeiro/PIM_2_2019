@@ -283,7 +283,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Name = "ExcluirVeiculo";
-            this.Text = "Cor";
+            this.Text = "ExcluirVeiculo";
             this.Load += new System.EventHandler(this.ExcluirVeiculo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -82,6 +82,7 @@ namespace PrototipoTelas
             if (dgvDados.Rows.Count <= 0)
             {
                 MessageBox.Show("Erro ao consultar! Item não localizado, tente novamente!", "Erro");
+                this.Close();
             }
             btnModificar.Enabled = true;
         }

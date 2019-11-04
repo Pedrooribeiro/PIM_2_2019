@@ -57,7 +57,6 @@ namespace PrototipoTelas
             }
             else if (txtUsername.Text.Equals("admin") && txtPassword.Text.Equals(password))
             {
-                MessageBox.Show("Login efetuado com sucesso!");
                 OperacoesUsuario frmOperacoes = new OperacoesUsuario();
                 frmOperacoes.ShowDialog();
                 txtPassword.Text = "";

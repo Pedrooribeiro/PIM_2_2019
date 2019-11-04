@@ -51,10 +51,18 @@ namespace PrototipoTelas
             usuarioConsultar.UsernameConsultado = txtCpfConsultado.Text.Replace(",", "").Replace("-", ""); 
             usuarioConsultar.consultarUsuario();
 
-            txtNomeCompleto.Text = usuarioConsultar.NomeCompleto;
-            txtRg.Text = usuarioConsultar.Rg;
-            txtCpf.Text = usuarioConsultar.Cpf;
-            btnExcluir.Enabled = true;
+            if (!String.IsNullOrEmpty(usuarioConsultar.NomeCompleto))
+            {
+                txtNomeCompleto.Text = usuarioConsultar.NomeCompleto;
+                txtRg.Text = usuarioConsultar.Rg;
+                txtCpf.Text = usuarioConsultar.Cpf;
+
+                btnExcluir.Enabled = true;
+            }
+            else
+            {
+                MessageBox.Show("Erro ao consultar! Item não localizado, tente novamente", "Erro");
+            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

@@ -55,7 +55,6 @@ namespace PrototipoTelas
             {
                 MessageBox.Show("Campos vazios, tente novamente.");
             } else if(txtUsername.Text.Equals(username) && txtPassword.Text.Equals(password)) {
-                MessageBox.Show("Login efetuado com sucesso!");
                 Crud Crud2 = new Crud();
                 Crud2.ShowDialog();
                 txtPassword.Text = "";

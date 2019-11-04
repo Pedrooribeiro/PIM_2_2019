@@ -104,22 +104,26 @@ namespace PrototipoTelas
             seguroConsultar.PlacaConsultada = txtPlacaConsultada.Text;
             seguroConsultar.consultarSeguro();
 
-            txtNumApolice.Text = seguroConsultar.NumeroApolice;
-            txtSeguradora.Text = seguroConsultar.Seguradora;
-            txtSegurado.Text = seguroConsultar.Segurado;
-            txtCorretor.Text = seguroConsultar.Corretor;
-            txtDataInicio.Text = seguroConsultar.DataInicio;
-            txtDataVencimento.Text = seguroConsultar.DataVencimento;
-            txtValorTotal.Text = seguroConsultar.ValorTotal.ToString();
-            txtNumeroParcela.Text = seguroConsultar.NumeroParcelas;
-            txtSituacao.Text = seguroConsultar.Situacao;
-            txtPlaca.Text = seguroConsultar.PlacaSeguro;
-
-            if (seguroConsultar.Passou == true)
+            if (seguroConsultar.ValorTotal != 0)
             {
+                txtNumApolice.Text = seguroConsultar.NumeroApolice;
+                txtSeguradora.Text = seguroConsultar.Seguradora;
+                txtSegurado.Text = seguroConsultar.Seguradora;
+                txtCorretor.Text = seguroConsultar.Corretor;
+                txtDataInicio.Text = seguroConsultar.DataInicio;
+                txtDataVencimento.Text = seguroConsultar.DataVencimento;
+                txtValorTotal.Text = seguroConsultar.ValorTotal.ToString();
+                txtNumeroParcela.Text = seguroConsultar.NumeroParcelas;
+                txtSituacao.Text = seguroConsultar.Situacao;
+                txtPlaca.Text = seguroConsultar.PlacaSeguro;
+
                 txtPlacaConsultada.Enabled = false;
                 txtEnabled(true);
                 btnModificar.Enabled = true;
+            }
+            else
+            {
+                MessageBox.Show("Erro ao cadastrar! Campos vazios ou preenchidos incorretamente, tente novamente.", "Erro");
             }
         }
     }

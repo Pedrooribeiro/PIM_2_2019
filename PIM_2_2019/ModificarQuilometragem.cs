@@ -76,16 +76,26 @@ namespace PrototipoTelas
             quilometragemConsultar.PlacaConsultada = txtPlacaConsultada.Text;
             quilometragemConsultar.consultarQuilometragem();
 
-            txtDataInicio.Text = quilometragemConsultar.DataInicio;
-            txtDataAtual.Text = quilometragemConsultar.DataAtual;
-            txtPlaca.Text = quilometragemConsultar.Placa;
-            txtQuilometrosRodados.Text = quilometragemConsultar.QuilometrosRodados;
-
-            if (quilometragemConsultar.Passou == true)
+            if (!String.IsNullOrEmpty(quilometragemConsultar.QuilometrosRodados))
             {
+                ResultadoConsultaQuilometragem ResultadoConsultaQuilometragem2 = new ResultadoConsultaQuilometragem();
+
+                ResultadoConsultaQuilometragem2.txtDataInicio.Text = quilometragemConsultar.DataInicio;
+                ResultadoConsultaQuilometragem2.txtDataAtual.Text = quilometragemConsultar.DataAtual;
+                ResultadoConsultaQuilometragem2.txtPlaca.Text = quilometragemConsultar.Placa;
+                ResultadoConsultaQuilometragem2.txtQuilometrosRodados.Text = quilometragemConsultar.QuilometrosRodados;
+
+                ResultadoConsultaQuilometragem2.ShowDialog();
+
                 txtPlacaConsultada.Enabled = false;
                 txtEnabled(true);
                 btnModificar.Enabled = true;
+
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Erro ao consultar! Item não localizado, tente novamente", "Erro");
             }
         }
 

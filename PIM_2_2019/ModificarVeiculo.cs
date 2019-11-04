@@ -85,19 +85,22 @@ namespace PrototipoTelas
             veiculoConsultar.PlacaConsultada = txtPlacaConsultar.Text;
             veiculoConsultar.consultarVeiculo();
 
-            txtCor.Text = veiculoConsultar.Cor;
-            txtPlaca.Text = veiculoConsultar.Placa;
-            txtModelo.Text = veiculoConsultar.Modelo;
-            txtMarca.Text = veiculoConsultar.Marca;
-            txtAno.Text = veiculoConsultar.AnoFabricacao.ToString();
-            txtMotorizacao.Text = veiculoConsultar.Motorizacao;
-            txtTipoCombustivel.Text = veiculoConsultar.TipoCombustivel;
-
-            if (veiculoConsultar.Passou == true)
+            if (veiculoConsultar.AnoFabricacao != 0)
             {
+                txtCor.Text = veiculoConsultar.Cor;
+                txtPlaca.Text = veiculoConsultar.Placa;
+                txtModelo.Text = veiculoConsultar.Modelo;
+                txtMarca.Text = veiculoConsultar.Marca;
+                txtAno.Text = veiculoConsultar.AnoFabricacao.ToString();
+                txtMotorizacao.Text = veiculoConsultar.Motorizacao;
+                txtTipoCombustivel.Text = veiculoConsultar.TipoCombustivel;
                 txtPlacaConsultar.Enabled = false;
                 txtEnabled(true);
                 btnModificar.Enabled = true;
+            }
+            else
+            {
+                MessageBox.Show("Erro ao consultar! Item não localizado, tente novamente", "Erro");
             }
         }
 

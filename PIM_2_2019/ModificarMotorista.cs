@@ -81,18 +81,22 @@ namespace PrototipoTelas
             motoristaConsultar.CpfConsultado = txtCpfConsultado.Text;
             motoristaConsultar.consultarMotorista();
 
-            txtNomeCompleto.Text = motoristaConsultar.NomeCompleto;
-            txtRg.Text = motoristaConsultar.Rg;
-            txtCpf.Text = motoristaConsultar.Cpf;
-            txtCnh.Text = motoristaConsultar.Cnh;
-            txtVencimentoCnh.Text = motoristaConsultar.VencimentoCnh;
-            txtEmpresa.Text = motoristaConsultar.Empresa;
-
-            if (motoristaConsultar.Passou == true)
+            if (!String.IsNullOrEmpty(motoristaConsultar.NomeCompleto))
             {
+                txtNomeCompleto.Text = motoristaConsultar.NomeCompleto;
+                txtRg.Text = motoristaConsultar.Rg;
+                txtCpf.Text = motoristaConsultar.Cpf;
+                txtCnh.Text = motoristaConsultar.Cnh;
+                txtVencimentoCnh.Text = motoristaConsultar.VencimentoCnh;
+                txtEmpresa.Text = motoristaConsultar.Empresa;
+
                 txtCpfConsultado.Enabled = false;
                 txtEnabled(true);
                 btnModificar.Enabled = true;
+            }
+            else
+            {
+                MessageBox.Show("Erro ao consultar! Item não localizado, tente novamente", "Erro");
             }
         }
 

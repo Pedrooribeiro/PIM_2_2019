@@ -54,7 +54,7 @@ namespace PrototipoTelas
 
                 if (sinistroModificar.Passou == true)
                 {
-                    MessageBox.Show("Sinistro modificado com sucesso");
+                    MessageBox.Show("Sinistro modificado com sucesso.");
                     this.Close();
                 }
             }
@@ -81,6 +81,7 @@ namespace PrototipoTelas
             if (dgvDados.Rows.Count <= 0)
             {
                 MessageBox.Show("Erro ao consultar! Item não localizado, tente novamente!", "Erro");
+                this.Close();
             }
             btnModificar.Enabled = true;
         }

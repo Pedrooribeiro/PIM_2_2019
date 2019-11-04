@@ -624,7 +624,7 @@ namespace PrototipoTelas
         private void Button50_Click(object sender, EventArgs e)
         {
             Relatorio relatorio = new Relatorio();
-            if (MessageBox.Show("Você desejar gerar o relátorio? ","Confirmação", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("Você deseja gerar o relátorio? ","Confirmação", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 relatorio.gerarRelatorio();
                 MessageBox.Show("Relatório gerado com sucesso no caminho '" + relatorio.Caminho + "'");
@@ -642,7 +642,15 @@ namespace PrototipoTelas
 
         private void Button51_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (MessageBox.Show("Você deseja sair do sistema? ", "Confirmação", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                MessageBox.Show("Saída realizada com sucesso!");
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Saída cancelada");
+            }
         }
 
         private void Button53_Click(object sender, EventArgs e)

@@ -41,7 +41,7 @@ namespace PrototipoTelas
             }
             else
             {
-                MessageBox.Show("Erro ao consultar! Item não localizado, tente novamente", "Erro");
+                MessageBox.Show("Erro ao consultar! Item não localizado, tente novamente.", "Erro");
             }
         }
 
