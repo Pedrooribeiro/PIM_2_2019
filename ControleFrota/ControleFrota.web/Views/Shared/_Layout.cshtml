@@ -15,7 +15,7 @@
 
     <div class="container body-content">
         @RenderBody()
-        
+
 
     </div>
 
@@ -26,85 +26,113 @@
             <li>
                 <div class="link"><i class="fa fa-paint-brush"></i>Motorista<i class="fa fa-chevron-down"></i></div>
                 <ul class="submenu">
-                    <li>@Html.ActionLink("Consultar Motorista", "ConsultaMotorista", "Consulta")</li>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ConsultaMotorista">
+                        Consultar Motorista
+                    </button>
                 </ul>
             </li>
             <li class="default open">
                 <div class="link"><i class="fa fa-code"></i>Multa<i class="fa fa-chevron-down"></i></div>
                 <ul class="submenu">
-                    <li>@Html.ActionLink("Consultar Multa", "ConsultaMulta", "Consulta")</li>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ConsultaMulta">
+                        Consultar Multa
+                    </button>
                 </ul>
             </li>
             <li>
                 <div class="link"><i class="fa fa-mobile"></i>Peças<i class="fa fa-chevron-down"></i></div>
                 <ul class="submenu">
-                    <li>@Html.ActionLink("Consultar Peça", "ConsultaPeca", "Consulta")</li>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ConsultaPeca">
+                        Consultar Peça
+                    </button>
                 </ul>
             </li>
             <li>
                 <div class="link"><i class="fa fa-globe"></i>Veículo<i class="fa fa-chevron-down"></i></div>
                 <ul class="submenu">
-                    <li>@Html.ActionLink("Consultar Veículo", "ConsultaVeiculo", "Consulta")</li>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ConsultaVeiculo">
+                        Consultar Veículo
+                    </button>
                 </ul>
             </li>
             <li>
                 <div class="link"><i class="fa fa-globe"></i>Pneu<i class="fa fa-chevron-down"></i></div>
                 <ul class="submenu">
-                    <li>@Html.ActionLink("Consultar Pneu", "ConsultaPneu", "Consulta")</li>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ConsultaPneu">
+                        Consultar Pneu
+                    </button>
                 </ul>
             </li>
             <li>
                 <div class="link"><i class="fa fa-globe"></i>Abastecimento<i class="fa fa-chevron-down"></i></div>
                 <ul class="submenu">
-                    <li>@Html.ActionLink("Consultar Abastecimento", "ConsultaAbastecimento", "Consulta")</li>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ConsultaAbastecimento">
+                        Consultar Abastecimento
+                    </button>
                 </ul>
             </li>
             <li>
                 <div class="link"><i class="fa fa-globe"></i>Aluguel<i class="fa fa-chevron-down"></i></div>
                 <ul class="submenu">
-                    <li>@Html.ActionLink("Consultar Aluguel", "ConsultaAluguel", "Consulta")</li>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ConsultaAluguel">
+                        Consultar Aluguel
+                    </button>
                 </ul>
             </li>
             <li>
                 <div class="link"><i class="fa fa-globe"></i>Entrada<i class="fa fa-chevron-down"></i></div>
                 <ul class="submenu">
-                    <li>@Html.ActionLink("Consultar Entrada", "ConsultaEntrada", "Consulta")</li>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ConsultaEntradaSaida">
+                        Consultar Entrada ou Saída
+                    </button>
                 </ul>
             </li>
             <li>
                 <div class="link"><i class="fa fa-globe"></i>Manutenção<i class="fa fa-chevron-down"></i></div>
                 <ul class="submenu">
-                    <li>@Html.ActionLink("Consultar Manutenção", "ConsultaManutencao", "Consulta")</li>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ConsultaManutencao">
+                        Consultar Manutenção
+                    </button>
                 </ul>
             </li>
             <li>
                 <div class="link"><i class="fa fa-globe"></i>Quilometragem<i class="fa fa-chevron-down"></i></div>
                 <ul class="submenu">
-                    <li>@Html.ActionLink("Consultar Quilometragem", "ConsultaQuilometragem", "Consulta")</li>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ConsultaQuilometragem">
+                        Consultar Quilometragem
+                    </button>
                 </ul>
             </li>
             <li>
                 <div class="link"><i class="fa fa-globe"></i>Rota<i class="fa fa-chevron-down"></i></div>
                 <ul class="submenu">
-                    <li>@Html.ActionLink("Consultar Rota", "ConsultaRota", "Consulta")</li>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ConsultaRota">
+                        Consultar Rota
+                    </button>
                 </ul>
             </li>
             <li>
                 <div class="link"><i class="fa fa-globe"></i>Seguro<i class="fa fa-chevron-down"></i></div>
                 <ul class="submenu">
-                    <li>@Html.ActionLink("Consultar Seguro", "ConsultaSeguro", "Consulta")</li>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ConsultaSeguro">
+                        Consultar Seguro
+                    </button>
                 </ul>
             </li>
             <li>
                 <div class="link"><i class="fa fa-globe"></i>Sinistro<i class="fa fa-chevron-down"></i></div>
                 <ul class="submenu">
-                    <li>@Html.ActionLink("Consultar Sinistro", "ConsultaSinistro", "Consulta")</li>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ConsultaSinistro">
+                        Consultar Sinistro
+                    </button>
                 </ul>
             </li>
             <li>
                 <div class="link"><i class="fa fa-globe"></i>Usuário<i class="fa fa-chevron-down"></i></div>
                 <ul class="submenu">
-                    <li>@Html.ActionLink("Consultar Usuário", "ConsultaUsuario", "Consulta")</li>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ConsultaUsuario">
+                        Consultar Usuário
+                    </button>
                 </ul>
             </li>
 
@@ -113,13 +141,404 @@
             <li>
 
                 @using (Html.BeginForm("LogOff", "Conta", FormMethod.Post, new { id = "logoffForm" }))
-                 {
-                    <li class="logout"><a href="javascript:document.getElementById('logoffForm').submit()">Sair</a></li>
-                 }
-            </li>
-        </ul>
-    }
+                {
+                <li class="logout"><a href="javascript:document.getElementById('logoffForm').submit()">Sair</a></li>
+            }
+                </li>
+            </ul>
+        }
 
+    <!-- Consulta Motorista -->
+    <div class="modal fade" id="ConsultaMotorista" tabindex="-1" role="dialog" aria-labelledby="Consulta" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="TituloModalCentralizado">Tela de Consulta</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Pesquisar por CPF
+                        @using (Html.BeginForm("Consultar Multa", "ConsultaMulta", "Consulta"))
+                        {
+                            @Html.TextBox("Pesquisa")
+                            <input type="submit" value="Pesquisar" />
+                        }
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary">Consultar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Consulta Multa -->
+    <div class="modal fade" id="ConsultaMulta" tabindex="-1" role="dialog" aria-labelledby="Consulta" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="TituloModalCentralizado">Tela de Consulta</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Pesquisar por número da multa
+                        @using (Html.BeginForm("Consultar Multa", "ConsultaMulta", "Consulta"))
+                        {
+                            @Html.TextBox("Pesquisa")
+                            <input type="submit" value="Pesquisar" />
+                        }
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary">Consultar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Consulta Peças -->
+    <div class="modal fade" id="ConsultaPeca" tabindex="-1" role="dialog" aria-labelledby="Consulta" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="TituloModalCentralizado">Tela de Consulta</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Pesquisar por nome da peça
+                        @using (Html.BeginForm("Consultar Multa", "ConsultaMulta", "Consulta"))
+                        {
+                            @Html.TextBox("Pesquisa")
+                            <input type="submit" value="Pesquisar" />
+                        }
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary">Consultar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Consulta Veículo -->
+    <div class="modal fade" id="ConsultaVeiculo" tabindex="-1" role="dialog" aria-labelledby="Consulta" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="TituloModalCentralizado">Tela de Consulta</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Pesquisar por nome do veículo
+                        @using (Html.BeginForm("Consultar Multa", "ConsultaMulta", "Consulta"))
+                        {
+                            @Html.TextBox("Pesquisa")
+                            <input type="submit" value="Pesquisar" />
+                        }
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary">Consultar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Consulta Pneu -->
+    <div class="modal fade" id="ConsultaPneu" tabindex="-1" role="dialog" aria-labelledby="Consulta" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="TituloModalCentralizado">Tela de Consulta</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Pesquisar por pneu
+                        @using (Html.BeginForm("Consultar Multa", "ConsultaMulta", "Consulta"))
+                        {
+                            @Html.TextBox("Pesquisa")
+                            <input type="submit" value="Pesquisar" />
+                        }
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary">Consultar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Consulta Abastecimento -->
+    <div class="modal fade" id="ConsultaAbastecimento" tabindex="-1" role="dialog" aria-labelledby="Consulta" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="TituloModalCentralizado">Tela de Consulta</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Pesquisar por abastecimento
+                        @using (Html.BeginForm("Consultar Multa", "ConsultaMulta", "Consulta"))
+                        {
+                            @Html.TextBox("Pesquisa")
+                            <input type="submit" value="Pesquisar" />
+                        }
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary">Consultar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Consulta Alguel -->
+    <div class="modal fade" id="ConsultaAluguel" tabindex="-1" role="dialog" aria-labelledby="Consulta" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="TituloModalCentralizado">Tela de Consulta</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Pesquisar por aluguel
+                        @using (Html.BeginForm("Consultar Multa", "ConsultaMulta", "Consulta"))
+                        {
+                            @Html.TextBox("Pesquisa")
+                            <input type="submit" value="Pesquisar" />
+                        }
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary">Consultar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Consulta Entrada ou Saída -->
+    <div class="modal fade" id="ConsultaEntradaSaida" tabindex="-1" role="dialog" aria-labelledby="Consulta" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="TituloModalCentralizado">Tela de Consulta</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Pesquisar por entrada ou saída
+                        @using (Html.BeginForm("Consultar Multa", "ConsultaMulta", "Consulta"))
+                        {
+                            @Html.TextBox("Pesquisa")
+                            <input type="submit" value="Pesquisar" />
+                        }
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary">Consultar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Consulta Manutenção -->
+    <div class="modal fade" id="ConsultaManutencao" tabindex="-1" role="dialog" aria-labelledby="Consulta" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="TituloModalCentralizado">Tela de Consulta</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Pesquisar por manutenção
+                        @using (Html.BeginForm("Consultar Multa", "ConsultaMulta", "Consulta"))
+                        {
+                            @Html.TextBox("Pesquisa")
+                            <input type="submit" value="Pesquisar" />
+                        }
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary">Consultar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Consulta Quilometragem -->
+    <div class="modal fade" id="ConsultaQuilometragem" tabindex="-1" role="dialog" aria-labelledby="Consulta" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="TituloModalCentralizado">Tela de Consulta</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Pesquisar por quilometragem
+                        @using (Html.BeginForm("Consultar Multa", "ConsultaMulta", "Consulta"))
+                        {
+                            @Html.TextBox("Pesquisa")
+                            <input type="submit" value="Pesquisar" />
+                        }
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary">Consultar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Consulta Rota -->
+    <div class="modal fade" id="ConsultaRota" tabindex="-1" role="dialog" aria-labelledby="Consulta" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="TituloModalCentralizado">Tela de Consulta</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Pesquisar por rota
+                        @using (Html.BeginForm("Consultar Multa", "ConsultaMulta", "Consulta"))
+                        {
+                            @Html.TextBox("Pesquisa")
+                            <input type="submit" value="Pesquisar" />
+                        }
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary">Consultar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Consulta Seguro -->
+    <div class="modal fade" id="ConsultaSeguro" tabindex="-1" role="dialog" aria-labelledby="Consulta" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="TituloModalCentralizado">Tela de Consulta</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Pesquisar por seguro
+                        @using (Html.BeginForm("Consultar Multa", "ConsultaMulta", "Consulta"))
+                        {
+                            @Html.TextBox("Pesquisa")
+                            <input type="submit" value="Pesquisar" />
+                        }
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary">Consultar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Consulta Sinistro -->
+    <div class="modal fade" id="ConsultaSinistro" tabindex="-1" role="dialog" aria-labelledby="Consulta" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="TituloModalCentralizado">Tela de Consulta</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Pesquisar por sinistro
+                        @using (Html.BeginForm("Consultar Multa", "ConsultaMulta", "Consulta"))
+                        {
+                            @Html.TextBox("Pesquisa")
+                            <input type="submit" value="Pesquisar" />
+                        }
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary">Consultar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Consulta Usuário -->
+    <div class="modal fade" id="ConsultaUsuario" tabindex="-1" role="dialog" aria-labelledby="Consulta" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="TituloModalCentralizado">Tela de Consulta</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Pesquisar por usuário
+                        @using (Html.BeginForm("Consultar Multa", "ConsultaMulta", "Consulta"))
+                        {
+                            @Html.TextBox("Pesquisa")
+                            <input type="submit" value="Pesquisar" />
+                        }
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary">Consultar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")

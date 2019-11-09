@@ -69,7 +69,7 @@ margin-top: 10px;
 }
 
 .accordion li i {
-    position: absolute;
+    position: relative;
     top: 16px;
     left: 12px;
     font-size: 18px;
@@ -142,4 +142,14 @@ font-size: 14px;
     transition: all 0.25s ease;
     color: black;
     font-weight: bold;
+}
+
+@media (max-width: 520px){
+    .accordion {
+        display:block;
+    }
+}
+
+.button.btn-primary {
+    text-align: center;
 }
