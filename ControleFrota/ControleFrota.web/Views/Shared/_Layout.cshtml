@@ -161,7 +161,7 @@
                 <div class="modal-body">
                     <p>
                         Pesquisar por CPF
-                        @using (Html.BeginForm("Consultar Multa", "ConsultaMulta", "Consulta"))
+                        @using (Html.BeginForm("ConsultaMotorista", "Consulta", FormMethod.Post))
                         {
                             @Html.TextBox("Pesquisa")
                             <input type="submit" value="Pesquisar" />
