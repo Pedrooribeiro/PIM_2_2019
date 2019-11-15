@@ -12,6 +12,9 @@ namespace ControleFrota.web.Controllers
         [Authorize]
         public ActionResult ConsultaMotorista()
         {
+            ViewBag.Nome = "Pedro";
+            ViewBag.Veiculo = "Ford KA";
+            ViewBag.Multa = 3;
             return View();
         }
 

@@ -26,9 +26,14 @@
             <li>
                 <div class="link"><i class="fa fa-paint-brush"></i>Motorista<i class="fa fa-chevron-down"></i></div>
                 <ul class="submenu">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ConsultaMotorista">
-                        Consultar Motorista
-                    </button>
+                    <p>
+                        Pesquisar por CPF
+                        @using (Html.BeginForm("ConsultaMotorista", "Consulta", FormMethod.Post))
+                        {
+                           // @Html.TextBox("Pesquisa")
+                           // <input type="button" class="btn btn-primary" data-toggle="modal" data-target="#ConsultaMotorista" value="Pesquisar" />
+                        }
+                    </p>
                 </ul>
             </li>
             <li class="default open">
@@ -159,18 +164,12 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>
-                        Pesquisar por CPF
-                        @using (Html.BeginForm("ConsultaMotorista", "Consulta", FormMethod.Post))
-                        {
-                            @Html.TextBox("Pesquisa")
-                            <input type="submit" value="Pesquisar" />
-                        }
-                    </p>
+                    <p> NOME: @ViewBag.Nome </p>
+                    <p> MULTAS:  @ViewBag.Multa </p>
+                    <p> VEÍCULOS: @ViewBag.Veiculo </p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                    <button type="button" class="btn btn-primary">Consultar</button>
                 </div>
             </div>
         </div>
