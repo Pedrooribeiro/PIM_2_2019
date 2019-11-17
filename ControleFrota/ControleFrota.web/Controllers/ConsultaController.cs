@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
+using ControleFrota.web.Models;
 namespace ControleFrota.web.Controllers
 {
     public class ConsultaController : Controller
@@ -12,9 +13,16 @@ namespace ControleFrota.web.Controllers
         [Authorize]
         public ActionResult ConsultaMotorista()
         {
-            ViewBag.Nome = "Pedro";
-            ViewBag.Veiculo = "Ford KA";
-            ViewBag.Multa = 3;
+            SqlConnection conexao = new SqlConnection(@"Data Source=DESKTOP-SOKKM3N\SQLEXPRESS;Initial Catalog=controle-frota;User Id=admin;Password=123");
+            conexao.Open();
+
+            string resultadoPesquisa = "SELECT * FROM db_owner.motoristas";
+            SqlCommand cmdComandoSelect = new SqlCommand(resultadoPesquisa, conexao);
+            SqlDataReader dados = cmdComandoSelect.ExecuteReader();
+
+
+
+
             return View();
         }
 
