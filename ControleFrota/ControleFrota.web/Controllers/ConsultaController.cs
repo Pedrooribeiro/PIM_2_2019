@@ -16,10 +16,17 @@ namespace ControleFrota.web.Controllers
             SqlConnection conexao = new SqlConnection(@"Data Source=DESKTOP-SOKKM3N\SQLEXPRESS;Initial Catalog=controle-frota;User Id=admin;Password=123");
             conexao.Open();
 
-            string resultadoPesquisa = "SELECT * FROM db_owner.motoristas";
+            string resultadoPesquisa = "SELECT * FROM motoristas";
             SqlCommand cmdComandoSelect = new SqlCommand(resultadoPesquisa, conexao);
             SqlDataReader dados = cmdComandoSelect.ExecuteReader();
 
+            ViewBag.Id = 6;
+            ViewBag.Nome = "Pedro";
+            ViewBag.Rg = 646465464;
+            ViewBag.Cpf = 4986575967;
+            ViewBag.Cnh = 65465465;
+            ViewBag.Vencimento = "23 / 10 / 2025";
+            ViewBag.Empresa = "Indra";
 
 
 
@@ -29,6 +36,13 @@ namespace ControleFrota.web.Controllers
         [Authorize]
         public ActionResult ConsultaMulta()
         {
+            ViewBag.Id = 6;
+            ViewBag.Nome = "Pedro";
+            ViewBag.Rg = 646465464;
+            ViewBag.Cpf = 4986575967;
+            ViewBag.Cnh = 65465465;
+            ViewBag.Vencimento = "23 / 10 / 2025";
+            ViewBag.Empresa = "Indra";
             return View();
         }
 

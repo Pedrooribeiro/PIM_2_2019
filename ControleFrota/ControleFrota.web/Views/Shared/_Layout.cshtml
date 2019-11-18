@@ -164,9 +164,13 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p> NOME: @ViewBag.Nome </p>
-                    <p> MULTAS:  @ViewBag.Multa </p>
-                    <p> VEÍCULOS: @ViewBag.Veiculo </p>
+                    <p> ID: @ViewBag.Id </p>
+                    <p> NOME:  @ViewBag.Nome </p>
+                    <p> RG: @ViewBag.Rg </p>
+                    <p> CPF: @ViewBag.Cpf </p>
+                    <p> CNH: @ViewBag.Cnh</p>
+                    <p> VENCIMENTO CNH: @ViewBag.Vencimento</p>
+                    <p> EMPRESA: @ViewBag.Empresa</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
@@ -188,7 +192,7 @@
                 <div class="modal-body">
                     <p>
                         Pesquisar por número da multa
-                        @using (Html.BeginForm("Consultar Multa", "ConsultaMulta", "Consulta"))
+                        @using (Html.BeginForm("Consulta", "ConsultaMulta", "Consultar"))
                         {
                             @Html.TextBox("Pesquisa")
                             <input type="submit" value="Pesquisar" />
