@@ -247,3 +247,5 @@ C:\Users\pedro\Documents\PIM_2_2019\atualizado\PIM_2_2019\ControleFrota\Controle
 C:\Users\pedro\Documents\PIM_2_2019\atualizado\PIM_2_2019\ControleFrota\ControleFrota.web\obj\Debug\ControleFrota.web.csproj.CopyComplete
 C:\Users\pedro\Documents\PIM_2_2019\atualizado\PIM_2_2019\ControleFrota\ControleFrota.web\obj\Debug\ControleFrota.web.dll
 C:\Users\pedro\Documents\PIM_2_2019\atualizado\PIM_2_2019\ControleFrota\ControleFrota.web\obj\Debug\ControleFrota.web.pdb
+C:\Users\pedro\Documents\PIM_2_2019\atualizado\PIM_2_2019\ControleFrota\ControleFrota.web\bin\EntityFramework.dll
+C:\Users\pedro\Documents\PIM_2_2019\atualizado\PIM_2_2019\ControleFrota\ControleFrota.web\bin\EntityFramework.xml

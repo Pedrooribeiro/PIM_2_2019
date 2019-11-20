@@ -28,7 +28,7 @@
                 <ul class="submenu">
                     <p>
                         Pesquisar por CPF
-                        @using (Html.BeginForm("ConsultaMotorista", "Consulta", FormMethod.Post))
+                        @using (Html.BeginForm("Consulta", "ConsultaMotorista", FormMethod.Post))
                         {
                             @Html.TextBox("Pesquisa")
                             <input type="button" class="btn btn-primary" data-toggle="modal" data-target="#ConsultaMotorista" value="Pesquisar" />
