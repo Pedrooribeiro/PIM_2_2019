@@ -1,6 +1,6 @@
 ﻿@model IEnumerable < ControleFrota.web.Models.motoristas>
 
-@using (Html.BeginForm("Consulta", "ConsultaMotorista", FormMethod.Get))
+@using (Html.BeginForm("ConsultaMotorista", "Consulta", FormMethod.Get))
 {
     @Html.TextBox("searching")<input type="submit" value="Search" />
 }
@@ -28,7 +28,7 @@
         }
         else
         {
-            foreach(var item in Model)
+            foreach (var item in Model)
             {
             <tr>
                 <td>@item.id_motorista</td>
