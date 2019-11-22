@@ -9,7 +9,7 @@ namespace ControleFrota.web.Controllers
 {
     public class ConsultaController : Controller
     {
- 
+
         [Authorize]
         public ActionResult ConsultaMotorista(string searching)
         {
@@ -27,14 +27,10 @@ namespace ControleFrota.web.Controllers
             //ViewBag.Cnh = 65465465;
             //ViewBag.Vencimento = "23 / 10 / 2025";
             //ViewBag.Empresa = "Indra";
-            motoristas db = new motoristas();
 
-            return View(db.motoristas.Where(x => x.Contains(searching)));
-        }
+            Entities db = new Entities();
 
-        private ActionResult View(object p)
-        {
-            throw new NotImplementedException();
+            return View(db.motoristas.Where(x=>x.cpf.Contains(searching) || searching == null).ToList());
         }
 
         [Authorize]
