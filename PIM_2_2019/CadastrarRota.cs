@@ -49,7 +49,7 @@ namespace PrototipoTelas
 
                 if (viagem.Passou == true)
                 {
-                    MessageBox.Show("Rota cadastrado com sucesso");
+                    MessageBox.Show("Rota cadastrada com sucesso");
                     this.Close();
                 }
             }
