@@ -14,8 +14,6 @@ namespace ControleFrota.web.Models
     
     public partial class motoristas
     {
-      //  internal IEnumerable<object> motoristas;
-
         public int id_motorista { get; set; }
         public string nome_completo { get; set; }
         public string rg { get; set; }

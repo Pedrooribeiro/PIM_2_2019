@@ -1,3 +1,64 @@
-﻿
-<h2>Consulta Peça</h2>
+﻿@model IEnumerable<ControleFrota.web.Models.estoque_peca>
 
+@Styles.Render("~/App_Themes/Tema1/StyleSheet1.css")
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Resultado Consulta</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Id Peça</th>
+                            <th>Tipo</th>
+                            <th>Nome</th>
+                            <th>Descrição</th>
+                            <th>Quantidade</th>
+                            <th>Valor Unitário</th>
+                            <th>Nome Veículo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model.Count() == 0)
+                        {
+                            <tr>
+                                <td colspan="3" style="color:red">
+                                    Nenhum resultado encontrado
+                                </td>
+                            </tr>
+                        }
+                        else
+                        {
+                            foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.id_peca</td>
+                                    <td>@item.tipo</td>
+                                    <td>@item.nome</td>
+                                    <td>@item.descricao</td>
+                                    <td>@item.quantidade</td>
+                                    <td>@item.valor_unitario</td>
+                                    <td>@item.nome_veiculo</td>
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(function () {
+        $('#exampleModal').modal('show');
+    });
+</script>   

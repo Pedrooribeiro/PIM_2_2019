@@ -132,8 +132,26 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\abastecimentos.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\aluguel_veiculos.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\DBConnectionModel.cs" />
+    <Compile Include="Models\entradas.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\estoque_peca.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\login.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\LoginViewModel.cs" />
+    <Compile Include="Models\manutencoes.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Model.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -152,7 +170,34 @@
     <Compile Include="Models\motoristas.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\multas.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\pneus.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\quilometragem.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\saidas.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\seguros.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sinistros.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\UsuarioModel.cs" />
+    <Compile Include="Models\usuarios.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\veiculos.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\viagens.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -215,6 +260,16 @@
     <Content Include="Views\Consulta\ConsultaPneu.cshtml" />
     <Content Include="Views\Consulta\ConsultaVeiculo.cshtml" />
     <Content Include="Views\Consulta\ConsultaPeca.cshtml" />
+    <Content Include="Views\Consulta\ConsultaAbastecimento.cshtml" />
+    <Content Include="Views\Consulta\ConsultaAluguel.cshtml" />
+    <Content Include="Views\Consulta\ConsultaEntrada.cshtml" />
+    <Content Include="Views\Consulta\ConsultaManutencao.cshtml" />
+    <Content Include="Views\Consulta\ConsultaQuilometragem.cshtml" />
+    <Content Include="Views\Consulta\ConsultaRota.cshtml" />
+    <Content Include="Views\Consulta\ConsultaSeguro.cshtml" />
+    <Content Include="Views\Consulta\ConsultaSinistro.cshtml" />
+    <Content Include="Views\Consulta\ConsultaUsuario.cshtml" />
+    <Content Include="Views\Consulta\ConsultaSaida.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

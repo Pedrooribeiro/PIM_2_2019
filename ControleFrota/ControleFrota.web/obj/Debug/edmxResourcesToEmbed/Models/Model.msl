@@ -14,5 +14,197 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="abastecimentos">
+      <EntityTypeMapping TypeName="Model.abastecimentos">
+        <MappingFragment StoreEntitySet="abastecimentos">
+          <ScalarProperty Name="litros" ColumnName="litros" />
+          <ScalarProperty Name="valor_total" ColumnName="valor_total" />
+          <ScalarProperty Name="valor_litro" ColumnName="valor_litro" />
+          <ScalarProperty Name="placa" ColumnName="placa" />
+          <ScalarProperty Name="posto" ColumnName="posto" />
+          <ScalarProperty Name="tipo_combustivel" ColumnName="tipo_combustivel" />
+          <ScalarProperty Name="data_abastecimento" ColumnName="data_abastecimento" />
+          <ScalarProperty Name="id_abastecimento" ColumnName="id_abastecimento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aluguel_veiculos">
+      <EntityTypeMapping TypeName="Model.aluguel_veiculos">
+        <MappingFragment StoreEntitySet="aluguel_veiculos">
+          <ScalarProperty Name="data_entrega" ColumnName="data_entrega" />
+          <ScalarProperty Name="data_inicio" ColumnName="data_inicio" />
+          <ScalarProperty Name="numero_veiculos" ColumnName="numero_veiculos" />
+          <ScalarProperty Name="cpf" ColumnName="cpf" />
+          <ScalarProperty Name="id_aluguel" ColumnName="id_aluguel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="entradas">
+      <EntityTypeMapping TypeName="Model.entradas">
+        <MappingFragment StoreEntitySet="entradas">
+          <ScalarProperty Name="horario_entrada" ColumnName="horario_entrada" />
+          <ScalarProperty Name="cpf" ColumnName="cpf" />
+          <ScalarProperty Name="placa" ColumnName="placa" />
+          <ScalarProperty Name="data_entrada" ColumnName="data_entrada" />
+          <ScalarProperty Name="id_entrada" ColumnName="id_entrada" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="estoque_peca">
+      <EntityTypeMapping TypeName="Model.estoque_peca">
+        <MappingFragment StoreEntitySet="estoque_peca">
+          <ScalarProperty Name="nome_veiculo" ColumnName="nome_veiculo" />
+          <ScalarProperty Name="valor_unitario" ColumnName="valor_unitario" />
+          <ScalarProperty Name="quantidade" ColumnName="quantidade" />
+          <ScalarProperty Name="descricao" ColumnName="descricao" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+          <ScalarProperty Name="id_peca" ColumnName="id_peca" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="login">
+      <EntityTypeMapping TypeName="Model.login">
+        <MappingFragment StoreEntitySet="login">
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="id_login" ColumnName="id_login" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="manutencoes">
+      <EntityTypeMapping TypeName="Model.manutencoes">
+        <MappingFragment StoreEntitySet="manutencoes">
+          <ScalarProperty Name="valor_total" ColumnName="valor_total" />
+          <ScalarProperty Name="placa" ColumnName="placa" />
+          <ScalarProperty Name="estabelecimento" ColumnName="estabelecimento" />
+          <ScalarProperty Name="motivo" ColumnName="motivo" />
+          <ScalarProperty Name="data_manutencao" ColumnName="data_manutencao" />
+          <ScalarProperty Name="id_manutencao" ColumnName="id_manutencao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="multas">
+      <EntityTypeMapping TypeName="Model.multas">
+        <MappingFragment StoreEntitySet="multas">
+          <ScalarProperty Name="gravidade" ColumnName="gravidade" />
+          <ScalarProperty Name="valor" ColumnName="valor" />
+          <ScalarProperty Name="cpf" ColumnName="cpf" />
+          <ScalarProperty Name="placa" ColumnName="placa" />
+          <ScalarProperty Name="situacao" ColumnName="situacao" />
+          <ScalarProperty Name="data_pagamento" ColumnName="data_pagamento" />
+          <ScalarProperty Name="data_vencimento" ColumnName="data_vencimento" />
+          <ScalarProperty Name="local_multa" ColumnName="local_multa" />
+          <ScalarProperty Name="descricao_infracao" ColumnName="descricao_infracao" />
+          <ScalarProperty Name="auto_infracao" ColumnName="auto_infracao" />
+          <ScalarProperty Name="data_multa" ColumnName="data_multa" />
+          <ScalarProperty Name="id_multa" ColumnName="id_multa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pneus">
+      <EntityTypeMapping TypeName="Model.pneus">
+        <MappingFragment StoreEntitySet="pneus">
+          <ScalarProperty Name="placa" ColumnName="placa" />
+          <ScalarProperty Name="dimensao" ColumnName="dimensao" />
+          <ScalarProperty Name="modelo" ColumnName="modelo" />
+          <ScalarProperty Name="marca" ColumnName="marca" />
+          <ScalarProperty Name="situacao" ColumnName="situacao" />
+          <ScalarProperty Name="numero_serie" ColumnName="numero_serie" />
+          <ScalarProperty Name="id_pneu" ColumnName="id_pneu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="quilometragem">
+      <EntityTypeMapping TypeName="Model.quilometragem">
+        <MappingFragment StoreEntitySet="quilometragem">
+          <ScalarProperty Name="quilometros_rodados" ColumnName="quilometros_rodados" />
+          <ScalarProperty Name="placa" ColumnName="placa" />
+          <ScalarProperty Name="data_atual" ColumnName="data_atual" />
+          <ScalarProperty Name="data_inicio" ColumnName="data_inicio" />
+          <ScalarProperty Name="id_quilometragem" ColumnName="id_quilometragem" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="saidas">
+      <EntityTypeMapping TypeName="Model.saidas">
+        <MappingFragment StoreEntitySet="saidas">
+          <ScalarProperty Name="horario_saida" ColumnName="horario_saida" />
+          <ScalarProperty Name="cpf" ColumnName="cpf" />
+          <ScalarProperty Name="placa" ColumnName="placa" />
+          <ScalarProperty Name="data_saida" ColumnName="data_saida" />
+          <ScalarProperty Name="id_saida" ColumnName="id_saida" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="seguros">
+      <EntityTypeMapping TypeName="Model.seguros">
+        <MappingFragment StoreEntitySet="seguros">
+          <ScalarProperty Name="placa_seguro" ColumnName="placa_seguro" />
+          <ScalarProperty Name="situacao" ColumnName="situacao" />
+          <ScalarProperty Name="numero_parcelas" ColumnName="numero_parcelas" />
+          <ScalarProperty Name="valor_total" ColumnName="valor_total" />
+          <ScalarProperty Name="data_vencimento" ColumnName="data_vencimento" />
+          <ScalarProperty Name="data_inicio" ColumnName="data_inicio" />
+          <ScalarProperty Name="corretor" ColumnName="corretor" />
+          <ScalarProperty Name="segurado" ColumnName="segurado" />
+          <ScalarProperty Name="seguradora" ColumnName="seguradora" />
+          <ScalarProperty Name="numero_apolice" ColumnName="numero_apolice" />
+          <ScalarProperty Name="id_seguro" ColumnName="id_seguro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sinistros">
+      <EntityTypeMapping TypeName="Model.sinistros">
+        <MappingFragment StoreEntitySet="sinistros">
+          <ScalarProperty Name="cpf" ColumnName="cpf" />
+          <ScalarProperty Name="placa" ColumnName="placa" />
+          <ScalarProperty Name="local_sinistro" ColumnName="local_sinistro" />
+          <ScalarProperty Name="descricao_ocorrido" ColumnName="descricao_ocorrido" />
+          <ScalarProperty Name="data_sinistro" ColumnName="data_sinistro" />
+          <ScalarProperty Name="id_sinistro" ColumnName="id_sinistro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="usuarios">
+      <EntityTypeMapping TypeName="Model.usuarios">
+        <MappingFragment StoreEntitySet="usuarios">
+          <ScalarProperty Name="cpf" ColumnName="cpf" />
+          <ScalarProperty Name="rg" ColumnName="rg" />
+          <ScalarProperty Name="nome_completo" ColumnName="nome_completo" />
+          <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="veiculos">
+      <EntityTypeMapping TypeName="Model.veiculos">
+        <MappingFragment StoreEntitySet="veiculos">
+          <ScalarProperty Name="tipo_combustivel" ColumnName="tipo_combustivel" />
+          <ScalarProperty Name="motorizacao" ColumnName="motorizacao" />
+          <ScalarProperty Name="ano_fabricacao" ColumnName="ano_fabricacao" />
+          <ScalarProperty Name="marca" ColumnName="marca" />
+          <ScalarProperty Name="modelo" ColumnName="modelo" />
+          <ScalarProperty Name="placa" ColumnName="placa" />
+          <ScalarProperty Name="cor" ColumnName="cor" />
+          <ScalarProperty Name="id_veiculo" ColumnName="id_veiculo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="viagens">
+      <EntityTypeMapping TypeName="Model.viagens">
+        <MappingFragment StoreEntitySet="viagens">
+          <ScalarProperty Name="cpf" ColumnName="cpf" />
+          <ScalarProperty Name="placa" ColumnName="placa" />
+          <ScalarProperty Name="km_final" ColumnName="km_final" />
+          <ScalarProperty Name="km_inicial" ColumnName="km_inicial" />
+          <ScalarProperty Name="situacao" ColumnName="situacao" />
+          <ScalarProperty Name="motivo" ColumnName="motivo" />
+          <ScalarProperty Name="data_entregue" ColumnName="data_entregue" />
+          <ScalarProperty Name="data_entregar" ColumnName="data_entregar" />
+          <ScalarProperty Name="data_viagem" ColumnName="data_viagem" />
+          <ScalarProperty Name="id_viagem" ColumnName="id_viagem" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

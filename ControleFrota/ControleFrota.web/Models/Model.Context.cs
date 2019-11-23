@@ -26,5 +26,20 @@ namespace ControleFrota.web.Models
         }
     
         public DbSet<motoristas> motoristas { get; set; }
+        public DbSet<abastecimentos> abastecimentos { get; set; }
+        public DbSet<aluguel_veiculos> aluguel_veiculos { get; set; }
+        public DbSet<entradas> entradas { get; set; }
+        public DbSet<estoque_peca> estoque_peca { get; set; }
+        public DbSet<login> login { get; set; }
+        public DbSet<manutencoes> manutencoes { get; set; }
+        public DbSet<multas> multas { get; set; }
+        public DbSet<pneus> pneus { get; set; }
+        public DbSet<quilometragem> quilometragem { get; set; }
+        public DbSet<saidas> saidas { get; set; }
+        public DbSet<seguros> seguros { get; set; }
+        public DbSet<sinistros> sinistros { get; set; }
+        public DbSet<usuarios> usuarios { get; set; }
+        public DbSet<veiculos> veiculos { get; set; }
+        public DbSet<viagens> viagens { get; set; }
     }
 }

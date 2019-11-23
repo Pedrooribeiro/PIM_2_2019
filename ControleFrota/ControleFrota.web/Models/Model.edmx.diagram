@@ -5,7 +5,22 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="3aa3f48537364d268c3a0e418b5ecd12" Name="Diagram1">
-        <EntityTypeShape EntityType="Model.motoristas" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.motoristas" Width="1.5" PointX="0.875" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.abastecimentos" Width="1.5" PointX="3.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Model.aluguel_veiculos" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="Model.entradas" Width="1.5" PointX="2.75" PointY="4.75" />
+        <EntityTypeShape EntityType="Model.estoque_peca" Width="1.5" PointX="4.75" PointY="4.75" />
+        <EntityTypeShape EntityType="Model.login" Width="1.5" PointX="5.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Model.manutencoes" Width="1.5" PointX="6.75" PointY="3.75" />
+        <EntityTypeShape EntityType="Model.multas" Width="1.5" PointX="6.75" PointY="6.75" />
+        <EntityTypeShape EntityType="Model.pneus" Width="1.5" PointX="0.75" PointY="7.75" />
+        <EntityTypeShape EntityType="Model.quilometragem" Width="1.5" PointX="7.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Model.saidas" Width="1.5" PointX="2.75" PointY="8.75" />
+        <EntityTypeShape EntityType="Model.seguros" Width="1.5" PointX="8.75" PointY="3.75" />
+        <EntityTypeShape EntityType="Model.sinistros" Width="1.5" PointX="8.75" PointY="7.75" />
+        <EntityTypeShape EntityType="Model.usuarios" Width="1.5" PointX="9.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Model.veiculos" Width="1.5" PointX="10.75" PointY="3.75" />
+        <EntityTypeShape EntityType="Model.viagens" Width="1.5" PointX="10.75" PointY="7.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

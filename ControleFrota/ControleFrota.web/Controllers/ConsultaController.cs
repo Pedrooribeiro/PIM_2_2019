@@ -11,57 +11,109 @@ namespace ControleFrota.web.Controllers
     {
 
         [Authorize]
-        public ActionResult ConsultaMotorista(string searching)
+        public ActionResult ConsultaMotorista(string cpfConsultado)
         {
-            //SqlConnection conexao = new SqlConnection(@"Data Source=DESKTOP-SOKKM3N\SQLEXPRESS;Initial Catalog=controle-frota;User Id=admin;Password=123");
-            //conexao.Open();
-
-            //string resultadoPesquisa = "SELECT * FROM motoristas";
-            //SqlCommand cmdComandoSelect = new SqlCommand(resultadoPesquisa, conexao);
-            // SqlDataReader dados = cmdComandoSelect.ExecuteReader();
-
-            //ViewBag.Id = 6;
-            //ViewBag.Nome = "Pedro";
-            //ViewBag.Rg = 646465464;
-            //ViewBag.Cpf = 4986575967;
-            //ViewBag.Cnh = 65465465;
-            //ViewBag.Vencimento = "23 / 10 / 2025";
-            //ViewBag.Empresa = "Indra";
-
             Entities db = new Entities();
 
-            return View(db.motoristas.Where(x=>x.cpf.Contains(searching) || searching == null).ToList());
+            return View(db.motoristas.Where(x=>x.cpf.Equals(cpfConsultado) || cpfConsultado == null).ToList());
         }
 
         [Authorize]
-        public ActionResult ConsultaMulta()
+        public ActionResult ConsultaMulta(string placaConsultada)
         {
-            ViewBag.Id = 6;
-            ViewBag.Nome = "Pedro";
-            ViewBag.Rg = 646465464;
-            ViewBag.Cpf = 4986575967;
-            ViewBag.Cnh = 65465465;
-            ViewBag.Vencimento = "23 / 10 / 2025";
-            ViewBag.Empresa = "Indra";
-            return View();
+            Entities db = new Entities();
+            return View(db.multas.Where(x => x.placa.Equals(placaConsultada) || placaConsultada == null).ToList());
         }
 
         [Authorize]
-        public ActionResult ConsultaPeca()
+        public ActionResult ConsultaPeca(string nomeVeiculoConsultado)
         {
-            return View();
+            Entities db = new Entities();
+            return View(db.estoque_peca.Where(x => x.nome_veiculo.Equals(nomeVeiculoConsultado) || nomeVeiculoConsultado == null).ToList());
         }
 
         [Authorize]
-        public ActionResult ConsultaVeiculo()
+        public ActionResult ConsultaVeiculo(string placaConsultada)
         {
-            return View();
+            Entities db = new Entities();
+            return View(db.veiculos.Where(x => x.placa.Equals(placaConsultada) || placaConsultada == null).ToList());
         }
 
         [Authorize]
-        public ActionResult ConsultaPneu()
+        public ActionResult ConsultaPneu(string placaConsultada)
         {
-            return View();
+            Entities db = new Entities();
+            return View(db.pneus.Where(x => x.placa.Equals(placaConsultada) || placaConsultada == null).ToList());
+        }
+
+        [Authorize]
+        public ActionResult ConsultaAbastecimento(string placaConsultada)
+        {
+            Entities db = new Entities();
+            return View(db.abastecimentos.Where(x => x.placa.Equals(placaConsultada) || placaConsultada == null).ToList());
+        }
+
+        [Authorize]
+        public ActionResult ConsultaAluguel(string cpfConsultado)
+        {
+            Entities db = new Entities();
+            return View(db.aluguel_veiculos.Where(x => x.cpf.Equals(cpfConsultado) || cpfConsultado == null).ToList());
+        }
+
+        [Authorize]
+        public ActionResult ConsultaEntrada(string placaConsultada)
+        {
+            Entities db = new Entities();
+            return View(db.entradas.Where(x => x.placa.Equals(placaConsultada) || placaConsultada == null).ToList());
+        }
+
+        [Authorize]
+        public ActionResult ConsultaSaida(string placaConsultada)
+        {
+            Entities db = new Entities();
+            return View(db.saidas.Where(x => x.placa.Equals(placaConsultada) || placaConsultada == null).ToList());
+        }
+
+        [Authorize]
+        public ActionResult ConsultaManutencao(string placaConsultada)
+        {
+            Entities db = new Entities();
+            return View(db.manutencoes.Where(x => x.placa.Equals(placaConsultada) || placaConsultada == null).ToList());
+        }
+
+        [Authorize]
+        public ActionResult ConsultaQuilometragem(string placaConsultada)
+        {
+            Entities db = new Entities();
+            return View(db.quilometragem.Where(x => x.placa.Equals(placaConsultada) || placaConsultada == null).ToList());
+        }
+
+        [Authorize]
+        public ActionResult ConsultaRota(string placaConsultada)
+        {
+            Entities db = new Entities();
+            return View(db.viagens.Where(x => x.placa.Equals(placaConsultada) || placaConsultada == null).ToList());
+        }
+
+        [Authorize]
+        public ActionResult ConsultaSeguro(string numeroApolice)
+        {
+            Entities db = new Entities();
+            return View(db.seguros.Where(x => x.numero_apolice.Equals(numeroApolice) || numeroApolice == null).ToList());
+        }
+
+        [Authorize]
+        public ActionResult ConsultaSinistro(string placaConsultada)
+        {
+            Entities db = new Entities();
+            return View(db.sinistros.Where(x => x.placa.Equals(placaConsultada) || placaConsultada == null).ToList());
+        }
+
+        [Authorize]
+        public ActionResult ConsultaUsuario(string cpfConsultado)
+        {
+            Entities db = new Entities();
+            return View(db.usuarios.Where(x => x.cpf.Equals(cpfConsultado) || cpfConsultado == null).ToList());
         }
     }
 }

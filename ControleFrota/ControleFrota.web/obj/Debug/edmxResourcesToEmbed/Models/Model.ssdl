@@ -1,5 +1,69 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="abastecimentos">
+    <Key>
+      <PropertyRef Name="id_abastecimento" />
+    </Key>
+    <Property Name="id_abastecimento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="data_abastecimento" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="tipo_combustivel" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="posto" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="placa" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="valor_litro" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="valor_total" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="litros" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aluguel_veiculos">
+    <Key>
+      <PropertyRef Name="id_aluguel" />
+    </Key>
+    <Property Name="id_aluguel" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cpf" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="numero_veiculos" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="data_inicio" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="data_entrega" Type="varchar" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <EntityType Name="entradas">
+    <Key>
+      <PropertyRef Name="id_entrada" />
+    </Key>
+    <Property Name="id_entrada" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="data_entrada" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="placa" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="cpf" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="horario_entrada" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="estoque_peca">
+    <Key>
+      <PropertyRef Name="id_peca" />
+    </Key>
+    <Property Name="id_peca" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tipo" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="nome" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="descricao" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="quantidade" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="valor_unitario" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="nome_veiculo" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="login">
+    <Key>
+      <PropertyRef Name="id_login" />
+    </Key>
+    <Property Name="id_login" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="username" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="manutencoes">
+    <Key>
+      <PropertyRef Name="id_manutencao" />
+    </Key>
+    <Property Name="id_manutencao" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="data_manutencao" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="motivo" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="estabelecimento" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="placa" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="valor_total" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
   <EntityType Name="motoristas">
     <Key>
       <PropertyRef Name="id_motorista" />
@@ -12,7 +76,135 @@
     <Property Name="vencimento_cnh" Type="varchar" MaxLength="15" Nullable="false" />
     <Property Name="empresa" Type="varchar" MaxLength="30" Nullable="false" />
   </EntityType>
+  <EntityType Name="multas">
+    <Key>
+      <PropertyRef Name="id_multa" />
+    </Key>
+    <Property Name="id_multa" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="data_multa" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="auto_infracao" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="descricao_infracao" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="local_multa" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="data_vencimento" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="data_pagamento" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="situacao" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="placa" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="cpf" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="valor" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="gravidade" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="pneus">
+    <Key>
+      <PropertyRef Name="id_pneu" />
+    </Key>
+    <Property Name="id_pneu" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="numero_serie" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="situacao" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="marca" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="modelo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="dimensao" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="placa" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="quilometragem">
+    <Key>
+      <PropertyRef Name="id_quilometragem" />
+    </Key>
+    <Property Name="id_quilometragem" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="data_inicio" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="data_atual" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="placa" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="quilometros_rodados" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="saidas">
+    <Key>
+      <PropertyRef Name="id_saida" />
+    </Key>
+    <Property Name="id_saida" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="data_saida" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="placa" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="cpf" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="horario_saida" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="seguros">
+    <Key>
+      <PropertyRef Name="id_seguro" />
+    </Key>
+    <Property Name="id_seguro" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="numero_apolice" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="seguradora" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="segurado" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="corretor" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="data_inicio" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="data_vencimento" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="valor_total" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="numero_parcelas" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="situacao" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="placa_seguro" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sinistros">
+    <Key>
+      <PropertyRef Name="id_sinistro" />
+    </Key>
+    <Property Name="id_sinistro" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="data_sinistro" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="descricao_ocorrido" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="local_sinistro" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="placa" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="cpf" Type="varchar" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <EntityType Name="usuarios">
+    <Key>
+      <PropertyRef Name="id_usuario" />
+    </Key>
+    <Property Name="id_usuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nome_completo" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="rg" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="cpf" Type="varchar" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <EntityType Name="veiculos">
+    <Key>
+      <PropertyRef Name="id_veiculo" />
+    </Key>
+    <Property Name="id_veiculo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cor" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="placa" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="modelo" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="marca" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="ano_fabricacao" Type="int" Nullable="false" />
+    <Property Name="motorizacao" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="tipo_combustivel" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="viagens">
+    <Key>
+      <PropertyRef Name="id_viagem" />
+    </Key>
+    <Property Name="id_viagem" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="data_viagem" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="data_entregar" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="data_entregue" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="motivo" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="situacao" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="km_inicial" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="km_final" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="placa" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="cpf" Type="varchar" MaxLength="15" Nullable="false" />
+  </EntityType>
   <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="abastecimentos" EntityType="Self.abastecimentos" Schema="db_owner" store:Type="Tables" />
+    <EntitySet Name="aluguel_veiculos" EntityType="Self.aluguel_veiculos" Schema="db_owner" store:Type="Tables" />
+    <EntitySet Name="entradas" EntityType="Self.entradas" Schema="db_owner" store:Type="Tables" />
+    <EntitySet Name="estoque_peca" EntityType="Self.estoque_peca" Schema="db_owner" store:Type="Tables" />
+    <EntitySet Name="login" EntityType="Self.login" Schema="db_owner" store:Type="Tables" />
+    <EntitySet Name="manutencoes" EntityType="Self.manutencoes" Schema="db_owner" store:Type="Tables" />
     <EntitySet Name="motoristas" EntityType="Self.motoristas" Schema="db_owner" store:Type="Tables" />
+    <EntitySet Name="multas" EntityType="Self.multas" Schema="db_owner" store:Type="Tables" />
+    <EntitySet Name="pneus" EntityType="Self.pneus" Schema="db_owner" store:Type="Tables" />
+    <EntitySet Name="quilometragem" EntityType="Self.quilometragem" Schema="db_owner" store:Type="Tables" />
+    <EntitySet Name="saidas" EntityType="Self.saidas" Schema="db_owner" store:Type="Tables" />
+    <EntitySet Name="seguros" EntityType="Self.seguros" Schema="db_owner" store:Type="Tables" />
+    <EntitySet Name="sinistros" EntityType="Self.sinistros" Schema="db_owner" store:Type="Tables" />
+    <EntitySet Name="usuarios" EntityType="Self.usuarios" Schema="db_owner" store:Type="Tables" />
+    <EntitySet Name="veiculos" EntityType="Self.veiculos" Schema="db_owner" store:Type="Tables" />
+    <EntitySet Name="viagens" EntityType="Self.viagens" Schema="db_owner" store:Type="Tables" />
   </EntityContainer>
 </Schema>

@@ -1,0 +1,70 @@
+﻿@model IEnumerable<ControleFrota.web.Models.viagens>
+
+@Styles.Render("~/App_Themes/Tema1/StyleSheet1.css")
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Resultado Consulta</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Id Viagem</th>
+                            <th>Data Viagem</th>
+                            <th>Data Entrega</th>
+                            <th>Data Entregue</th>
+                            <th>Motivo</th>
+                            <th>Situação</th>
+                            <th>Km Inicial</th>
+                            <th>Km Final</th>
+                            <th>Placa</th>
+                            <th>CPF</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model.Count() == 0)
+                        {
+                            <tr>
+                                <td colspan="3" style="color:red">
+                                    Nenhum resultado encontrado
+                                </td>
+                            </tr>
+                        }
+                        else
+                        {
+                            foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.id_viagem</td>
+                                    <td>@item.data_viagem</td>
+                                    <td>@item.data_entregar</td>
+                                    <td>@item.data_entregue</td>
+                                    <td>@item.motivo</td>
+                                    <td>@item.situacao</td>
+                                    <td>@item.km_inicial</td>
+                                    <td>@item.km_final</td>
+                                    <td>@item.placa</td>
+                                    <td>@item.cpf</td>
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(function () {
+        $('#exampleModal').modal('show');
+    });
+</script>   

@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\ControleFrota.web"
+    "\\ControleFrota.web",
+    "\\ControleFrota.web\\Controllers"
   ],
   "SelectedNode": "\\ControleFrota.sln",
   "PreviewInSolutionExplorer": false
