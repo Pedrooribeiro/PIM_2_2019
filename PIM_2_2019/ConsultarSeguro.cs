@@ -49,7 +49,7 @@ namespace PrototipoTelas
             }
             else
             {
-                MessageBox.Show("Erro ao cadastrar! Campos vazios ou preenchidos incorretamente, tente novamente.", "Erro");
+                MessageBox.Show("Erro ao consultar! Campos vazios ou preenchidos incorretamente, tente novamente.", "Erro");
             }
         }
 
