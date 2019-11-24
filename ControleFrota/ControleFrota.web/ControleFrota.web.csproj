@@ -268,7 +268,6 @@
     <Content Include="Views\Consulta\ConsultaRota.cshtml" />
     <Content Include="Views\Consulta\ConsultaSeguro.cshtml" />
     <Content Include="Views\Consulta\ConsultaSinistro.cshtml" />
-    <Content Include="Views\Consulta\ConsultaUsuario.cshtml" />
     <Content Include="Views\Consulta\ConsultaSaida.cshtml" />
   </ItemGroup>
   <ItemGroup>

@@ -50,13 +50,13 @@
                 </ul>
             </li>
             <li>
-                <div class="link"><i class="fa fa-mobile"></i>Peças<i class="fa fa-chevron-down"></i></div>
+                <div class="link"><i class="fa fa-mobile"></i>Peça<i class="fa fa-chevron-down"></i></div>
                 <ul class="submenu">
                     <p>
-                        Pesquisar Nome do Veículo
+                        Pesquisar Nome da Peça
                         @using (Html.BeginForm("ConsultaPeca", "Consulta", FormMethod.Get))
                         {
-                            @Html.TextBox("nomeVeiculoConsultado")
+                            @Html.TextBox("nomePecaConsultada")
                             <input type="submit" class="btn btn-primary" data-toggle="modal" data-target="#ConsultaPeca" value="Pesquisar" />
                         }
                     </p>
@@ -69,7 +69,7 @@
                         Pesquisar por Placa
                         @using (Html.BeginForm("ConsultaVeiculo", "Consulta", FormMethod.Get))
                         {
-                            @Html.TextBox("veiculoConsultado")
+                            @Html.TextBox("placaConsultada")
                             <input type="submit" class="btn btn-primary" data-toggle="modal" data-target="#ConsultaVeiculo" value="Pesquisar" />
                         }
                     </p>
@@ -102,7 +102,7 @@
                 </ul>
             </li>
             <li>
-                <div class="link"><i class="fa fa-globe"></i>Aluguel<i class="fa fa-chevron-down"></i></div>
+                <div class="link"><i class="fa fa-globe"></i>Aluguel Veículos<i class="fa fa-chevron-down"></i></div>
                 <ul class="submenu">
                     <p>
                         Pesquisar por CPF
@@ -167,7 +167,7 @@
                 </ul>
             </li>
             <li>
-                <div class="link"><i class="fa fa-globe"></i>Rota<i class="fa fa-chevron-down"></i></div>
+                <div class="link"><i class="fa fa-globe"></i>Viagem<i class="fa fa-chevron-down"></i></div>
                 <ul class="submenu">
                     <p>
                         Pesquisar por Placa
@@ -183,10 +183,10 @@
                 <div class="link"><i class="fa fa-globe"></i>Seguro<i class="fa fa-chevron-down"></i></div>
                 <ul class="submenu">
                     <p>
-                        Pesquisar por Apólice
+                        Pesquisar por Placa
                         @using (Html.BeginForm("ConsultaSeguro", "Consulta", FormMethod.Get))
                         {
-                            @Html.TextBox("numeroApolice")
+                            @Html.TextBox("placaConsultada")
                             <input type="submit" class="btn btn-primary" data-toggle="modal" data-target="#ConsultaSeguro" value="Pesquisar" />
                         }
                     </p>
@@ -201,19 +201,6 @@
                         {
                             @Html.TextBox("placaConsultada")
                             <input type="submit" class="btn btn-primary" data-toggle="modal" data-target="#ConsultaSinistro" value="Pesquisar" />
-                        }
-                    </p>
-                </ul>
-            </li>
-            <li>
-                <div class="link"><i class="fa fa-globe"></i>Usuário<i class="fa fa-chevron-down"></i></div>
-                <ul class="submenu">
-                    <p>
-                        Pesquisar por CPF
-                        @using (Html.BeginForm("ConsultaUsuario", "Consulta", FormMethod.Get))
-                        {
-                            @Html.TextBox("cpfConsultado")
-                            <input type="submit" class="btn btn-primary" data-toggle="modal" data-target="#ConsultaUsuario" value="Pesquisar" />
                         }
                     </p>
                 </ul>

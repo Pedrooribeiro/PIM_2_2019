@@ -140,7 +140,7 @@
     <EntitySetMapping Name="seguros">
       <EntityTypeMapping TypeName="Model.seguros">
         <MappingFragment StoreEntitySet="seguros">
-          <ScalarProperty Name="placa_seguro" ColumnName="placa_seguro" />
+          <ScalarProperty Name="placa" ColumnName="placa" />
           <ScalarProperty Name="situacao" ColumnName="situacao" />
           <ScalarProperty Name="numero_parcelas" ColumnName="numero_parcelas" />
           <ScalarProperty Name="valor_total" ColumnName="valor_total" />

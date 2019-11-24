@@ -26,10 +26,10 @@ namespace ControleFrota.web.Controllers
         }
 
         [Authorize]
-        public ActionResult ConsultaPeca(string nomeVeiculoConsultado)
+        public ActionResult ConsultaPeca(string nomePecaConsultada)
         {
             Entities db = new Entities();
-            return View(db.estoque_peca.Where(x => x.nome_veiculo.Equals(nomeVeiculoConsultado) || nomeVeiculoConsultado == null).ToList());
+            return View(db.estoque_peca.Where(x => x.nome.Equals(nomePecaConsultada) || nomePecaConsultada == null).ToList());
         }
 
         [Authorize]
@@ -96,10 +96,10 @@ namespace ControleFrota.web.Controllers
         }
 
         [Authorize]
-        public ActionResult ConsultaSeguro(string numeroApolice)
+        public ActionResult ConsultaSeguro(string placaConsultada)
         {
             Entities db = new Entities();
-            return View(db.seguros.Where(x => x.numero_apolice.Equals(numeroApolice) || numeroApolice == null).ToList());
+            return View(db.seguros.Where(x => x.placa.Equals(placaConsultada) || placaConsultada == null).ToList());
         }
 
         [Authorize]
@@ -109,11 +109,5 @@ namespace ControleFrota.web.Controllers
             return View(db.sinistros.Where(x => x.placa.Equals(placaConsultada) || placaConsultada == null).ToList());
         }
 
-        [Authorize]
-        public ActionResult ConsultaUsuario(string cpfConsultado)
-        {
-            Entities db = new Entities();
-            return View(db.usuarios.Where(x => x.cpf.Equals(cpfConsultado) || cpfConsultado == null).ToList());
-        }
     }
 }
