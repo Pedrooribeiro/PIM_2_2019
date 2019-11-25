@@ -144,7 +144,7 @@
           <Property Name="valor_total" Type="decimal" Precision="10" Scale="0" Nullable="false" />
           <Property Name="numero_parcelas" Type="decimal" Precision="10" Scale="0" Nullable="false" />
           <Property Name="situacao" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="placa" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="placa_seguro" Type="varchar" MaxLength="10" Nullable="false" />
         </EntityType>
         <EntityType Name="sinistros">
           <Key>
@@ -373,7 +373,7 @@
           <Property Name="valor_total" Type="Decimal" Nullable="false" Precision="10" Scale="0" />
           <Property Name="numero_parcelas" Type="Decimal" Nullable="false" Precision="10" Scale="0" />
           <Property Name="situacao" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="placa" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="placa_seguro" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="sinistros">
           <Key>
@@ -568,7 +568,7 @@
           <EntitySetMapping Name="seguros">
             <EntityTypeMapping TypeName="Model.seguros">
               <MappingFragment StoreEntitySet="seguros">
-                <ScalarProperty Name="placa" ColumnName="placa" />
+                <ScalarProperty Name="placa_seguro" ColumnName="placa_seguro" />
                 <ScalarProperty Name="situacao" ColumnName="situacao" />
                 <ScalarProperty Name="numero_parcelas" ColumnName="numero_parcelas" />
                 <ScalarProperty Name="valor_total" ColumnName="valor_total" />

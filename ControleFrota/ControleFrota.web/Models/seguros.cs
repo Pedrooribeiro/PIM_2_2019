@@ -24,6 +24,6 @@ namespace ControleFrota.web.Models
         public decimal valor_total { get; set; }
         public decimal numero_parcelas { get; set; }
         public string situacao { get; set; }
-        public string placa { get; set; }
+        public string placa_seguro { get; set; }
     }
 }

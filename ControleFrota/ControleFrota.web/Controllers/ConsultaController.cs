@@ -99,7 +99,7 @@ namespace ControleFrota.web.Controllers
         public ActionResult ConsultaSeguro(string placaConsultada)
         {
             Entities db = new Entities();
-            return View(db.seguros.Where(x => x.placa.Equals(placaConsultada) || placaConsultada == null).ToList());
+            return View(db.seguros.Where(x => x.placa_seguro.Equals(placaConsultada) || placaConsultada == null).ToList());
         }
 
         [Authorize]
