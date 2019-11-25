@@ -53,7 +53,7 @@
                                         <td>@item.valor_total</td>
                                         <td>@item.numero_parcelas</td>
                                         <td>@item.situacao</td>
-                                        <td>@item.placa</td>
+                                        <td>@item.placa_seguro</td>
                                     </tr>
                                 }
                             }
@@ -61,7 +61,7 @@
                     </table>
                 </div>
                 <div class="modal-footer">
-                    @Html.ActionLink("Fechar", "Index", "Home", null, new { @class = "btn btn-secondary" })
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">@Html.ActionLink("Fechar", "Index", "Home", null, new { @class = "btn btn-secondary" })</button>
                 </div>
             </div>
         </div>

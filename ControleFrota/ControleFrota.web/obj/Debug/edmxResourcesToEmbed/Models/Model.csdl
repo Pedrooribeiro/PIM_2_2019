@@ -157,7 +157,7 @@
     <Property Name="valor_total" Type="Decimal" Nullable="false" Precision="10" Scale="0" />
     <Property Name="numero_parcelas" Type="Decimal" Nullable="false" Precision="10" Scale="0" />
     <Property Name="situacao" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="placa" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="placa_seguro" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="sinistros">
     <Key>
