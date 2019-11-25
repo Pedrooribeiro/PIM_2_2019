@@ -2,7 +2,6 @@
 
 @Styles.Render("~/App_Themes/Tema1/StyleSheet1.css")
 
-
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -13,50 +12,52 @@
                 </button>
             </div>
             <div class="modal-body">
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th>Id Motorista</th>
-                            <th>Nome Completo</th>
-                            <th>RG</th>
-                            <th>CPF</th>
-                            <th>CNH</th>
-                            <th>Vencimento CNH</th>
-                            <th>Empresa</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @if (Model.Count() == 0)
-                        {
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
                             <tr>
-                                <td colspan="3" style="color:red">
-                                    Nenhum resultado encontrado
-                                </td>
+                                <th>Id Motorista</th>
+                                <th>Nome Completo</th>
+                                <th>RG</th>
+                                <th>CPF</th>
+                                <th>CNH</th>
+                                <th>Vencimento CNH</th>
+                                <th>Empresa</th>
                             </tr>
-                        }
-                        else
-                        {
-                            foreach (var item in Model)
+                        </thead>
+                        <tbody>
+                            @if (Model.Count() == 0)
                             {
                                 <tr>
-                                    <td>@item.id_motorista</td>
-                                    <td>@item.nome_completo</td>
-                                    <td>@item.rg</td>
-                                    <td>@item.cpf</td>
-                                    <td>@item.cnh</td>
-                                    <td>@item.vencimento_cnh</td>
-                                    <td>@item.empresa</td>
+                                    <td colspan="3" style="color:red">
+                                        Nenhum resultado encontrado
+                                    </td>
                                 </tr>
                             }
-                        }
-                    </tbody>
-                </table>
+                            else
+                            {
+                                foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.id_motorista</td>
+                                        <td>@item.nome_completo</td>
+                                        <td>@item.rg</td>
+                                        <td>@item.cpf</td>
+                                        <td>@item.cnh</td>
+                                        <td>@item.vencimento_cnh</td>
+                                        <td>@item.empresa</td>
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    @Html.ActionLink("Fechar", "Index", "Home", null, new { @class = "btn btn-secondary" })
+                </div>
             </div>
-            <div class="modal-footer">
-                @Html.ActionLink("Fechar", "Index", "Home", null, new { @class = "btn btn-secondary" })
-            </div>
-        </div>
     </div>
+</div>
 </div>
 <script>
     $(function () {

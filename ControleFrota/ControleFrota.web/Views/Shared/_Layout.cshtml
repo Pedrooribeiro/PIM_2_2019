@@ -8,6 +8,8 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <link href="~/App_Themes/Tema1/StyleSheet1.css" rel="stylesheet" />
+    <!-- Bootstrap core CSS -->
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="~/App_Themes/Tema1/script.js"></script>
 </head>
@@ -26,7 +28,7 @@
             <li>
                 <div class="link"><i class="fa fa-paint-brush"></i>Motorista<i class="fa fa-chevron-down"></i></div>
                 <ul class="submenu">
-                    <p>
+                    <p style="color:white;">
                         Pesquisar por CPF
                         @using (Html.BeginForm("ConsultaMotorista", "Consulta", FormMethod.Get))
                         {
@@ -39,7 +41,7 @@
             <li class="default open">
                 <div class="link"><i class="fa fa-code"></i>Multa<i class="fa fa-chevron-down"></i></div>
                 <ul class="submenu">
-                    <p>
+                    <p style="color:white;">
                         Pesquisar por placa
                         @using (Html.BeginForm("ConsultaMulta", "Consulta", FormMethod.Get))
                         {
@@ -52,7 +54,7 @@
             <li>
                 <div class="link"><i class="fa fa-mobile"></i>Peça<i class="fa fa-chevron-down"></i></div>
                 <ul class="submenu">
-                    <p>
+                    <p style="color:white;">
                         Pesquisar Nome da Peça
                         @using (Html.BeginForm("ConsultaPeca", "Consulta", FormMethod.Get))
                         {
@@ -65,7 +67,7 @@
             <li>
                 <div class="link"><i class="fa fa-globe"></i>Veículo<i class="fa fa-chevron-down"></i></div>
                 <ul class="submenu">
-                    <p>
+                    <p style="color:white;">
                         Pesquisar por Placa
                         @using (Html.BeginForm("ConsultaVeiculo", "Consulta", FormMethod.Get))
                         {
@@ -78,7 +80,7 @@
             <li>
                 <div class="link"><i class="fa fa-globe"></i>Pneu<i class="fa fa-chevron-down"></i></div>
                 <ul class="submenu">
-                    <p>
+                    <p style="color:white;">
                         Pesquisar por Placa
                         @using (Html.BeginForm("ConsultaPneu", "Consulta", FormMethod.Get))
                         {
@@ -91,7 +93,7 @@
             <li>
                 <div class="link"><i class="fa fa-globe"></i>Abastecimento<i class="fa fa-chevron-down"></i></div>
                 <ul class="submenu">
-                    <p>
+                    <p style="color:white;">
                         Pesquisar por Placa
                         @using (Html.BeginForm("ConsultaAbastecimento", "Consulta", FormMethod.Get))
                         {
@@ -104,7 +106,7 @@
             <li>
                 <div class="link"><i class="fa fa-globe"></i>Aluguel Veículos<i class="fa fa-chevron-down"></i></div>
                 <ul class="submenu">
-                    <p>
+                    <p style="color:white;">
                         Pesquisar por CPF
                         @using (Html.BeginForm("ConsultaAluguel", "Consulta", FormMethod.Get))
                         {
@@ -117,7 +119,7 @@
             <li>
                 <div class="link"><i class="fa fa-globe"></i>Entrada<i class="fa fa-chevron-down"></i></div>
                 <ul class="submenu">
-                    <p>
+                    <p style="color:white;">
                         Pesquisar por Placa
                         @using (Html.BeginForm("ConsultaEntrada", "Consulta", FormMethod.Get))
                         {
@@ -130,7 +132,7 @@
             <li>
                 <div class="link"><i class="fa fa-globe"></i>Saída<i class="fa fa-chevron-down"></i></div>
                 <ul class="submenu">
-                    <p>
+                    <p style="color:white;">
                         Pesquisar por Placa
                         @using (Html.BeginForm("ConsultaSaida", "Consulta", FormMethod.Get))
                         {
@@ -143,7 +145,7 @@
             <li>
                 <div class="link"><i class="fa fa-globe"></i>Manutenção<i class="fa fa-chevron-down"></i></div>
                 <ul class="submenu">
-                    <p>
+                    <p style="color:white;">
                         Pesquisar por Placa
                         @using (Html.BeginForm("ConsultaManutencao", "Consulta", FormMethod.Get))
                         {
@@ -156,7 +158,7 @@
             <li>
                 <div class="link"><i class="fa fa-globe"></i>Quilometragem<i class="fa fa-chevron-down"></i></div>
                 <ul class="submenu">
-                    <p>
+                    <p style="color:white;">
                         Pesquisar por Placa
                         @using (Html.BeginForm("ConsultaQuilometragem", "Consulta", FormMethod.Get))
                         {
@@ -169,7 +171,7 @@
             <li>
                 <div class="link"><i class="fa fa-globe"></i>Viagem<i class="fa fa-chevron-down"></i></div>
                 <ul class="submenu">
-                    <p>
+                    <p style="color:white;">
                         Pesquisar por Placa
                         @using (Html.BeginForm("ConsultaRota", "Consulta", FormMethod.Get))
                         {
@@ -182,7 +184,7 @@
             <li>
                 <div class="link"><i class="fa fa-globe"></i>Seguro<i class="fa fa-chevron-down"></i></div>
                 <ul class="submenu">
-                    <p>
+                    <p style="color:white;">
                         Pesquisar por Placa
                         @using (Html.BeginForm("ConsultaSeguro", "Consulta", FormMethod.Get))
                         {
@@ -195,7 +197,7 @@
             <li>
                 <div class="link"><i class="fa fa-globe"></i>Sinistro<i class="fa fa-chevron-down"></i></div>
                 <ul class="submenu">
-                    <p>
+                    <p style="color:white;">
                         Pesquisar por Placa
                         @using (Html.BeginForm("ConsultaSinistro", "Consulta", FormMethod.Get))
                         {

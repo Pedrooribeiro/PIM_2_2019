@@ -1,4 +1,4 @@
-﻿* {
+* {
 margin: 0;
 padding: 0;
 -webkit-box-sizing: border-box;
@@ -152,4 +152,8 @@ font-size: 14px;
 
 .button.btn-primary {
     text-align: center;
+}
+
+#submenu p{
+    color: white;
 }

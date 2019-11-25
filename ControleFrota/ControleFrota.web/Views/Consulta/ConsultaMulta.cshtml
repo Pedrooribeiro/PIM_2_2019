@@ -14,57 +14,59 @@
                 </button>
             </div>
             <div class="modal-body">
-                <table class="table table-striped table-dark">
-                    <thead>
-                        <tr>
-                            <th>Multa</th>
-                            <th>data</th>
-                            <th>infração</th>
-                            <th>descrição</th>
-                            <th>local</th>
-                            <th>vencimento</th>
-                            <th>pagamento</th>
-                            <th>situação</th>
-                            <th>placa</th>
-                            <th>CPF</th>
-                            <th>Valor</th>
-                            <th>Gravidade</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @if (Model.Count() == 0)
-                        {
+                <div class="table-responsive">
+                    <table class="table table-striped table-dark">
+                        <thead>
                             <tr>
-                                <td colspan="3" style="color:red">
-                                    Nenhum resultado encontrado
-                                </td>
+                                <th>Multa</th>
+                                <th>data</th>
+                                <th>infração</th>
+                                <th>descrição</th>
+                                <th>local</th>
+                                <th>vencimento</th>
+                                <th>pagamento</th>
+                                <th>situação</th>
+                                <th>placa</th>
+                                <th>CPF</th>
+                                <th>Valor</th>
+                                <th>Gravidade</th>
                             </tr>
-                        }
-                        else
-                        {
-                            foreach (var item in Model)
+                        </thead>
+                        <tbody>
+                            @if (Model.Count() == 0)
                             {
                                 <tr>
-                                    <td>@item.id_multa</td>
-                                    <td>@item.data_multa</td>
-                                    <td>@item.auto_infracao</td>
-                                    <td>@item.descricao_infracao</td>
-                                    <td>@item.local_multa</td>
-                                    <td>@item.data_vencimento</td>
-                                    <td>@item.data_pagamento</td>
-                                    <td>@item.situacao</td>
-                                    <td>@item.placa</td>
-                                    <td>@item.cpf</td>
-                                    <td>@item.valor</td>
-                                    <td>@item.gravidade</td>
+                                    <td colspan="3" style="color:red">
+                                        Nenhum resultado encontrado
+                                    </td>
                                 </tr>
                             }
-                        }
-                    </tbody>
-                </table>
-            </div>
-            <div class="modal-footer">
-                @Html.ActionLink("Fechar", "Index", "Home", null, new { @class = "btn btn-secondary" })
+                            else
+                            {
+                                foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.id_multa</td>
+                                        <td>@item.data_multa</td>
+                                        <td>@item.auto_infracao</td>
+                                        <td>@item.descricao_infracao</td>
+                                        <td>@item.local_multa</td>
+                                        <td>@item.data_vencimento</td>
+                                        <td>@item.data_pagamento</td>
+                                        <td>@item.situacao</td>
+                                        <td>@item.placa</td>
+                                        <td>@item.cpf</td>
+                                        <td>@item.valor</td>
+                                        <td>@item.gravidade</td>
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    @Html.ActionLink("Fechar", "Index", "Home", null, new { @class = "btn btn-secondary" })
+                </div>
             </div>
         </div>
     </div>

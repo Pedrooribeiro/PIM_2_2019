@@ -12,43 +12,45 @@
                 </button>
             </div>
             <div class="modal-body">
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th>Id Quilometragem</th>
-                            <th>Data Início</th>
-                            <th>Data Atual</th>
-                            <th>Placa</th>
-                            <th>Quilometros Rodados</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @if (Model.Count() == 0)
-                        {
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
                             <tr>
-                                <td colspan="3" style="color:red">
-                                    Nenhum resultado encontrado
-                                </td>
+                                <th>Id Quilometragem</th>
+                                <th>Data Início</th>
+                                <th>Data Atual</th>
+                                <th>Placa</th>
+                                <th>Quilometros Rodados</th>
                             </tr>
-                        }
-                        else
-                        {
-                            foreach (var item in Model)
+                        </thead>
+                        <tbody>
+                            @if (Model.Count() == 0)
                             {
                                 <tr>
-                                    <td>@item.id_quilometragem</td>
-                                    <td>@item.data_inicio</td>
-                                    <td>@item.data_atual</td>
-                                    <td>@item.placa</td>
-                                    <td>@item.quilometros_rodados</td>
+                                    <td colspan="3" style="color:red">
+                                        Nenhum resultado encontrado
+                                    </td>
                                 </tr>
                             }
-                        }
-                    </tbody>
-                </table>
-            </div>
-            <div class="modal-footer">
-                @Html.ActionLink("Fechar", "Index", "Home", null, new { @class = "btn btn-secondary" })
+                            else
+                            {
+                                foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.id_quilometragem</td>
+                                        <td>@item.data_inicio</td>
+                                        <td>@item.data_atual</td>
+                                        <td>@item.placa</td>
+                                        <td>@item.quilometros_rodados</td>
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    @Html.ActionLink("Fechar", "Index", "Home", null, new { @class = "btn btn-secondary" })
+                </div>
             </div>
         </div>
     </div>

@@ -12,47 +12,49 @@
                 </button>
             </div>
             <div class="modal-body">
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th>Id Pneu</th>
-                            <th>Número de Série</th>
-                            <th>Situação</th>
-                            <th>Marca</th>
-                            <th>Modelo</th>
-                            <th>Dimensão</th>
-                            <th>Placa</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @if (Model.Count() == 0)
-                        {
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
                             <tr>
-                                <td colspan="3" style="color:red">
-                                    Nenhum resultado encontrado
-                                </td>
+                                <th>Id Pneu</th>
+                                <th>Número de Série</th>
+                                <th>Situação</th>
+                                <th>Marca</th>
+                                <th>Modelo</th>
+                                <th>Dimensão</th>
+                                <th>Placa</th>
                             </tr>
-                        }
-                        else
-                        {
-                            foreach (var item in Model)
+                        </thead>
+                        <tbody>
+                            @if (Model.Count() == 0)
                             {
                                 <tr>
-                                    <td>@item.id_pneu</td>
-                                    <td>@item.numero_serie</td>
-                                    <td>@item.situacao</td>
-                                    <td>@item.marca</td>
-                                    <td>@item.modelo</td>
-                                    <td>@item.dimensao</td>
-                                    <td>@item.placa</td>
+                                    <td colspan="3" style="color:red">
+                                        Nenhum resultado encontrado
+                                    </td>
                                 </tr>
                             }
-                        }
-                    </tbody>
-                </table>
-            </div>
-            <div class="modal-footer">
-                @Html.ActionLink("Fechar", "Index", "Home", null, new { @class = "btn btn-secondary" })
+                            else
+                            {
+                                foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.id_pneu</td>
+                                        <td>@item.numero_serie</td>
+                                        <td>@item.situacao</td>
+                                        <td>@item.marca</td>
+                                        <td>@item.modelo</td>
+                                        <td>@item.dimensao</td>
+                                        <td>@item.placa</td>
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    @Html.ActionLink("Fechar", "Index", "Home", null, new { @class = "btn btn-secondary" })
+                </div>
             </div>
         </div>
     </div>
