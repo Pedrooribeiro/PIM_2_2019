@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\pedro\Documents\PIM_2_2019\atualizado\PIM_2_2019\ControleFrota\ControleFrota.web\Models\Model.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\jdpacheco\Pictures\Faculdade\PIM\2\PROJETO-WEB\PIM_2_2019\ControleFrota\ControleFrota.web\Models\Model.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

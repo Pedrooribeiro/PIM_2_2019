@@ -4,23 +4,23 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="3aa3f48537364d268c3a0e418b5ecd12" Name="Diagram1">
-        <EntityTypeShape EntityType="Model.motoristas" Width="1.5" PointX="0.875" PointY="0.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.abastecimentos" Width="1.5" PointX="3.75" PointY="0.75" />
-        <EntityTypeShape EntityType="Model.aluguel_veiculos" Width="1.5" PointX="0.75" PointY="3.75" />
-        <EntityTypeShape EntityType="Model.entradas" Width="1.5" PointX="2.75" PointY="4.75" />
-        <EntityTypeShape EntityType="Model.estoque_peca" Width="1.5" PointX="4.75" PointY="4.75" />
-        <EntityTypeShape EntityType="Model.login" Width="1.5" PointX="5.75" PointY="0.75" />
-        <EntityTypeShape EntityType="Model.manutencoes" Width="1.5" PointX="6.75" PointY="3.75" />
-        <EntityTypeShape EntityType="Model.multas" Width="1.5" PointX="6.75" PointY="6.75" />
-        <EntityTypeShape EntityType="Model.pneus" Width="1.5" PointX="0.75" PointY="7.75" />
-        <EntityTypeShape EntityType="Model.quilometragem" Width="1.5" PointX="7.75" PointY="0.75" />
-        <EntityTypeShape EntityType="Model.saidas" Width="1.5" PointX="2.75" PointY="8.75" />
-        <EntityTypeShape EntityType="Model.seguros" Width="1.5" PointX="8.75" PointY="3.75" />
-        <EntityTypeShape EntityType="Model.sinistros" Width="1.5" PointX="8.75" PointY="7.75" />
-        <EntityTypeShape EntityType="Model.usuarios" Width="1.5" PointX="9.75" PointY="0.75" />
-        <EntityTypeShape EntityType="Model.veiculos" Width="1.5" PointX="10.75" PointY="3.75" />
-        <EntityTypeShape EntityType="Model.viagens" Width="1.5" PointX="10.75" PointY="7.75" />
+      <Diagram DiagramId="b564ec42210a4368a0f4f50fce3573e0" Name="Diagram1">
+        <EntityTypeShape EntityType="dbControleFrotasModel.abastecimentos" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbControleFrotasModel.aluguel_veiculos" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbControleFrotasModel.entradas" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbControleFrotasModel.estoque_peca" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbControleFrotasModel.login" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbControleFrotasModel.manutencoes" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbControleFrotasModel.motoristas" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbControleFrotasModel.multas" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbControleFrotasModel.pneus" Width="1.5" PointX="2.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbControleFrotasModel.quilometragem" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbControleFrotasModel.saidas" Width="1.5" PointX="8.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbControleFrotasModel.seguros" Width="1.5" PointX="4.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbControleFrotasModel.sinistros" Width="1.5" PointX="8.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbControleFrotasModel.usuarios" Width="1.5" PointX="6.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbControleFrotasModel.veiculos" Width="1.5" PointX="8.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbControleFrotasModel.viagens" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

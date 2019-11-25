@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="dbControleFrotasModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="abastecimentos">
           <Key>
             <PropertyRef Name="id_abastecimento" />
@@ -194,28 +194,93 @@
           <Property Name="placa" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="cpf" Type="varchar" MaxLength="15" Nullable="false" />
         </EntityType>
-        <EntityContainer Name="ModelStoreContainer">
-          <EntitySet Name="abastecimentos" EntityType="Self.abastecimentos" Schema="db_owner" store:Type="Tables" />
-          <EntitySet Name="aluguel_veiculos" EntityType="Self.aluguel_veiculos" Schema="db_owner" store:Type="Tables" />
-          <EntitySet Name="entradas" EntityType="Self.entradas" Schema="db_owner" store:Type="Tables" />
-          <EntitySet Name="estoque_peca" EntityType="Self.estoque_peca" Schema="db_owner" store:Type="Tables" />
-          <EntitySet Name="login" EntityType="Self.login" Schema="db_owner" store:Type="Tables" />
-          <EntitySet Name="manutencoes" EntityType="Self.manutencoes" Schema="db_owner" store:Type="Tables" />
-          <EntitySet Name="motoristas" EntityType="Self.motoristas" Schema="db_owner" store:Type="Tables" />
-          <EntitySet Name="multas" EntityType="Self.multas" Schema="db_owner" store:Type="Tables" />
-          <EntitySet Name="pneus" EntityType="Self.pneus" Schema="db_owner" store:Type="Tables" />
-          <EntitySet Name="quilometragem" EntityType="Self.quilometragem" Schema="db_owner" store:Type="Tables" />
-          <EntitySet Name="saidas" EntityType="Self.saidas" Schema="db_owner" store:Type="Tables" />
-          <EntitySet Name="seguros" EntityType="Self.seguros" Schema="db_owner" store:Type="Tables" />
-          <EntitySet Name="sinistros" EntityType="Self.sinistros" Schema="db_owner" store:Type="Tables" />
-          <EntitySet Name="usuarios" EntityType="Self.usuarios" Schema="db_owner" store:Type="Tables" />
-          <EntitySet Name="veiculos" EntityType="Self.veiculos" Schema="db_owner" store:Type="Tables" />
-          <EntitySet Name="viagens" EntityType="Self.viagens" Schema="db_owner" store:Type="Tables" />
+        <EntityContainer Name="dbControleFrotasModelStoreContainer">
+          <EntitySet Name="abastecimentos" EntityType="Self.abastecimentos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="aluguel_veiculos" EntityType="Self.aluguel_veiculos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="entradas" EntityType="Self.entradas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="estoque_peca" EntityType="Self.estoque_peca" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="login" EntityType="Self.login" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="manutencoes" EntityType="Self.manutencoes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="motoristas" EntityType="Self.motoristas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="multas" EntityType="Self.multas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="pneus" EntityType="Self.pneus" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="quilometragem" EntityType="Self.quilometragem" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="saidas" EntityType="Self.saidas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="seguros" EntityType="Self.seguros" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sinistros" EntityType="Self.sinistros" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="usuarios" EntityType="Self.usuarios" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="veiculos" EntityType="Self.veiculos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="viagens" EntityType="Self.viagens" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="dbControleFrotasModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="abastecimentos">
+          <Key>
+            <PropertyRef Name="id_abastecimento" />
+          </Key>
+          <Property Name="id_abastecimento" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="data_abastecimento" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="tipo_combustivel" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="posto" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="placa" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="valor_litro" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="valor_total" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="litros" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="aluguel_veiculos">
+          <Key>
+            <PropertyRef Name="id_aluguel" />
+          </Key>
+          <Property Name="id_aluguel" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="cpf" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="numero_veiculos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="data_inicio" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="data_entrega" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="entradas">
+          <Key>
+            <PropertyRef Name="id_entrada" />
+          </Key>
+          <Property Name="id_entrada" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="data_entrada" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="placa" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="cpf" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="horario_entrada" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="estoque_peca">
+          <Key>
+            <PropertyRef Name="id_peca" />
+          </Key>
+          <Property Name="id_peca" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tipo" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nome" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="descricao" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="quantidade" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="valor_unitario" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nome_veiculo" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="login">
+          <Key>
+            <PropertyRef Name="id_login" />
+          </Key>
+          <Property Name="id_login" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="username" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="manutencoes">
+          <Key>
+            <PropertyRef Name="id_manutencao" />
+          </Key>
+          <Property Name="id_manutencao" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="data_manutencao" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="motivo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="estabelecimento" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="placa" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="valor_total" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
         <EntityType Name="motoristas">
           <Key>
             <PropertyRef Name="id_motorista" />
@@ -228,103 +293,21 @@
           <Property Name="vencimento_cnh" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="empresa" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
-        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="motoristas" EntityType="Self.motoristas" />
-          <EntitySet Name="abastecimentos" EntityType="Model.abastecimentos" />
-          <EntitySet Name="aluguel_veiculos" EntityType="Model.aluguel_veiculos" />
-          <EntitySet Name="entradas" EntityType="Model.entradas" />
-          <EntitySet Name="estoque_peca" EntityType="Model.estoque_peca" />
-          <EntitySet Name="login" EntityType="Model.login" />
-          <EntitySet Name="manutencoes" EntityType="Model.manutencoes" />
-          <EntitySet Name="multas" EntityType="Model.multas" />
-          <EntitySet Name="pneus" EntityType="Model.pneus" />
-          <EntitySet Name="quilometragem" EntityType="Model.quilometragem" />
-          <EntitySet Name="saidas" EntityType="Model.saidas" />
-          <EntitySet Name="seguros" EntityType="Model.seguros" />
-          <EntitySet Name="sinistros" EntityType="Model.sinistros" />
-          <EntitySet Name="usuarios" EntityType="Model.usuarios" />
-          <EntitySet Name="veiculos" EntityType="Model.veiculos" />
-          <EntitySet Name="viagens" EntityType="Model.viagens" />
-        </EntityContainer>
-        <EntityType Name="abastecimentos">
-          <Key>
-            <PropertyRef Name="id_abastecimento" />
-          </Key>
-          <Property Name="id_abastecimento" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="data_abastecimento" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
-          <Property Name="tipo_combustivel" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="posto" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="placa" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="valor_litro" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="valor_total" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="litros" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
-        </EntityType>
-        <EntityType Name="aluguel_veiculos">
-          <Key>
-            <PropertyRef Name="id_aluguel" />
-          </Key>
-          <Property Name="id_aluguel" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="cpf" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
-          <Property Name="numero_veiculos" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="data_inicio" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
-          <Property Name="data_entrega" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
-        </EntityType>
-        <EntityType Name="entradas">
-          <Key>
-            <PropertyRef Name="id_entrada" />
-          </Key>
-          <Property Name="id_entrada" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="data_entrada" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
-          <Property Name="placa" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="cpf" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
-          <Property Name="horario_entrada" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
-        </EntityType>
-        <EntityType Name="estoque_peca">
-          <Key>
-            <PropertyRef Name="id_peca" />
-          </Key>
-          <Property Name="id_peca" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="tipo" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
-          <Property Name="nome" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
-          <Property Name="descricao" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="quantidade" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
-          <Property Name="valor_unitario" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="nome_veiculo" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
-        </EntityType>
-        <EntityType Name="login">
-          <Key>
-            <PropertyRef Name="id_login" />
-          </Key>
-          <Property Name="id_login" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="username" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="password" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-        </EntityType>
-        <EntityType Name="manutencoes">
-          <Key>
-            <PropertyRef Name="id_manutencao" />
-          </Key>
-          <Property Name="id_manutencao" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="data_manutencao" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
-          <Property Name="motivo" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="estabelecimento" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="placa" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="valor_total" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
-        </EntityType>
         <EntityType Name="multas">
           <Key>
             <PropertyRef Name="id_multa" />
           </Key>
           <Property Name="id_multa" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="data_multa" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
-          <Property Name="auto_infracao" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="descricao_infracao" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="local_multa" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
-          <Property Name="data_vencimento" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
-          <Property Name="data_pagamento" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
-          <Property Name="situacao" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="placa" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="cpf" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
-          <Property Name="valor" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="data_multa" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="auto_infracao" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="descricao_infracao" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="local_multa" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="data_vencimento" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="data_pagamento" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="situacao" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="placa" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="cpf" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="valor" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="gravidade" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="pneus">
@@ -332,105 +315,193 @@
             <PropertyRef Name="id_pneu" />
           </Key>
           <Property Name="id_pneu" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="numero_serie" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="situacao" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="marca" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="modelo" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="dimensao" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
-          <Property Name="placa" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="numero_serie" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="situacao" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="marca" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="modelo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="dimensao" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="placa" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
         <EntityType Name="quilometragem">
           <Key>
             <PropertyRef Name="id_quilometragem" />
           </Key>
           <Property Name="id_quilometragem" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="data_inicio" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
-          <Property Name="data_atual" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
-          <Property Name="placa" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="quilometros_rodados" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="data_inicio" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="data_atual" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="placa" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="quilometros_rodados" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
         <EntityType Name="saidas">
           <Key>
             <PropertyRef Name="id_saida" />
           </Key>
           <Property Name="id_saida" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="data_saida" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
-          <Property Name="placa" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="cpf" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
-          <Property Name="horario_saida" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="data_saida" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="placa" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="cpf" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="horario_saida" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
         <EntityType Name="seguros">
           <Key>
             <PropertyRef Name="id_seguro" />
           </Key>
           <Property Name="id_seguro" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="numero_apolice" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="seguradora" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="segurado" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="corretor" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="data_inicio" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
-          <Property Name="data_vencimento" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
-          <Property Name="valor_total" Type="Decimal" Nullable="false" Precision="10" Scale="0" />
-          <Property Name="numero_parcelas" Type="Decimal" Nullable="false" Precision="10" Scale="0" />
-          <Property Name="situacao" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="placa_seguro" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="numero_apolice" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="seguradora" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="segurado" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="corretor" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="data_inicio" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="data_vencimento" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="valor_total" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="numero_parcelas" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="situacao" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="placa_seguro" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
         <EntityType Name="sinistros">
           <Key>
             <PropertyRef Name="id_sinistro" />
           </Key>
           <Property Name="id_sinistro" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="data_sinistro" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
-          <Property Name="descricao_ocorrido" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="local_sinistro" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
-          <Property Name="placa" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="cpf" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="data_sinistro" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="descricao_ocorrido" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="local_sinistro" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="placa" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="cpf" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
         <EntityType Name="usuarios">
           <Key>
             <PropertyRef Name="id_usuario" />
           </Key>
           <Property Name="id_usuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="nome_completo" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
-          <Property Name="rg" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
-          <Property Name="cpf" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="nome_completo" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="rg" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="cpf" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
         <EntityType Name="veiculos">
           <Key>
             <PropertyRef Name="id_veiculo" />
           </Key>
           <Property Name="id_veiculo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="cor" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="placa" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
-          <Property Name="modelo" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
-          <Property Name="marca" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="cor" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="placa" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="modelo" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="marca" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ano_fabricacao" Type="Int32" Nullable="false" />
-          <Property Name="motorizacao" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="tipo_combustivel" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="motorizacao" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="tipo_combustivel" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
         <EntityType Name="viagens">
           <Key>
             <PropertyRef Name="id_viagem" />
           </Key>
           <Property Name="id_viagem" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="data_viagem" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
-          <Property Name="data_entregar" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
-          <Property Name="data_entregue" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
-          <Property Name="motivo" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="situacao" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="km_inicial" Type="Decimal" Nullable="false" Precision="10" Scale="0" />
-          <Property Name="km_final" Type="Decimal" Nullable="false" Precision="10" Scale="0" />
-          <Property Name="placa" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="cpf" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="data_viagem" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="data_entregar" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="data_entregue" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="motivo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="situacao" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="km_inicial" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="km_final" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="placa" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="cpf" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
+        <EntityContainer Name="dbControleFrotasEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="abastecimentos" EntityType="Self.abastecimentos" />
+          <EntitySet Name="aluguel_veiculos" EntityType="Self.aluguel_veiculos" />
+          <EntitySet Name="entradas" EntityType="Self.entradas" />
+          <EntitySet Name="estoque_peca" EntityType="Self.estoque_peca" />
+          <EntitySet Name="login" EntityType="Self.login" />
+          <EntitySet Name="manutencoes" EntityType="Self.manutencoes" />
+          <EntitySet Name="motoristas" EntityType="Self.motoristas" />
+          <EntitySet Name="multas" EntityType="Self.multas" />
+          <EntitySet Name="pneus" EntityType="Self.pneus" />
+          <EntitySet Name="quilometragem" EntityType="Self.quilometragem" />
+          <EntitySet Name="saidas" EntityType="Self.saidas" />
+          <EntitySet Name="seguros" EntityType="Self.seguros" />
+          <EntitySet Name="sinistros" EntityType="Self.sinistros" />
+          <EntitySet Name="usuarios" EntityType="Self.usuarios" />
+          <EntitySet Name="veiculos" EntityType="Self.veiculos" />
+          <EntitySet Name="viagens" EntityType="Self.viagens" />
+        </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities">
+        <EntityContainerMapping StorageEntityContainer="dbControleFrotasModelStoreContainer" CdmEntityContainer="dbControleFrotasEntities">
+          <EntitySetMapping Name="abastecimentos">
+            <EntityTypeMapping TypeName="dbControleFrotasModel.abastecimentos">
+              <MappingFragment StoreEntitySet="abastecimentos">
+                <ScalarProperty Name="id_abastecimento" ColumnName="id_abastecimento" />
+                <ScalarProperty Name="data_abastecimento" ColumnName="data_abastecimento" />
+                <ScalarProperty Name="tipo_combustivel" ColumnName="tipo_combustivel" />
+                <ScalarProperty Name="posto" ColumnName="posto" />
+                <ScalarProperty Name="placa" ColumnName="placa" />
+                <ScalarProperty Name="valor_litro" ColumnName="valor_litro" />
+                <ScalarProperty Name="valor_total" ColumnName="valor_total" />
+                <ScalarProperty Name="litros" ColumnName="litros" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="aluguel_veiculos">
+            <EntityTypeMapping TypeName="dbControleFrotasModel.aluguel_veiculos">
+              <MappingFragment StoreEntitySet="aluguel_veiculos">
+                <ScalarProperty Name="id_aluguel" ColumnName="id_aluguel" />
+                <ScalarProperty Name="cpf" ColumnName="cpf" />
+                <ScalarProperty Name="numero_veiculos" ColumnName="numero_veiculos" />
+                <ScalarProperty Name="data_inicio" ColumnName="data_inicio" />
+                <ScalarProperty Name="data_entrega" ColumnName="data_entrega" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="entradas">
+            <EntityTypeMapping TypeName="dbControleFrotasModel.entradas">
+              <MappingFragment StoreEntitySet="entradas">
+                <ScalarProperty Name="id_entrada" ColumnName="id_entrada" />
+                <ScalarProperty Name="data_entrada" ColumnName="data_entrada" />
+                <ScalarProperty Name="placa" ColumnName="placa" />
+                <ScalarProperty Name="cpf" ColumnName="cpf" />
+                <ScalarProperty Name="horario_entrada" ColumnName="horario_entrada" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="estoque_peca">
+            <EntityTypeMapping TypeName="dbControleFrotasModel.estoque_peca">
+              <MappingFragment StoreEntitySet="estoque_peca">
+                <ScalarProperty Name="id_peca" ColumnName="id_peca" />
+                <ScalarProperty Name="tipo" ColumnName="tipo" />
+                <ScalarProperty Name="nome" ColumnName="nome" />
+                <ScalarProperty Name="descricao" ColumnName="descricao" />
+                <ScalarProperty Name="quantidade" ColumnName="quantidade" />
+                <ScalarProperty Name="valor_unitario" ColumnName="valor_unitario" />
+                <ScalarProperty Name="nome_veiculo" ColumnName="nome_veiculo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="login">
+            <EntityTypeMapping TypeName="dbControleFrotasModel.login">
+              <MappingFragment StoreEntitySet="login">
+                <ScalarProperty Name="id_login" ColumnName="id_login" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="password" ColumnName="password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="manutencoes">
+            <EntityTypeMapping TypeName="dbControleFrotasModel.manutencoes">
+              <MappingFragment StoreEntitySet="manutencoes">
+                <ScalarProperty Name="id_manutencao" ColumnName="id_manutencao" />
+                <ScalarProperty Name="data_manutencao" ColumnName="data_manutencao" />
+                <ScalarProperty Name="motivo" ColumnName="motivo" />
+                <ScalarProperty Name="estabelecimento" ColumnName="estabelecimento" />
+                <ScalarProperty Name="placa" ColumnName="placa" />
+                <ScalarProperty Name="valor_total" ColumnName="valor_total" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="motoristas">
-            <EntityTypeMapping TypeName="Model.motoristas">
+            <EntityTypeMapping TypeName="dbControleFrotasModel.motoristas">
               <MappingFragment StoreEntitySet="motoristas">
                 <ScalarProperty Name="id_motorista" ColumnName="id_motorista" />
                 <ScalarProperty Name="nome_completo" ColumnName="nome_completo" />
@@ -442,195 +513,125 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="abastecimentos">
-            <EntityTypeMapping TypeName="Model.abastecimentos">
-              <MappingFragment StoreEntitySet="abastecimentos">
-                <ScalarProperty Name="litros" ColumnName="litros" />
-                <ScalarProperty Name="valor_total" ColumnName="valor_total" />
-                <ScalarProperty Name="valor_litro" ColumnName="valor_litro" />
-                <ScalarProperty Name="placa" ColumnName="placa" />
-                <ScalarProperty Name="posto" ColumnName="posto" />
-                <ScalarProperty Name="tipo_combustivel" ColumnName="tipo_combustivel" />
-                <ScalarProperty Name="data_abastecimento" ColumnName="data_abastecimento" />
-                <ScalarProperty Name="id_abastecimento" ColumnName="id_abastecimento" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="aluguel_veiculos">
-            <EntityTypeMapping TypeName="Model.aluguel_veiculos">
-              <MappingFragment StoreEntitySet="aluguel_veiculos">
-                <ScalarProperty Name="data_entrega" ColumnName="data_entrega" />
-                <ScalarProperty Name="data_inicio" ColumnName="data_inicio" />
-                <ScalarProperty Name="numero_veiculos" ColumnName="numero_veiculos" />
-                <ScalarProperty Name="cpf" ColumnName="cpf" />
-                <ScalarProperty Name="id_aluguel" ColumnName="id_aluguel" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="entradas">
-            <EntityTypeMapping TypeName="Model.entradas">
-              <MappingFragment StoreEntitySet="entradas">
-                <ScalarProperty Name="horario_entrada" ColumnName="horario_entrada" />
-                <ScalarProperty Name="cpf" ColumnName="cpf" />
-                <ScalarProperty Name="placa" ColumnName="placa" />
-                <ScalarProperty Name="data_entrada" ColumnName="data_entrada" />
-                <ScalarProperty Name="id_entrada" ColumnName="id_entrada" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="estoque_peca">
-            <EntityTypeMapping TypeName="Model.estoque_peca">
-              <MappingFragment StoreEntitySet="estoque_peca">
-                <ScalarProperty Name="nome_veiculo" ColumnName="nome_veiculo" />
-                <ScalarProperty Name="valor_unitario" ColumnName="valor_unitario" />
-                <ScalarProperty Name="quantidade" ColumnName="quantidade" />
-                <ScalarProperty Name="descricao" ColumnName="descricao" />
-                <ScalarProperty Name="nome" ColumnName="nome" />
-                <ScalarProperty Name="tipo" ColumnName="tipo" />
-                <ScalarProperty Name="id_peca" ColumnName="id_peca" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="login">
-            <EntityTypeMapping TypeName="Model.login">
-              <MappingFragment StoreEntitySet="login">
-                <ScalarProperty Name="password" ColumnName="password" />
-                <ScalarProperty Name="username" ColumnName="username" />
-                <ScalarProperty Name="id_login" ColumnName="id_login" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="manutencoes">
-            <EntityTypeMapping TypeName="Model.manutencoes">
-              <MappingFragment StoreEntitySet="manutencoes">
-                <ScalarProperty Name="valor_total" ColumnName="valor_total" />
-                <ScalarProperty Name="placa" ColumnName="placa" />
-                <ScalarProperty Name="estabelecimento" ColumnName="estabelecimento" />
-                <ScalarProperty Name="motivo" ColumnName="motivo" />
-                <ScalarProperty Name="data_manutencao" ColumnName="data_manutencao" />
-                <ScalarProperty Name="id_manutencao" ColumnName="id_manutencao" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="multas">
-            <EntityTypeMapping TypeName="Model.multas">
+            <EntityTypeMapping TypeName="dbControleFrotasModel.multas">
               <MappingFragment StoreEntitySet="multas">
-                <ScalarProperty Name="gravidade" ColumnName="gravidade" />
-                <ScalarProperty Name="valor" ColumnName="valor" />
-                <ScalarProperty Name="cpf" ColumnName="cpf" />
-                <ScalarProperty Name="placa" ColumnName="placa" />
-                <ScalarProperty Name="situacao" ColumnName="situacao" />
-                <ScalarProperty Name="data_pagamento" ColumnName="data_pagamento" />
-                <ScalarProperty Name="data_vencimento" ColumnName="data_vencimento" />
-                <ScalarProperty Name="local_multa" ColumnName="local_multa" />
-                <ScalarProperty Name="descricao_infracao" ColumnName="descricao_infracao" />
-                <ScalarProperty Name="auto_infracao" ColumnName="auto_infracao" />
-                <ScalarProperty Name="data_multa" ColumnName="data_multa" />
                 <ScalarProperty Name="id_multa" ColumnName="id_multa" />
+                <ScalarProperty Name="data_multa" ColumnName="data_multa" />
+                <ScalarProperty Name="auto_infracao" ColumnName="auto_infracao" />
+                <ScalarProperty Name="descricao_infracao" ColumnName="descricao_infracao" />
+                <ScalarProperty Name="local_multa" ColumnName="local_multa" />
+                <ScalarProperty Name="data_vencimento" ColumnName="data_vencimento" />
+                <ScalarProperty Name="data_pagamento" ColumnName="data_pagamento" />
+                <ScalarProperty Name="situacao" ColumnName="situacao" />
+                <ScalarProperty Name="placa" ColumnName="placa" />
+                <ScalarProperty Name="cpf" ColumnName="cpf" />
+                <ScalarProperty Name="valor" ColumnName="valor" />
+                <ScalarProperty Name="gravidade" ColumnName="gravidade" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="pneus">
-            <EntityTypeMapping TypeName="Model.pneus">
+            <EntityTypeMapping TypeName="dbControleFrotasModel.pneus">
               <MappingFragment StoreEntitySet="pneus">
-                <ScalarProperty Name="placa" ColumnName="placa" />
-                <ScalarProperty Name="dimensao" ColumnName="dimensao" />
-                <ScalarProperty Name="modelo" ColumnName="modelo" />
-                <ScalarProperty Name="marca" ColumnName="marca" />
-                <ScalarProperty Name="situacao" ColumnName="situacao" />
-                <ScalarProperty Name="numero_serie" ColumnName="numero_serie" />
                 <ScalarProperty Name="id_pneu" ColumnName="id_pneu" />
+                <ScalarProperty Name="numero_serie" ColumnName="numero_serie" />
+                <ScalarProperty Name="situacao" ColumnName="situacao" />
+                <ScalarProperty Name="marca" ColumnName="marca" />
+                <ScalarProperty Name="modelo" ColumnName="modelo" />
+                <ScalarProperty Name="dimensao" ColumnName="dimensao" />
+                <ScalarProperty Name="placa" ColumnName="placa" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="quilometragem">
-            <EntityTypeMapping TypeName="Model.quilometragem">
+            <EntityTypeMapping TypeName="dbControleFrotasModel.quilometragem">
               <MappingFragment StoreEntitySet="quilometragem">
-                <ScalarProperty Name="quilometros_rodados" ColumnName="quilometros_rodados" />
-                <ScalarProperty Name="placa" ColumnName="placa" />
-                <ScalarProperty Name="data_atual" ColumnName="data_atual" />
-                <ScalarProperty Name="data_inicio" ColumnName="data_inicio" />
                 <ScalarProperty Name="id_quilometragem" ColumnName="id_quilometragem" />
+                <ScalarProperty Name="data_inicio" ColumnName="data_inicio" />
+                <ScalarProperty Name="data_atual" ColumnName="data_atual" />
+                <ScalarProperty Name="placa" ColumnName="placa" />
+                <ScalarProperty Name="quilometros_rodados" ColumnName="quilometros_rodados" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="saidas">
-            <EntityTypeMapping TypeName="Model.saidas">
+            <EntityTypeMapping TypeName="dbControleFrotasModel.saidas">
               <MappingFragment StoreEntitySet="saidas">
-                <ScalarProperty Name="horario_saida" ColumnName="horario_saida" />
-                <ScalarProperty Name="cpf" ColumnName="cpf" />
-                <ScalarProperty Name="placa" ColumnName="placa" />
-                <ScalarProperty Name="data_saida" ColumnName="data_saida" />
                 <ScalarProperty Name="id_saida" ColumnName="id_saida" />
+                <ScalarProperty Name="data_saida" ColumnName="data_saida" />
+                <ScalarProperty Name="placa" ColumnName="placa" />
+                <ScalarProperty Name="cpf" ColumnName="cpf" />
+                <ScalarProperty Name="horario_saida" ColumnName="horario_saida" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="seguros">
-            <EntityTypeMapping TypeName="Model.seguros">
+            <EntityTypeMapping TypeName="dbControleFrotasModel.seguros">
               <MappingFragment StoreEntitySet="seguros">
-                <ScalarProperty Name="placa_seguro" ColumnName="placa_seguro" />
-                <ScalarProperty Name="situacao" ColumnName="situacao" />
-                <ScalarProperty Name="numero_parcelas" ColumnName="numero_parcelas" />
-                <ScalarProperty Name="valor_total" ColumnName="valor_total" />
-                <ScalarProperty Name="data_vencimento" ColumnName="data_vencimento" />
-                <ScalarProperty Name="data_inicio" ColumnName="data_inicio" />
-                <ScalarProperty Name="corretor" ColumnName="corretor" />
-                <ScalarProperty Name="segurado" ColumnName="segurado" />
-                <ScalarProperty Name="seguradora" ColumnName="seguradora" />
-                <ScalarProperty Name="numero_apolice" ColumnName="numero_apolice" />
                 <ScalarProperty Name="id_seguro" ColumnName="id_seguro" />
+                <ScalarProperty Name="numero_apolice" ColumnName="numero_apolice" />
+                <ScalarProperty Name="seguradora" ColumnName="seguradora" />
+                <ScalarProperty Name="segurado" ColumnName="segurado" />
+                <ScalarProperty Name="corretor" ColumnName="corretor" />
+                <ScalarProperty Name="data_inicio" ColumnName="data_inicio" />
+                <ScalarProperty Name="data_vencimento" ColumnName="data_vencimento" />
+                <ScalarProperty Name="valor_total" ColumnName="valor_total" />
+                <ScalarProperty Name="numero_parcelas" ColumnName="numero_parcelas" />
+                <ScalarProperty Name="situacao" ColumnName="situacao" />
+                <ScalarProperty Name="placa_seguro" ColumnName="placa_seguro" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sinistros">
-            <EntityTypeMapping TypeName="Model.sinistros">
+            <EntityTypeMapping TypeName="dbControleFrotasModel.sinistros">
               <MappingFragment StoreEntitySet="sinistros">
-                <ScalarProperty Name="cpf" ColumnName="cpf" />
-                <ScalarProperty Name="placa" ColumnName="placa" />
-                <ScalarProperty Name="local_sinistro" ColumnName="local_sinistro" />
-                <ScalarProperty Name="descricao_ocorrido" ColumnName="descricao_ocorrido" />
-                <ScalarProperty Name="data_sinistro" ColumnName="data_sinistro" />
                 <ScalarProperty Name="id_sinistro" ColumnName="id_sinistro" />
+                <ScalarProperty Name="data_sinistro" ColumnName="data_sinistro" />
+                <ScalarProperty Name="descricao_ocorrido" ColumnName="descricao_ocorrido" />
+                <ScalarProperty Name="local_sinistro" ColumnName="local_sinistro" />
+                <ScalarProperty Name="placa" ColumnName="placa" />
+                <ScalarProperty Name="cpf" ColumnName="cpf" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="usuarios">
-            <EntityTypeMapping TypeName="Model.usuarios">
+            <EntityTypeMapping TypeName="dbControleFrotasModel.usuarios">
               <MappingFragment StoreEntitySet="usuarios">
-                <ScalarProperty Name="cpf" ColumnName="cpf" />
-                <ScalarProperty Name="rg" ColumnName="rg" />
-                <ScalarProperty Name="nome_completo" ColumnName="nome_completo" />
                 <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+                <ScalarProperty Name="nome_completo" ColumnName="nome_completo" />
+                <ScalarProperty Name="rg" ColumnName="rg" />
+                <ScalarProperty Name="cpf" ColumnName="cpf" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="veiculos">
-            <EntityTypeMapping TypeName="Model.veiculos">
+            <EntityTypeMapping TypeName="dbControleFrotasModel.veiculos">
               <MappingFragment StoreEntitySet="veiculos">
-                <ScalarProperty Name="tipo_combustivel" ColumnName="tipo_combustivel" />
-                <ScalarProperty Name="motorizacao" ColumnName="motorizacao" />
-                <ScalarProperty Name="ano_fabricacao" ColumnName="ano_fabricacao" />
-                <ScalarProperty Name="marca" ColumnName="marca" />
-                <ScalarProperty Name="modelo" ColumnName="modelo" />
-                <ScalarProperty Name="placa" ColumnName="placa" />
-                <ScalarProperty Name="cor" ColumnName="cor" />
                 <ScalarProperty Name="id_veiculo" ColumnName="id_veiculo" />
+                <ScalarProperty Name="cor" ColumnName="cor" />
+                <ScalarProperty Name="placa" ColumnName="placa" />
+                <ScalarProperty Name="modelo" ColumnName="modelo" />
+                <ScalarProperty Name="marca" ColumnName="marca" />
+                <ScalarProperty Name="ano_fabricacao" ColumnName="ano_fabricacao" />
+                <ScalarProperty Name="motorizacao" ColumnName="motorizacao" />
+                <ScalarProperty Name="tipo_combustivel" ColumnName="tipo_combustivel" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="viagens">
-            <EntityTypeMapping TypeName="Model.viagens">
+            <EntityTypeMapping TypeName="dbControleFrotasModel.viagens">
               <MappingFragment StoreEntitySet="viagens">
-                <ScalarProperty Name="cpf" ColumnName="cpf" />
-                <ScalarProperty Name="placa" ColumnName="placa" />
-                <ScalarProperty Name="km_final" ColumnName="km_final" />
-                <ScalarProperty Name="km_inicial" ColumnName="km_inicial" />
-                <ScalarProperty Name="situacao" ColumnName="situacao" />
-                <ScalarProperty Name="motivo" ColumnName="motivo" />
-                <ScalarProperty Name="data_entregue" ColumnName="data_entregue" />
-                <ScalarProperty Name="data_entregar" ColumnName="data_entregar" />
-                <ScalarProperty Name="data_viagem" ColumnName="data_viagem" />
                 <ScalarProperty Name="id_viagem" ColumnName="id_viagem" />
+                <ScalarProperty Name="data_viagem" ColumnName="data_viagem" />
+                <ScalarProperty Name="data_entregar" ColumnName="data_entregar" />
+                <ScalarProperty Name="data_entregue" ColumnName="data_entregue" />
+                <ScalarProperty Name="motivo" ColumnName="motivo" />
+                <ScalarProperty Name="situacao" ColumnName="situacao" />
+                <ScalarProperty Name="km_inicial" ColumnName="km_inicial" />
+                <ScalarProperty Name="km_final" ColumnName="km_final" />
+                <ScalarProperty Name="placa" ColumnName="placa" />
+                <ScalarProperty Name="cpf" ColumnName="cpf" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -14,13 +14,13 @@ namespace ControleFrota.web.Models
 
             using (var conexao = new SqlConnection())
             {
-                conexao.ConnectionString = @"Data Source=DESKTOP-SOKKM3N\SQLEXPRESS;Initial Catalog=controle-frota;User Id=admin;Password=123";
+                conexao.ConnectionString = @"Server=localhost\SQLEXPRESS;Database=dbControleFrotas;Trusted_Connection=True";
                 conexao.Open();
                 using (var comando = new SqlCommand())
                 {
                     comando.Connection = conexao;
                     comando.CommandText = string.Format(
-                        "select count(*) from usuario where login='{0}' and senha='{1}'", login, senha);
+                        "select count(*) from login where username='{0}' and password='{1}'", login, senha);
                     ret = ((int)comando.ExecuteScalar() > 0);
                 }
             }

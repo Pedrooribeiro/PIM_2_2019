@@ -10,7 +10,7 @@ namespace ControleFrota.web.Models
     {
         public class DBConnection
         {
-            SqlConnection sqlConn = new SqlConnection(@"Server==DESKTOP-SOKKM3N\SQLEXPRESS;Database=dbControleFrotas;Trusted_Connection=True;");
+            SqlConnection sqlConn = new SqlConnection(@"Server=localhost\SQLEXPRESS;Database=dbControleFrotas;Trusted_Connection=True");
             public SqlConnection getSqlConn()
             {
                 return this.sqlConn;

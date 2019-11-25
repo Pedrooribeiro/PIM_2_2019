@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="dbControleFrotasModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="abastecimentos">
     <Key>
       <PropertyRef Name="id_abastecimento" />
@@ -189,22 +189,22 @@
     <Property Name="placa" Type="varchar" MaxLength="10" Nullable="false" />
     <Property Name="cpf" Type="varchar" MaxLength="15" Nullable="false" />
   </EntityType>
-  <EntityContainer Name="ModelStoreContainer">
-    <EntitySet Name="abastecimentos" EntityType="Self.abastecimentos" Schema="db_owner" store:Type="Tables" />
-    <EntitySet Name="aluguel_veiculos" EntityType="Self.aluguel_veiculos" Schema="db_owner" store:Type="Tables" />
-    <EntitySet Name="entradas" EntityType="Self.entradas" Schema="db_owner" store:Type="Tables" />
-    <EntitySet Name="estoque_peca" EntityType="Self.estoque_peca" Schema="db_owner" store:Type="Tables" />
-    <EntitySet Name="login" EntityType="Self.login" Schema="db_owner" store:Type="Tables" />
-    <EntitySet Name="manutencoes" EntityType="Self.manutencoes" Schema="db_owner" store:Type="Tables" />
-    <EntitySet Name="motoristas" EntityType="Self.motoristas" Schema="db_owner" store:Type="Tables" />
-    <EntitySet Name="multas" EntityType="Self.multas" Schema="db_owner" store:Type="Tables" />
-    <EntitySet Name="pneus" EntityType="Self.pneus" Schema="db_owner" store:Type="Tables" />
-    <EntitySet Name="quilometragem" EntityType="Self.quilometragem" Schema="db_owner" store:Type="Tables" />
-    <EntitySet Name="saidas" EntityType="Self.saidas" Schema="db_owner" store:Type="Tables" />
-    <EntitySet Name="seguros" EntityType="Self.seguros" Schema="db_owner" store:Type="Tables" />
-    <EntitySet Name="sinistros" EntityType="Self.sinistros" Schema="db_owner" store:Type="Tables" />
-    <EntitySet Name="usuarios" EntityType="Self.usuarios" Schema="db_owner" store:Type="Tables" />
-    <EntitySet Name="veiculos" EntityType="Self.veiculos" Schema="db_owner" store:Type="Tables" />
-    <EntitySet Name="viagens" EntityType="Self.viagens" Schema="db_owner" store:Type="Tables" />
+  <EntityContainer Name="dbControleFrotasModelStoreContainer">
+    <EntitySet Name="abastecimentos" EntityType="Self.abastecimentos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="aluguel_veiculos" EntityType="Self.aluguel_veiculos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="entradas" EntityType="Self.entradas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="estoque_peca" EntityType="Self.estoque_peca" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="login" EntityType="Self.login" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="manutencoes" EntityType="Self.manutencoes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="motoristas" EntityType="Self.motoristas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="multas" EntityType="Self.multas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="pneus" EntityType="Self.pneus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="quilometragem" EntityType="Self.quilometragem" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="saidas" EntityType="Self.saidas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="seguros" EntityType="Self.seguros" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sinistros" EntityType="Self.sinistros" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="usuarios" EntityType="Self.usuarios" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="veiculos" EntityType="Self.veiculos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="viagens" EntityType="Self.viagens" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>
